@@ -48,9 +48,9 @@ try
     
     builder.Services.AddCors(options =>
     {
-        options.AddPolicy("AllowBlazorApp", policy =>
+        options.AddPolicy("AllowAngularUI", policy =>
         {
-            policy.WithOrigins("http://localhost:5213") // Replace with your Blazor app URL
+            policy.WithOrigins("http://localhost:4200") // Replace with your Blazor app URL
                 .AllowAnyMethod()
                 .AllowAnyHeader() // This allows the Authorization header!
                 .AllowCredentials(); // Required if you use cookies or specific auth headers
@@ -73,7 +73,7 @@ try
     app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
-    app.UseCors("AllowBlazorApp");
+    app.UseCors("AllowAngularUI");
     
     app.Run();
 
