@@ -1,0 +1,198 @@
+2026-05-24 10:33:10.293 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 10:33:10.328 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 10:33:10.329 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 10:33:10.329 +03:00 [INF] Hosting environment: Development
+2026-05-24 10:33:10.329 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 10:33:23.992 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 10:36:10.328 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:36:10.3250300"
+2026-05-24 10:36:10.721 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 10:39:10.299 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:39:10.2988110"
+2026-05-24 10:42:10.299 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:42:10.2977330"
+2026-05-24 10:45:10.304 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:45:10.3039040"
+2026-05-24 10:48:10.296 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:48:10.2956400"
+2026-05-24 10:51:10.318 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:51:10.3061650"
+2026-05-24 10:54:10.303 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:54:10.3032600"
+2026-05-24 10:57:10.301 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:57:10.3007750"
+2026-05-24 11:00:10.297 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:00:10.2968980"
+2026-05-24 11:03:10.299 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:03:10.2986800"
+2026-05-24 11:06:10.298 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:06:10.2977020"
+2026-05-24 11:09:10.303 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:09:10.3004520"
+2026-05-24 11:12:10.309 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:12:10.3079680"
+2026-05-24 11:15:10.295 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:15:10.2954030"
+2026-05-24 11:18:10.304 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:18:10.3043450"
+2026-05-24 11:21:10.308 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:21:10.3085110"
+2026-05-24 11:24:10.302 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:24:10.3017160"
+2026-05-24 11:27:10.296 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:27:10.2960900"
+2026-05-24 11:30:10.297 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:30:10.2971300"
+2026-05-24 11:33:10.303 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:33:10.3033530"
+2026-05-24 11:36:10.306 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:36:10.3054580"
+2026-05-24 11:39:10.300 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:39:10.3003170"
+2026-05-24 11:42:10.309 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:42:10.3064880"
+2026-05-24 11:45:10.314 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:45:10.3119630"
+2026-05-24 11:48:10.316 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:48:10.3125490"
+2026-05-24 11:51:10.308 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:51:10.3081690"
+2026-05-24 11:54:10.304 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:54:10.3040700"
+2026-05-24 11:57:10.299 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:57:10.2975730"
+2026-05-24 12:00:10.319 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:00:10.3186460"
+2026-05-24 12:03:10.323 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:03:10.3187230"
+2026-05-24 12:06:10.347 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:06:10.3305110"
+2026-05-24 12:09:10.363 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:09:10.3537470"
+2026-05-24 12:12:10.330 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:12:10.3282090"
+2026-05-24 12:15:10.302 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:15:10.3025620"
+2026-05-24 12:18:10.299 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:18:10.2988770"
+2026-05-24 12:32:28.725 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:32:28.7235720"
+2026-05-24 12:35:28.734 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:35:28.7340280"
+2026-05-24 12:38:28.727 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:38:28.7263090"
+2026-05-24 12:44:05.882 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:44:05.8824060"
+2026-05-24 12:47:05.884 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:47:05.8838380"
+2026-05-24 12:50:05.878 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:50:05.8784480"
+2026-05-24 12:53:05.877 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:53:05.8766290"
+2026-05-24 12:56:05.875 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:56:05.8756640"
+2026-05-24 12:59:05.872 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:59:05.8719000"
+2026-05-24 13:02:05.895 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:02:05.8930680"
+2026-05-24 13:05:05.900 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:05:05.8959140"
+2026-05-24 13:07:48.715 +03:00 [INF] Application is shutting down...
+2026-05-24 13:08:04.735 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 13:08:04.756 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 13:08:04.757 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 13:08:04.757 +03:00 [INF] Hosting environment: Development
+2026-05-24 13:08:04.757 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 13:08:24.627 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 13:08:25.029 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 13:08:26.129 +03:00 [INF] Login successful.
+2026-05-24 13:08:31.377 +03:00 [ERR] Internal server error while adding working hours
+System.ArgumentException: The conversion could not be completed because the supplied DateTime did not have the Kind property set correctly.  For example, when the Kind property is DateTimeKind.Local, the source time zone must be TimeZoneInfo.Local. (Parameter 'sourceTimeZone')
+   at System.TimeZoneInfo.ConvertTime(DateTime dateTime, TimeZoneInfo sourceTimeZone, TimeZoneInfo destinationTimeZone, TimeZoneInfoOptions flags, CachedData cachedData)
+   at MyThings.Infrastructure.Services.WorkingHoursService.<>c__DisplayClass4_0.<AddWorkingHoursAsync>b__0(WorkingHourDto whDto) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/WorkingHoursService.cs:line 34
+   at System.Linq.Enumerable.ListSelectIterator`2.Fill(ReadOnlySpan`1 source, Span`1 destination, Func`2 func)
+   at System.Linq.Enumerable.ListSelectIterator`2.ToList()
+   at MyThings.Infrastructure.Services.WorkingHoursService.AddWorkingHoursAsync(WorkingHoursDto dto) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/WorkingHoursService.cs:line 27
+   at WorkingHoursController.Controllers.WorkingHoursController.AddWorkingHours(WorkingHoursDto dto) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/WorkingHoursController.cs:line 27
+2026-05-24 13:11:04.830 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:11:04.8175320"
+2026-05-24 13:11:26.332 +03:00 [INF] Application is shutting down...
+2026-05-24 13:11:35.153 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 13:11:35.176 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 13:11:35.177 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 13:11:35.177 +03:00 [INF] Hosting environment: Development
+2026-05-24 13:11:35.177 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 13:11:39.022 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 13:11:39.451 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 13:13:33.324 +03:00 [INF] Application is shutting down...
+2026-05-24 13:13:39.887 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 13:13:39.924 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 13:13:39.924 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 13:13:39.925 +03:00 [INF] Hosting environment: Development
+2026-05-24 13:13:39.925 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 13:13:49.850 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 13:13:50.283 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 13:16:39.911 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:16:39.9097360"
+2026-05-24 13:19:39.987 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:19:39.9840900"
+2026-05-24 13:22:39.904 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:22:39.9041070"
+2026-05-24 13:22:44.251 +03:00 [INF] Application is shutting down...
+2026-05-24 13:22:53.307 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 13:22:53.332 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 13:22:53.332 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 13:22:53.333 +03:00 [INF] Hosting environment: Development
+2026-05-24 13:22:53.333 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 13:25:53.699 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:25:53.6971720"
+2026-05-24 13:25:54.118 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 13:28:53.358 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:28:53.3568480"
+2026-05-24 13:31:53.327 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:31:53.3268450"
+2026-05-24 13:31:53.430 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: false
+2026-05-24 13:34:53.317 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:34:53.3176990"
+2026-05-24 13:34:53.348 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: true
+2026-05-24 13:35:59.451 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 13:37:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:37:53.3112390"
+2026-05-24 13:37:53.339 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: true
+2026-05-24 13:40:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:40:53.3126230"
+2026-05-24 13:43:53.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:43:53.3142790"
+2026-05-24 13:46:53.326 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:46:53.3261540"
+2026-05-24 13:49:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:49:53.3133570"
+2026-05-24 13:52:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:52:53.3124960"
+2026-05-24 13:55:53.314 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:55:53.3141610"
+2026-05-24 13:58:53.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:58:53.3146390"
+2026-05-24 14:01:53.318 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:01:53.3186310"
+2026-05-24 14:04:53.314 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:04:53.3146670"
+2026-05-24 14:07:53.311 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:07:53.3103300"
+2026-05-24 14:10:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:10:53.3126010"
+2026-05-24 14:13:53.314 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:13:53.3133500"
+2026-05-24 14:16:53.310 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:16:53.3098040"
+2026-05-24 14:19:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:19:53.3127510"
+2026-05-24 14:22:53.311 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:22:53.3110940"
+2026-05-24 14:25:53.310 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:25:53.3102610"
+2026-05-24 14:28:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:28:53.3103330"
+2026-05-24 14:31:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:31:53.3124130"
+2026-05-24 14:34:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:34:53.3119450"
+2026-05-24 14:37:53.321 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:37:53.3212740"
+2026-05-24 14:40:53.320 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:40:53.3205230"
+2026-05-24 14:43:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:43:53.3105710"
+2026-05-24 14:46:53.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:46:53.3150420"
+2026-05-24 14:49:53.310 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:49:53.3100290"
+2026-05-24 14:52:53.320 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:52:53.3200400"
+2026-05-24 14:55:53.321 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:55:53.3211240"
+2026-05-24 14:58:53.322 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="11:58:53.3221350"
+2026-05-24 15:01:53.348 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:01:53.3405550"
+2026-05-24 15:04:53.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:04:53.3148460"
+2026-05-24 15:07:53.311 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:07:53.3113570"
+2026-05-24 15:10:53.320 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:10:53.3201390"
+2026-05-24 15:13:53.331 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:13:53.3301870"
+2026-05-24 15:16:53.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:16:53.3121520"
+2026-05-24 15:19:53.316 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:19:53.3159000"
+2026-05-24 15:22:53.311 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:22:53.3106260"
+2026-05-24 15:25:53.336 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:25:53.3343680"
+2026-05-24 15:28:53.328 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:28:53.3271510"
+2026-05-24 15:31:53.327 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:31:53.3264210"
+2026-05-24 15:34:53.319 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:34:53.3164940"
+2026-05-24 15:37:53.313 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:37:53.3129940"
+2026-05-24 15:40:53.324 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:40:53.3147830"
+2026-05-24 15:43:53.310 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:43:53.3099460"
+2026-05-24 15:46:53.318 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:46:53.3186460"
+2026-05-24 15:49:53.320 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:49:53.3204680"
+2026-05-24 15:54:04.096 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:54:04.0933650"
+2026-05-24 15:57:04.087 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="12:57:04.0868940"
+2026-05-24 16:00:04.088 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:00:04.0878780"
+2026-05-24 16:03:04.086 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:03:04.0864300"
+2026-05-24 16:06:04.084 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:06:04.0842060"
+2026-05-24 16:09:04.098 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:09:04.0982380"
+2026-05-24 16:12:04.088 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:12:04.0873770"
+2026-05-24 16:15:04.085 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:15:04.0848840"
+2026-05-24 16:18:04.083 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:18:04.0833310"
+2026-05-24 16:21:04.095 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:21:04.0954750"
+2026-05-24 16:24:04.093 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:24:04.0929630"
+2026-05-24 16:27:04.087 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:27:04.0877610"
+2026-05-24 16:30:04.083 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:30:04.0832090"
+2026-05-24 16:33:04.083 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:33:04.0829880"
+2026-05-24 16:33:35.164 +03:00 [INF] Application is shutting down...
+2026-05-24 16:47:16.094 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-05-24 16:47:16.143 +03:00 [INF] Now listening on: http://localhost:5000
+2026-05-24 16:47:16.144 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-24 16:47:16.144 +03:00 [INF] Hosting environment: Development
+2026-05-24 16:47:16.144 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-05-24 16:47:58.823 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-05-24 16:49:56.821 +03:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'OrderLineOption'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-24 16:49:57.960 +03:00 [INF] Login successful.
+2026-05-24 16:50:16.102 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:50:16.1015880"
+2026-05-24 16:53:16.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:53:16.1108480"
+2026-05-24 16:56:16.105 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:56:16.1038250"
+2026-05-24 16:59:16.102 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="13:59:16.1025950"
+2026-05-24 17:02:16.097 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:02:16.0967150"
+2026-05-24 17:05:16.100 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:05:16.1001390"
+2026-05-24 17:08:16.100 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:08:16.1002470"
+2026-05-24 17:11:16.114 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:11:16.1126620"
+2026-05-24 17:14:16.107 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:14:16.1051560"
+2026-05-24 17:17:16.096 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:17:16.0961460"
+2026-05-24 17:20:16.130 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:20:16.1266250"
+2026-05-24 17:23:16.106 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:23:16.1056970"
+2026-05-24 17:26:16.126 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:26:16.1212610"
+2026-05-24 17:29:16.115 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:29:16.1149400"
+2026-05-24 17:32:16.100 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:32:16.0995000"
+2026-05-24 17:35:16.101 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:35:16.0994360"
+2026-05-24 17:38:16.102 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:38:16.1013390"
+2026-05-24 17:41:16.098 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:41:16.0977690"
+2026-05-24 17:44:16.101 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:44:16.1011900"
+2026-05-24 17:58:06.806 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="14:58:06.8007520"
+2026-05-24 18:01:06.798 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="15:01:06.7934080"
+2026-05-24 18:04:06.795 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="15:04:06.7940810"
+2026-05-24 18:07:06.797 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="15:07:06.7958370"
+2026-05-24 18:43:43.728 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="15:43:43.7203880"
+2026-05-24 23:50:45.138 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="20:50:45.1369790"

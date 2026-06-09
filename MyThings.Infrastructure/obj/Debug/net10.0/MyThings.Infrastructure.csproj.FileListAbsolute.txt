@@ -1,0 +1,17 @@
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Infrastructure.deps.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Infrastructure.runtimeconfig.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Infrastructure.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Infrastructure.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Core.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/bin/Debug/net10.0/MyThings.Core.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.csproj.AssemblyReference.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.AssemblyInfoInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.AssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.7A8F3EB9.Up2Date
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/refint/MyThings.Infrastructure.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/MyThings.Infrastructure.genruntimeconfig.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/ref/MyThings.Infrastructure.dll

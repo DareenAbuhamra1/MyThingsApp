@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+
+    {
+      "name": "(lldb) Launch",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "enter program name, for example ${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb"
+    },
+    {
+      "name": "Debug TestUI",
+      "type": "coreclr",
+      "requireExactSource": false,
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}/MyThings.TestUI",
+      "program": "${workspaceFolder}/MyThings.TestUI/bin/Debug/net10.0/MyThings.TestUI.dll"
+    },
+    {
+      "name": "Debug API Customer",
+      "type": "coreclr",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}/MyThings.API.Customer",
+      "program": "${workspaceFolder}/MyThings.API.Customer/bin/Debug/net10.0/MyThings.API.Customer.dll"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/dareenabuhamra/MyThingsApp",
+      "program": "/Users/dareenabuhamra/MyThingsApp/build/Debug/outDebug"
+    },
+    {
+      "name": "Debug AdminUI",
+      "type": "coreclr",
+      "requireExactSource": false,
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}/AdminUI",
+      "program": "${workspaceFolder}/AdminUI/bin/Debug/net10.0/AdminUI.dll"
+    },
+    {
+      "name": "Debug API Admin",
+      "type": "coreclr",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}/MyThings.API.Admin",
+      "program": "${workspaceFolder}/MyThings.API.Admin/bin/Debug/net10.0/MyThings.API.Admin.dll"
+    }
+  ]
+}

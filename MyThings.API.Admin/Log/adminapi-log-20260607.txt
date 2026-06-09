@@ -1,0 +1,67 @@
+2026-06-07 12:23:23.076 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 12:23:23.115 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 12:23:23.116 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 12:23:23.116 +03:00 [INF] Hosting environment: Development
+2026-06-07 12:23:23.116 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 12:23:38.383 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-07 12:26:23.117 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:26:23.1112190"
+2026-06-07 12:29:23.077 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:29:23.0775140"
+2026-06-07 12:32:23.087 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:32:23.0866360"
+2026-06-07 12:35:23.810 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:35:23.8097370"
+2026-06-07 12:53:19.713 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:53:19.7128780"
+2026-06-07 12:56:19.715 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:56:19.7150010"
+2026-06-07 12:59:19.716 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:59:19.7164200"
+2026-06-07 13:02:19.715 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:02:19.7149490"
+2026-06-07 13:03:25.583 +03:00 [INF] Login successful.
+2026-06-07 13:03:25.609 +03:00 [INF] Login successful.
+2026-06-07 13:04:50.780 +03:00 [INF] Login successful.
+2026-06-07 13:05:19.716 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:05:19.7166730"
+2026-06-07 13:08:19.716 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:08:19.7159810"
+2026-06-07 13:11:19.714 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:11:19.7146800"
+2026-06-07 13:12:16.492 +03:00 [INF] Login successful.
+2026-06-07 13:14:19.768 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:14:19.7627270"
+2026-06-07 13:14:28.140 +03:00 [INF] Application is shutting down...
+2026-06-07 13:14:37.827 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 13:14:37.857 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 13:14:37.858 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 13:14:37.858 +03:00 [INF] Hosting environment: Development
+2026-06-07 13:14:37.858 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 13:14:47.471 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-07 13:14:48.746 +03:00 [INF] Login successful.
+2026-06-07 13:14:48.807 +03:00 [INF] Login successful.
+2026-06-07 13:16:11.429 +03:00 [INF] Login successful.
+2026-06-07 13:17:37.839 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:17:37.8385560"
+2026-06-07 13:18:41.139 +03:00 [INF] Application is shutting down...
+2026-06-07 13:18:52.746 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 13:18:53.040 +03:00 [INF] Now listening on: https://localhost:7000
+2026-06-07 13:18:53.041 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 13:18:53.041 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 13:18:53.041 +03:00 [INF] Hosting environment: Development
+2026-06-07 13:18:53.041 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 13:21:58.486 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 13:21:58.803 +03:00 [INF] Now listening on: https://localhost:7000
+2026-06-07 13:21:58.804 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 13:21:58.804 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 13:21:58.804 +03:00 [INF] Hosting environment: Development
+2026-06-07 13:21:58.804 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 13:22:22.216 +03:00 [INF] Login successful.
+2026-06-07 13:22:22.267 +03:00 [INF] Login successful.
+2026-06-07 13:24:58.511 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:24:58.5096390"
+2026-06-07 13:27:58.553 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:27:58.5524400"
+2026-06-07 13:30:58.491 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:30:58.4913750"
+2026-06-07 13:33:58.504 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:33:58.5020350"
+2026-06-07 13:35:43.438 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 13:35:43.736 +03:00 [INF] Now listening on: https://localhost:7000
+2026-06-07 13:35:43.737 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 13:35:43.737 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 13:35:43.737 +03:00 [INF] Hosting environment: Development
+2026-06-07 13:35:43.737 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 13:38:43.453 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:38:43.4527650"
+2026-06-07 13:42:05.137 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-07 13:42:05.467 +03:00 [INF] Now listening on: https://localhost:7000
+2026-06-07 13:42:05.468 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-07 13:42:05.468 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 13:42:05.468 +03:00 [INF] Hosting environment: Development
+2026-06-07 13:42:05.468 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-07 13:42:13.922 +03:00 [INF] Login successful.
+2026-06-07 13:45:06.060 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="10:45:06.0595920"

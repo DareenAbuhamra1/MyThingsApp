@@ -1,0 +1,6 @@
+@MyThings.API.Driver_HostAddress = http://localhost:5129
+
+GET {{MyThings.API.Driver_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

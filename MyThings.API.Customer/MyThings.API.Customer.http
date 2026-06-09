@@ -1,0 +1,6 @@
+@MyThings.API.Customer_HostAddress = http://localhost:5270
+
+GET {{MyThings.API.Customer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

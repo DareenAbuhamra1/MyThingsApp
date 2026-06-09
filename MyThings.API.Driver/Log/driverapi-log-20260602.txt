@@ -1,0 +1,5 @@
+2026-06-02 09:59:49.273 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-02 09:59:49.326 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 09:59:49.331 +03:00 [INF] Hosting environment: Development
+2026-06-02 09:59:49.332 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-02 11:49:57.947 +03:00 [INF] Application is shutting down...

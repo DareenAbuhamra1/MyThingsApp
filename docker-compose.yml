@@ -1,0 +1,36 @@
+services:
+  sql-primary:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: MyThings_Primary
+    hostname: sql-primary
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=MyThingsApp@2026NotReallySecurePass
+      - MSSQL_AGENT_ENABLED=true
+      - MSSQL_HADR_ENABLED=Y
+    ports:
+      - "1433:1433"
+      - "5022:5022" # Mirroring Port
+    volumes:
+      - sql_primary_data:/var/opt/mssql
+      - ./ag-certs:/var/opt/mssql/certs # Shared cert folder
+
+  sql-secondary:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: MyThings_Secondary
+    hostname: sql-secondary
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=MyThingsApp@2026NotReallySecurePass
+      - MSSQL_AGENT_ENABLED=true
+      - MSSQL_HADR_ENABLED=Y
+    ports:
+      - "1434:1433"
+      - "5023:5022" # Mirroring Port
+    volumes:
+      - sql_secondary_data:/var/opt/mssql
+      - ./ag-certs:/var/opt/mssql/certs # Shared cert folder
+
+volumes:
+  sql_primary_data:
+  sql_secondary_data:
