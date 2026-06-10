@@ -1,0 +1,7 @@
+2026-06-10 15:44:51.616 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-10 15:44:51.625 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-10 15:44:51.626 +03:00 [INF] Hosting environment: Development
+2026-06-10 15:44:51.626 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-10 15:47:41.656 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-10 15:47:41.853 +03:00 [INF] OTP requested successfully for phone 0796406942.
+2026-06-10 15:48:44.815 +03:00 [INF] OTP requested successfully for phone 0796406942.

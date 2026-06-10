@@ -7,6 +7,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.AssemblyInfoInputs.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.AssemblyInfo.cs
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/refint/MyThings.Core.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.Core/obj/Debug/net10.0/MyThings.Core.pdb

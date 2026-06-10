@@ -8,6 +8,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.Auth.AssemblyInfoInputs.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.Auth.AssemblyInfo.cs
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.Auth.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.Auth.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.4A469014.Up2Date
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/MyThings.Auth.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.Auth/obj/Debug/net10.0/refint/MyThings.Auth.dll

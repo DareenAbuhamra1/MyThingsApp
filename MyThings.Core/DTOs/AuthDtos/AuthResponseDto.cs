@@ -7,7 +7,7 @@ public class AuthResponseDto
     public bool? IsActive {get;set;} //don't allow if false
     public bool? IsRegistered {get;set;} // don't allow if false
     public bool IsSuccess {get;set;} 
-    public bool RequiresOtp { get; set; }
+    //public bool RequiresOtp { get; set; }
 
 
     public string Token { get; set; } = string.Empty;

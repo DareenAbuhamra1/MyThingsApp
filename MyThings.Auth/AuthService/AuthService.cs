@@ -238,7 +238,7 @@ public class AuthService : IAuthService
 
         return Task.FromResult(otp);
     }
-    public  async Task<AuthResultDto> VerifyOtpAsync(VerifyOtpRequestDto verifyOtpRequest)
+    public async Task<AuthResultDto> VerifyOtpAsync(VerifyOtpRequestDto verifyOtpRequest)
     {
         if(!_cache.TryGetValue(verifyOtpRequest.Phone, out int cachedOtp))
         {
@@ -325,6 +325,7 @@ public class AuthService : IAuthService
             return new AuthResponseDto
             {
                 IsSuccess = false,
+                IsRegistered = false,
                 Message = "User not found."
             };
         }

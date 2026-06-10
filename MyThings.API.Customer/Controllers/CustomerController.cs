@@ -89,8 +89,6 @@ namespace Controllers.CustomerController
                 if (!authResult.IsSuccess)
                 {
                     _logger.LogWarning("Verification failed for {Phone}: {Message}", verifyOtp.Phone, authResult.Message);
-
-
                     return Unauthorized(new { Message = authResult.Message });
                 }
                 if (authResult.IsRegistered)
@@ -98,10 +96,10 @@ namespace Controllers.CustomerController
                     if (authResult.Role != RoleEnum.Customer)
                     {
                         _logger.LogWarning("Access denied for {Phone}: Not a customer account.", verifyOtp.Phone);
-                        return Unauthorized(new { Message = "Access denied. This portal is restricted to customers." });
+                        return StatusCode(403, new { message = "Access denied. Not a customer account." });
                     }
 
-                    _logger.LogInformation("Customer {Phone} logged in successfully.", verifyOtp.Phone);
+                    _logger.LogInformation("Customer {Phone} verified correctly.", verifyOtp.Phone);
                     return Ok(authResult);
                 }
                 else
@@ -128,16 +126,15 @@ namespace Controllers.CustomerController
             try
             {
                 var loginResult = await _authService.LoginAsync(loginDto);
-                if(loginResult.IsSuccess == false)
+                if(loginResult.IsSuccess == false && loginResult.IsRegistered == false)
                 {
                     _logger.LogWarning("Login failed for {Phone}: {Message}", loginDto.Phone, loginResult.Message);
-                    return Unauthorized(new { Message = loginResult.Message });
+                    return StatusCode(404, new {message = "new user register please"});
                 }
-
                 if (loginResult.Role != RoleEnum.Customer)
                 {
                     _logger.LogWarning("Access denied for {Phone}: Not a customer account.", loginDto.Phone);
-                    return Unauthorized(new { Message = "Access denied. This portal is restricted to customers." });
+                    return StatusCode(403, new { message = "Access denied. Not a customer account." });
                 }
 
                 _logger.LogInformation("Customer {Phone} logged in successfully.", loginDto.Phone);
