@@ -1,0 +1,64 @@
+2026-06-11 10:58:34.825 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-11 10:58:34.838 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-11 10:58:34.838 +03:00 [INF] Hosting environment: Development
+2026-06-11 10:58:34.838 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-11 11:42:23.812 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-11 11:42:24.071 +03:00 [INF] OTP successfully sent to 0796400000.
+2026-06-11 11:42:31.332 +03:00 [INF] New user 0796400000 verified; moving to registration.
+2026-06-11 11:42:31.386 +03:00 [WRN] Login failed for 0796400000: User not found.
+2026-06-11 11:43:55.950 +03:00 [INF] OTP successfully sent to 0798397323.
+2026-06-11 11:44:00.142 +03:00 [INF] New user 0798397323 verified; moving to registration.
+2026-06-11 11:44:00.157 +03:00 [WRN] Login failed for 0798397323: User not found.
+2026-06-11 12:16:03.153 +03:00 [INF] OTP successfully sent to 0796400000.
+2026-06-11 12:16:09.463 +03:00 [INF] New user 0796400000 verified; moving to registration.
+2026-06-11 12:16:09.489 +03:00 [WRN] Login failed for 0796400000: User not found.
+2026-06-11 12:18:33.109 +03:00 [INF] Customer 0796400000 registered successfully.
+2026-06-11 13:05:59.587 +03:00 [INF] OTP successfully sent to 0796406000.
+2026-06-11 13:06:05.568 +03:00 [INF] New user 0796406000 verified; moving to registration.
+2026-06-11 13:06:05.613 +03:00 [WRN] Login failed for 0796406000: User not found.
+2026-06-11 13:06:20.160 +03:00 [INF] Customer 0796406000 registered successfully.
+2026-06-11 13:10:56.807 +03:00 [INF] OTP successfully sent to 0796406000.
+2026-06-11 13:11:03.079 +03:00 [INF] New user 0796406000 verified; moving to registration.
+2026-06-11 13:11:03.107 +03:00 [WRN] Login failed for 0796406000: User not found.
+2026-06-11 13:11:17.275 +03:00 [INF] Customer 0796406000 registered successfully.
+2026-06-11 13:48:41.092 +03:00 [INF] OTP successfully sent to 0796000112.
+2026-06-11 13:48:46.820 +03:00 [INF] New user 0796000112 verified; moving to registration.
+2026-06-11 13:48:46.923 +03:00 [WRN] Login failed for 0796000112: User not found.
+2026-06-11 13:48:57.107 +03:00 [INF] Customer 0796000112 registered successfully.
+2026-06-11 13:52:42.808 +03:00 [INF] OTP successfully sent to 0796406209.
+2026-06-11 13:52:47.587 +03:00 [INF] New user 0796406209 verified; moving to registration.
+2026-06-11 13:52:47.616 +03:00 [WRN] Login failed for 0796406209: User not found.
+2026-06-11 13:53:01.769 +03:00 [INF] Customer 0796406209 registered successfully.
+2026-06-11 14:40:09.921 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 14:40:16.718 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 14:40:16.867 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 14:43:05.961 +03:00 [INF] OTP successfully sent to 0798297232.
+2026-06-11 14:43:10.113 +03:00 [INF] New user 0798297232 verified; moving to registration.
+2026-06-11 14:43:10.127 +03:00 [WRN] Login failed for 0798297232: User not found.
+2026-06-11 14:43:20.588 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 14:43:27.341 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 14:43:27.375 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 14:47:06.976 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 14:47:12.427 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 14:47:12.461 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 14:48:07.149 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 14:48:37.173 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 14:48:37.235 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 14:57:43.111 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 14:57:49.569 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 14:57:49.615 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 15:22:30.102 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 15:22:33.634 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 15:22:33.667 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 15:51:36.066 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 15:51:40.346 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 15:51:40.397 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-11 16:03:00.821 +03:00 [INF] OTP successfully sent to 0796400000.
+2026-06-11 16:03:06.108 +03:00 [INF] Customer 0796400000 verified correctly.
+2026-06-11 16:03:06.154 +03:00 [INF] Customer 0796400000 logged in successfully.
+2026-06-11 17:28:25.961 +03:00 [INF] OTP successfully sent to 0796406000.
+2026-06-11 17:28:31.986 +03:00 [INF] Customer 0796406000 verified correctly.
+2026-06-11 17:28:32.035 +03:00 [INF] Customer 0796406000 logged in successfully.
+2026-06-11 17:36:47.591 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-11 17:36:53.336 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-11 17:36:53.377 +03:00 [INF] Customer 0796406942 logged in successfully.

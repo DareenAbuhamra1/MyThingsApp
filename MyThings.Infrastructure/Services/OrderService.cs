@@ -37,37 +37,37 @@ public class OrderService : IOrderService
             result.Add(new OrderInfoDto
             {
                 OrderId = o.Id,
-            Status = o.Status, // Cast from entity status to DTO enum
-            PartnerName = o.Partner?.Name ?? "Unknown Partner",
-            Area = o.Partner?.Location.Area ?? "N/A",
-            PlacedDate = DateOnly.FromDateTime(o.CreatedAt),
-            PlacedTime = TimeOnly.FromDateTime(o.CreatedAt),
-            SubTotal = o.SubTotal,
-            ServiceFee = o.ServiceFee,
-            DeliveryFees = o.DeliveryFees,
-            SavingAmount = o.SavingAmount??0m,
-            TotalPrice = o.TotalPayment,
-            DeliveryLocation = $"{o.DeliveryLocation?.Street}, {o.DeliveryLocation?.Area}, {o.DeliveryLocation?.City.ToString()}"?? "No address provided",
-            PaymentMethod = o.PaymentType?.ToString() ?? "Undefined",
-            DriverName = $"{o.Driver?.FirstName} {o.Driver?.LastName}".Trim() == "" ? "Waiting for assignment" : $"{o.Driver?.FirstName} {o.Driver?.LastName}",
-            
-            // Mapping the nested OrderItems list
-            OrderItems = o.OrderLines?.Select(ol => new OrderItem
-            {
-                OrderItemId = ol.ProductId,
-                OrderItemName = ol.ProductName,
-                OrderItemPrice = ol.Price,
-                Quantity = ol.Quantity,
-                
-                // Mapping the nested Options list
-                OrderItemOptions = ol.OrderLineOptions?.Select(olo => new OrderItemOption
+                Status = o.Status, // Cast from entity status to DTO enum
+                PartnerName = o.Partner?.Name ?? "Unknown Partner",
+                Area = o.Partner?.Location.Area ?? "N/A",
+                PlacedDate = DateOnly.FromDateTime(o.CreatedAt),
+                PlacedTime = TimeOnly.FromDateTime(o.CreatedAt),
+                SubTotal = o.SubTotal,
+                ServiceFee = o.ServiceFee,
+                DeliveryFees = o.DeliveryFees,
+                SavingAmount = o.SavingAmount ?? 0m,
+                TotalPrice = o.TotalPayment,
+                DeliveryLocation = $"{o.DeliveryLocation?.Street}, {o.DeliveryLocation?.Area}, {o.DeliveryLocation?.City.ToString()}" ?? "No address provided",
+                PaymentMethod = o.PaymentType?.ToString() ?? "Undefined",
+                DriverName = $"{o.Driver?.FirstName} {o.Driver?.LastName}".Trim() == "" ? "Waiting for assignment" : $"{o.Driver?.FirstName} {o.Driver?.LastName}",
+
+                // Mapping the nested OrderItems list
+                OrderItems = o.OrderLines?.Select(ol => new OrderItem
                 {
-                    OrderItemOptionId = olo.ProductOptionId,
-                    OrderItemOptionName = olo.Option,
-                    OrderItemOptionQuantity = olo.Quantity,
-                    OrderItemOptionPrice = olo.Price
-                }).ToList() ?? new List<OrderItemOption>()
-            }).ToList() ?? new List<OrderItem>()
+                    OrderItemId = ol.ProductId,
+                    OrderItemName = ol.ProductName,
+                    OrderItemPrice = ol.Price,
+                    Quantity = ol.Quantity,
+
+                    // Mapping the nested Options list
+                    OrderItemOptions = ol.OrderLineOptions?.Select(olo => new OrderItemOption
+                    {
+                        OrderItemOptionId = olo.ProductOptionId,
+                        OrderItemOptionName = olo.Option,
+                        OrderItemOptionQuantity = olo.Quantity,
+                        OrderItemOptionPrice = olo.Price
+                    }).ToList() ?? new List<OrderItemOption>()
+                }).ToList() ?? new List<OrderItem>()
             });
         }
 
@@ -75,109 +75,136 @@ public class OrderService : IOrderService
     }
     public async Task<ServiceResponse<OrderCartResponseDto>> AddOrderCartAsync(OrderCartDto orderCart)
     {
-        var Partner = await _readUnitOfWork.Partners.GetByIdAsync(orderCart.PartnerId);
-        if (Partner == null)
+        var partner = await _readUnitOfWork.Partners.GetByIdAsync(orderCart.PartnerId);
+        if (partner == null)
             return ServiceResponse<OrderCartResponseDto>.Failure("The partner is not found", 404);
 
-        var DeliveryLocation = await _readUnitOfWork.Locations.GetByIdAsync(orderCart.DeliveryLocationId);
-        if (DeliveryLocation == null)
+        var deliveryLocation = await _readUnitOfWork.Locations.GetByIdAsync(orderCart.DeliveryLocationId);
+        if (deliveryLocation == null)
             return ServiceResponse<OrderCartResponseDto>.Failure("The Location is not found", 404);
 
 
-        var Product = await _readUnitOfWork.Products.GetByIdAsync(orderCart.OrderLine.ProductId);
-        if (Product == null)
+        var product = await _readUnitOfWork.Products.GetByIdAsync(orderCart.OrderLine.ProductId);
+        if (product == null)
             return ServiceResponse<OrderCartResponseDto>.Failure("The selected product is not found", 404);
 
-        var PartnerLocation = await _readUnitOfWork.Locations.GetByIdAsync(Partner.LocationId);
-        if (PartnerLocation == null)
+        var partnerLocation = await _readUnitOfWork.Locations.GetByIdAsync(partner.LocationId);
+        if (partnerLocation == null)
             return ServiceResponse<OrderCartResponseDto>.Failure("The store location is not found", 404);
 
-        int DeliveryRuleId = Partner.DeliveryRuleId;
+        int deliveryRuleId = partner.DeliveryRuleId;
 
-        var newCart = new Order
+        var pendingOrder = await _orderReadRepository.GetCustomerPendingOrderAsync(orderCart.CustomerId);
+        if (pendingOrder == null)
         {
-            CustomerId = orderCart.CustomerId,
-            DeliveryLocationId = orderCart.DeliveryLocationId,
-            DomainId = orderCart.DomainId,
-            PartnerId = orderCart.PartnerId,
-            Status = OrderStatusEnum.Pending,
-            SavingAmount = 0.00m,
-            DeliveryRuleId = DeliveryRuleId,
-            PaymentType = OrderPaymentTypeEnum.Cash,
-            CreatedAt = DateTime.UtcNow,
-            OrderLines = new List<OrderLine>()
-        };
-
-        var line = new OrderLine
-        {
-            ProductId = Product.Id,
-            ProductName = Product.Name,
-            Price = Product.Price,
-            Quantity = orderCart.OrderLine.Quantity,
-            Note = orderCart.OrderLine.Note ?? "",
-            OrderLineOptions = new List<OrderLineOption>()
-        };
-
-        decimal SubTotal = Product.Price * orderCart.OrderLine.Quantity;
-
-        if (orderCart.OrderLine.OrderLineOptions is not null)
-        {
-            foreach (var olp in orderCart.OrderLine.OrderLineOptions)
+            var newCart = new Order
             {
-                //might introduce a getMultipleByIds instead of going to the db multiple times
-                var ProductOption = await _readUnitOfWork.ProductOptions.GetByIdAsync(olp.ProductOptionId)
-                    ?? throw new Exception("Product Option not found");
+                CustomerId = orderCart.CustomerId,
+                DeliveryLocationId = orderCart.DeliveryLocationId,
+                DomainId = orderCart.DomainId,
+                PartnerId = orderCart.PartnerId,
+                Status = OrderStatusEnum.Pending,
+                SavingAmount = 0.00m,
+                DeliveryRuleId = deliveryRuleId,
+                PaymentType = OrderPaymentTypeEnum.Cash,
+                CreatedAt = DateTime.UtcNow,
+                OrderLines = new List<OrderLine>()
+            };
 
-                var lineOption = new OrderLineOption
+            var line = new OrderLine
+            {
+                ProductId = product.Id,
+                ProductName = product.Name,
+                Price = product.Price,
+                Quantity = orderCart.OrderLine.Quantity,
+                Note = orderCart.OrderLine.Note ?? "",
+                OrderLineOptions = new List<OrderLineOption>()
+            };
+
+            decimal SubTotal = product.Price * orderCart.OrderLine.Quantity;
+
+            if (orderCart.OrderLine.OrderLineOptions is not null)
+            {
+                foreach (var olp in orderCart.OrderLine.OrderLineOptions)
                 {
-                    ProductOptionId = olp.ProductOptionId,
-                    Option = ProductOption.Option,
-                    Price = ProductOption.Price,
-                    Quantity = olp.Quantity,
-                };
-                line.OrderLineOptions.Add(lineOption); // link orderLineOptions to OrderLine
-                SubTotal += ProductOption.Price * olp.Quantity;
+                    //might introduce a getMultipleByIds instead of going to the db multiple times
+                    var ProductOption = await _readUnitOfWork.ProductOptions.GetByIdAsync(olp.ProductOptionId)
+                        ?? throw new Exception("Product Option not found");
+
+                    var lineOption = new OrderLineOption
+                    {
+                        ProductOptionId = olp.ProductOptionId,
+                        Option = ProductOption.Option,
+                        Price = ProductOption.Price,
+                        Quantity = olp.Quantity,
+                    };
+                    line.OrderLineOptions.Add(lineOption); // link orderLineOptions to OrderLine
+                    SubTotal += ProductOption.Price * olp.Quantity;
+                }
             }
+
+            newCart.OrderLines.Add(line);//link orderline to order
+
+            newCart.SubTotal = SubTotal;
+            newCart.ServiceFee = Math.Round(SubTotal * 0.1m, 3);
+
+            var DeliveryFees = await _deliveryFeeService.CalculateDeliveryFee(newCart.PartnerId, newCart.DeliveryLocationId, deliveryRuleId, SubTotal);
+
+            newCart.DeliveryFees = DeliveryFees;
+            newCart.TotalPayment = newCart.SubTotal + newCart.ServiceFee + DeliveryFees;
+
+            await _unitOfWork.Orders.AddAsync(newCart);
+            await _unitOfWork.CompleteAsync();
+
+            return ServiceResponse<OrderCartResponseDto>.Ok(new OrderCartResponseDto
+            {
+                OrderId = newCart.Id,
+                DeliveryLocation = $"{deliveryLocation.Street} {deliveryLocation.Area}",
+                Status = newCart.Status,
+                CustomerId = newCart.CustomerId,
+                PartnerId = newCart.PartnerId,
+                PartnerName = partner.Name,
+                SubTotal = newCart.SubTotal,
+                DeliveryFees = newCart.DeliveryFees,
+                TotalPrice = newCart.TotalPayment,
+                OrderLine = new OrderLineCartResponse
+                {
+                    ProductId = line.ProductId,
+                    ProductName = line.ProductName,
+                    Quantity = line.Quantity,
+                    OrderLineOptions = line.OrderLineOptions?.Select(opt => new OrderLineOptionsCartResponse
+                    {
+                        ProductOptionId = opt.ProductOptionId,
+                        ProductOption = opt.Option, 
+                        Quantity = opt.Quantity
+                    }).ToList()
+                }
+            });
         }
-
-        newCart.OrderLines.Add(line);//link orderline to order
-
-        newCart.SubTotal = SubTotal;
-        newCart.ServiceFee = Math.Round(SubTotal * 0.1m, 3);
-
-        var DeliveryFees = await _deliveryFeeService.CalculateDeliveryFee(newCart.PartnerId, newCart.DeliveryLocationId, DeliveryRuleId, SubTotal);
-
-        newCart.DeliveryFees = DeliveryFees;
-        newCart.TotalPayment = newCart.SubTotal + newCart.ServiceFee + DeliveryFees;
-
-        await _unitOfWork.Orders.AddAsync(newCart);
-        await _unitOfWork.CompleteAsync();
-
-        return ServiceResponse<OrderCartResponseDto>.Ok(new OrderCartResponseDto
+        else
         {
-            OrderId = newCart.Id,
-            DeliveryLocation = $"{DeliveryLocation.Street} {DeliveryLocation.Area}",
-            Status = newCart.Status,
-            CustomerId = newCart.CustomerId,
-            PartnerId = newCart.PartnerId,
-            PartnerName = Partner.Name,
-            SubTotal = newCart.SubTotal,
-            DeliveryFees = newCart.DeliveryFees,
-            TotalPrice = newCart.TotalPayment,
-            OrderLine = new OrderLineCartResponse
+            if(product.PartnerId != orderCart.PartnerId)
             {
-                ProductId = line.ProductId,
-                ProductName = line.ProductName,
-                Quantity = line.Quantity,
-                OrderLineOptions = line.OrderLineOptions?.Select(opt => new OrderLineOptionsCartResponse
-                {
-                    ProductOptionId = opt.ProductOptionId,
-                    ProductOption = opt.Option, // Assuming opt.Option is the string name
-                    Quantity = opt.Quantity
-                }).ToList()
+                return ServiceResponse<OrderCartResponseDto>.Failure("Bad request",400);
             }
-        });
+            var line = new OrderLineCartDto
+            {
+                OrderId = pendingOrder.Id,
+                ProductId = orderCart.OrderLine.ProductId,
+                Quantity = orderCart.OrderLine.Quantity,
+                OrderLineOptions = orderCart.OrderLine.OrderLineOptions?.Select(
+                    opt => new OrderLineOptionsCartDto
+                    {
+                        ProductOptionId = opt.ProductOptionId,
+                        Quantity = opt.Quantity
+                    }).ToList()
+            };
+            var response = await AddOrderLineAsync(line);
+
+            return response;
+        }
     }
+
     public async Task<ServiceResponse<OrderCartResponseDto>> AddOrderLineAsync(OrderLineCartDto orderLine)
     {
         var order = await _orderReadRepository.GetOrderByOrderIdAsync(orderLine.OrderId);
@@ -229,7 +256,6 @@ public class OrderService : IOrderService
         var responseDto = new OrderCartResponseDto
         {
             OrderId = order.Id,
-            // Assuming your Order entity has a navigation property to Partner
             PartnerName = order.Partner?.Name ?? "Unknown",
             DeliveryLocation = $"{order.DeliveryLocation?.Street ?? ""} {order.DeliveryLocation?.Area ?? ""}",
             Status = order.Status,
@@ -650,6 +676,44 @@ public class OrderService : IOrderService
         await _unitOfWork.CompleteAsync();
 
         return ServiceResponse<bool>.Ok(true);
+    }
+
+    public async Task<ServiceResponse<OrderCartViewDto>> GetCartAsync(int customerId)
+    {
+        var order = await _orderReadRepository.GetCustomerCartAsync(customerId);
+
+        if(order == null) return ServiceResponse<OrderCartViewDto>.Failure("The order is not found", 404);
+
+        
+        var response = new OrderCartViewDto{
+            OrderId = order.Id,
+            PartnerName = order.Partner?.Name ?? "Unknown",
+            DeliveryLocation =
+                $"{order.DeliveryLocation?.Street ?? ""} {order.DeliveryLocation?.Area ?? ""}",
+            Status = order.Status,
+            CustomerId = order.CustomerId,
+            PartnerId = order.PartnerId,
+            SubTotal = order.SubTotal,
+            DeliveryFees = order.DeliveryFees,
+            TotalPrice = order.TotalPayment,
+            OrderLines = order.OrderLines.Select(
+                    ol => new OrderLineView
+                    {
+                        ProductId = ol.ProductId,
+                        ProductName = ol.ProductName,
+                        Quantity = ol.Quantity,
+                        OrderLineOptions = ol.OrderLineOptions?.Select(
+                            olp => new OrderLineOptionsView
+                            {
+                                ProductOptionId = olp.ProductOptionId,
+                                ProductOption = olp.Option,
+                                Quantity = olp.Quantity,
+                            }).ToList()?? new List<OrderLineOptionsView>()
+                    }
+                ).ToList()
+            };
+
+        return ServiceResponse<OrderCartViewDto>.Ok(response);
     }
 }
 

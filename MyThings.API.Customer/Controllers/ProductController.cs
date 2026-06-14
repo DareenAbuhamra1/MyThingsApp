@@ -17,7 +17,6 @@ namespace ProductController.Controllers
             _logger = logger;
             _partnerService = partnerService;
         }
-        
         [Authorize(RoleEnum.Customer)]
         [HttpGet("partner/{partnerId:int}/products")]
         public async Task<IActionResult> GetAllProductsForStore([FromRoute] int partnerId)

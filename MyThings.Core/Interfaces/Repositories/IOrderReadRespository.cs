@@ -14,5 +14,7 @@ public interface IOrderReadRepository
     Task<List<NearestDriversDto>> FindNearestDriversAsync(decimal orderLat, decimal orderLon);
     Task<List<DriverOrderInfo>> FindNearestOrdersAsync(decimal driverLat, decimal driverLon);
     Task<IReadOnlyList<Order?>> GetPartnerPreparingOrdersAsync(int parterId);
+    Task<Order?> GetCustomerPendingOrderAsync(int customerId);
+    Task<Order?> GetCustomerCartAsync(int customerId);
 }
 

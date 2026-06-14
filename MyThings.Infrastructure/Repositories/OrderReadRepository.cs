@@ -91,4 +91,22 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
                 .ThenInclude(pl => pl.Location)
             .ToListAsync();
     }
+
+    public async Task<Order?> GetCustomerPendingOrderAsync(int customerId)
+    {
+        return await _context.Orders
+            .Where(o =>o.CustomerId == customerId && o.Status == OrderStatusEnum.Pending)
+            .FirstOrDefaultAsync();     
+    }
+
+    public async Task<Order?> GetCustomerCartAsync(int customerId)
+    {
+        return await _context.Orders
+            .Where(o =>o.CustomerId == customerId && o.Status == OrderStatusEnum.Pending)
+            .Include(o => o.DeliveryLocation)
+            .Include(o => o.Partner)
+            .Include(o => o.OrderLines)
+                .ThenInclude(ol => ol.OrderLineOptions)
+            .FirstOrDefaultAsync();  
+    }
 }

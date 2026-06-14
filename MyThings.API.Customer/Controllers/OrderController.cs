@@ -95,5 +95,23 @@ namespace OrderController.Controllers
 
             }   
         }
+        [Authorize(RoleEnum.Customer)]
+        [HttpGet("cart/{customerId:int}")]
+        public async Task<IActionResult> GetCart([FromRoute] int customerId)
+        {
+            try
+            {
+                var result = await _orderService.GetCartAsync(customerId);
+                if(result is null) return BadRequest("Failed to place order.");
+                return Ok(result);
+            }
+             catch(Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred in PlaceOrder method");
+                return StatusCode(500, "An internal server error occurred. Please try again later.");
+
+            }   
+        }
+
     }
 }

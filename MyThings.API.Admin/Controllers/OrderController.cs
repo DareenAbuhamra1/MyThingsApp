@@ -18,7 +18,7 @@ namespace OrderController.Controllers
         
         [Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
         [HttpGet("get-all-orders")]
-        public async Task<IActionResult> GetAllOrders([FromRoute] int orderId)
+        public async Task<IActionResult> GetAllOrders()
         {
             try
             {

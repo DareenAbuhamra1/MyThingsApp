@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using MyThings.Core.DTOs;
 using MyThings.Core.Entities;
 using MyThings.Core.Enums;
+using MyThings.Core.Enums.GenderEnum;
 using MyThings.Core.Interfaces;
 using MyThings.Core.Wrappers;
 

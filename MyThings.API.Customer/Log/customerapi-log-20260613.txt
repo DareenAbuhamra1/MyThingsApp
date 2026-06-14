@@ -1,0 +1,59 @@
+2026-06-13 14:06:35.544 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 14:06:47.956 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 14:06:47.983 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 14:10:26.589 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 14:10:55.812 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 14:11:13.019 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 14:42:00.149 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 14:42:04.577 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 14:42:04.612 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 16:10:09.696 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 16:10:15.919 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 16:10:15.961 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 16:11:48.613 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 16:11:56.531 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 16:11:56.564 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:03:51.549 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:03:56.532 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:03:56.557 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:05:15.325 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:05:20.629 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:05:20.655 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:15:40.167 +03:00 [INF] OTP successfully sent to 0798297232.
+2026-06-13 18:15:45.534 +03:00 [INF] New user 0798297232 verified; moving to registration.
+2026-06-13 18:15:45.570 +03:00 [WRN] Login failed for 0798297232: User not found.
+2026-06-13 18:15:54.707 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:16:00.069 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:16:00.099 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:23:46.440 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:23:53.512 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:23:53.541 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:30:24.626 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:30:29.719 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:30:29.754 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:39:55.744 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:40:00.904 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:40:00.942 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 18:45:52.784 +03:00 [WRN] Verification failed for 0796406942: OTP has expired. Please request a new one.
+2026-06-13 18:45:56.422 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 18:46:01.285 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 18:46:01.317 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 19:19:41.286 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 19:19:47.279 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 19:19:47.312 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 19:26:44.473 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 19:26:53.388 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 19:26:53.420 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 19:41:26.174 +03:00 [INF] OTP successfully sent to 0798297232.
+2026-06-13 19:41:30.820 +03:00 [INF] New user 0798297232 verified; moving to registration.
+2026-06-13 19:41:30.852 +03:00 [WRN] Login failed for 0798297232: User not found.
+2026-06-13 19:41:49.284 +03:00 [INF] Customer 0798297232 registered successfully.
+2026-06-13 19:44:06.620 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 19:44:11.882 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 19:44:11.913 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 19:47:21.653 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-13 19:47:26.908 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-13 19:47:26.943 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-13 21:36:26.946 +03:00 [INF] OTP successfully sent to 0798297232.
+2026-06-13 21:36:30.831 +03:00 [INF] Customer 0798297232 verified correctly.
+2026-06-13 21:36:30.854 +03:00 [INF] Customer 0798297232 logged in successfully.

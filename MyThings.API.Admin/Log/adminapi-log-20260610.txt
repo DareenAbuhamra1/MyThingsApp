@@ -162,3 +162,8 @@
 2026-06-10 18:43:29.991 +03:00 [INF] Login successful.
 2026-06-10 18:43:30.163 +03:00 [INF] Login successful.
 2026-06-10 18:44:32.845 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="15:44:32.8454280"
+2026-06-10 18:47:32.850 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="15:47:32.8489870"
+2026-06-10 18:50:32.854 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="15:50:32.8531000"
+2026-06-10 18:53:32.846 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="15:53:32.8463080"
+2026-06-10 18:56:32.845 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="15:56:32.8456890"
+2026-06-10 21:36:47.026 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="18:36:47.0226610"
