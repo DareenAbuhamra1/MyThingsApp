@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyThings.Core.DTOs;
 using MyThings.Core.Enums;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Helper;
@@ -117,7 +118,22 @@ namespace OrderController.Controllers
                 _logger.LogError(e, "An error occurred in SetOrderReadyForPickup");
                 return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
             }
+        }
+        [Authorize(RoleEnum.Partner)]
+        [HttpGet("history/{partnerId:int}")]
+        public async Task<IActionResult> GetOrders([FromQuery] OrderHistoryQueryDto queryDto,[FromRoute]int partnerId)
+        {
+            try
+            {
+                var result = await _orderService.GetOrderHistoryAsync(queryDto,partnerId);
+                
+                return Ok(result.Data);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, "An error occurred in SetOrderReadyForPickup");
+                return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
             }
         }
-
+    }
 }

@@ -109,4 +109,11 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
                 .ThenInclude(ol => ol.OrderLineOptions)
             .FirstOrDefaultAsync();  
     }
+
+    public IQueryable<Order> GetPartnerOrdersAsync(int partnerId)
+    {
+        return _context.Orders
+            .Where(o => o.PartnerId == partnerId)
+            .AsQueryable();
+    }
 }

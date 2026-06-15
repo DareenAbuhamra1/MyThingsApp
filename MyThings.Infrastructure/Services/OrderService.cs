@@ -1,4 +1,5 @@
 using System.Data.Common;
+using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
 using MyThings.Core.Entities;
 using MyThings.Core.Enums;
@@ -727,6 +728,76 @@ public class OrderService : IOrderService
         }
         return ServiceResponse<bool>.Ok(true);
         
+    }
+
+    public async Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAsync(OrderHistoryQueryDto query, int partnerId)
+    {
+        var orders =  _orderReadRepository.GetPartnerOrdersAsync(partnerId);
+        if (orders != null)
+        {
+            if (query.Status.HasValue)
+            {
+                orders = orders.Where(o => o.Status == query.Status.Value);
+            }
+            if (query.From.HasValue)
+            {
+                orders = orders.Where(o => o.CreatedAt >= query.From.Value);
+            }
+            if (query.To.HasValue)
+            {
+                orders = orders.Where(o => o.CreatedAt <= query.To.Value);
+            }
+            orders = orders.OrderByDescending(o => o.CreatedAt);
+
+            var totalCount = await orders.CountAsync();
+            var totalPages = (int)Math.Ceiling(
+                (double)totalCount / query.PageSize
+            );
+            
+            var pageOrders = await orders
+                .Skip((query.Page -1) * query.PageSize)
+                .Take(query.PageSize)
+                .ToListAsync();
+
+            var data = pageOrders.Select(
+                o => new OrderForPaginationDto
+                {
+                    OrderId = o.Id,
+                    Status = o.Status,
+                    SubTotal = o.SubTotal,
+                    ServiceFee = o.ServiceFee,
+                    DeliveryFees = o.DeliveryFees,
+                    TotalPayment = o.TotalPayment,
+                    StartEstimation = o.StartEstimation,
+                    EndEstimation = o.EndEstimation,
+                    PlacementTime = o.PlacementTime,
+                    AcceptedTime = o.AcceptedTime,
+                    PickedUpTime = o.PickedUpTime,
+                    DeliveredTime = o.DeliveredTime,
+                    Note = o.Note,
+                }
+            ).ToList();
+
+            var response = new PageResponse<OrderForPaginationDto>
+            {
+                Data = data,
+                Page = totalPages,
+                PageSize = query.PageSize,
+                TotalCount = totalCount,
+                TotalPages = totalPages,
+            };
+
+            return ServiceResponse<PageResponse<OrderForPaginationDto>>.Ok(response);
+        }
+        return ServiceResponse<PageResponse<OrderForPaginationDto>>.Ok(
+            new PageResponse<OrderForPaginationDto>
+            {
+                Data = new List<OrderForPaginationDto>(),
+                Page = query.Page,
+                PageSize = query.PageSize,
+                TotalCount = 0,
+                TotalPages = 0
+            });
     }
 }
 

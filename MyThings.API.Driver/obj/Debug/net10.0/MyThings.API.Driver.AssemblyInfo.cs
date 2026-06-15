@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyThings.API.Driver")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a43679c596022f44dd49868f277efbe60674dcab")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+16a274db3dbf1525469f2dc01bfed7c55554eae0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyThings.API.Driver")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyThings.API.Driver")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

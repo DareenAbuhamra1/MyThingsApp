@@ -16,5 +16,6 @@ public interface IOrderReadRepository
     Task<IReadOnlyList<Order?>> GetPartnerPreparingOrdersAsync(int parterId);
     Task<Order?> GetCustomerPendingOrderAsync(int customerId);
     Task<Order?> GetCustomerCartAsync(int customerId);
+    IQueryable<Order> GetPartnerOrdersAsync(int partnerId);
 }
 
