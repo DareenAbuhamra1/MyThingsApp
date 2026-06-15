@@ -694,6 +694,7 @@ public class OrderService : IOrderService
             CustomerId = order.CustomerId,
             PartnerId = order.PartnerId,
             SubTotal = order.SubTotal,
+            ServiceFee = order.TotalPayment-order.SubTotal-order.DeliveryFees,
             DeliveryFees = order.DeliveryFees,
             TotalPrice = order.TotalPayment,
             OrderLines = order.OrderLines.Select(
@@ -714,6 +715,18 @@ public class OrderService : IOrderService
             };
 
         return ServiceResponse<OrderCartViewDto>.Ok(response);
+    }
+
+    public async Task<ServiceResponse<bool>> DeleteCartAsync(int orderId)
+    {
+        var order = await _unitOfWork.Orders.GetByIdAsync(orderId);
+        if (order != null)
+        {
+            _unitOfWork.Orders.Delete(order);
+            await _unitOfWork.CompleteAsync();
+        }
+        return ServiceResponse<bool>.Ok(true);
+        
     }
 }
 

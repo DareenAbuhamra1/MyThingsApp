@@ -51,8 +51,8 @@ public class OrderLine : BaseEntity
             builder.HasMany(olo => olo.OrderLineOptions)
                 .WithOne(ol => ol.OrderLine)
                 .HasForeignKey(olo => olo.OrderLineId)
-                .IsRequired(false)
-                .OnDelete(DeleteBehavior.NoAction);
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

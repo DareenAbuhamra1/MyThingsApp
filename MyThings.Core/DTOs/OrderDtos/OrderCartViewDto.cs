@@ -9,6 +9,7 @@ public class OrderCartViewDto
     public required int PartnerId { get; set; }
     public required string PartnerName { get; set; }
     public required decimal SubTotal { get; set; }
+    public required decimal ServiceFee {get;set;}
     public required decimal DeliveryFees { get; set; }
     public required decimal TotalPrice { get; set; }
 

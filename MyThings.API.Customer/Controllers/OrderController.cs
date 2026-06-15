@@ -107,11 +107,27 @@ namespace OrderController.Controllers
             }
              catch(Exception ex)
             {
+                _logger.LogError(ex, "An error occurred in GetCart method");
+                return StatusCode(500, "An internal server error occurred. Please try again later.");
+
+            }   
+        }
+        [Authorize(RoleEnum.Customer)]
+        [HttpDelete("cart/{orderId:int}")]
+        public async Task<IActionResult> DeleteCart([FromRoute] int orderId)
+        {
+            try
+            {
+                var result = await _orderService.DeleteCartAsync(orderId);
+
+                return Ok(result.Data);
+            }
+             catch(Exception ex)
+            {
                 _logger.LogError(ex, "An error occurred in PlaceOrder method");
                 return StatusCode(500, "An internal server error occurred. Please try again later.");
 
             }   
         }
-
     }
 }

@@ -48,6 +48,8 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class{
     }
     public void Delete(T entity)
     {
+        _context.Set<T>().Remove(entity);
+        /*
         if(entity is ISoftDeletable softDeletable)
         {
             softDeletable.IsDeleted = true;
@@ -57,8 +59,9 @@ public class GenericRepository<T> : IGenericRepository<T> where T : class{
         }
         else
         {
-            _context.Set<T>().Remove(entity);
+            
         }
+        */
     }
     public async Task<bool> FindAsync(Expression<Func<T, bool>> predicate)
     {

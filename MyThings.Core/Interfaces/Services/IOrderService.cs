@@ -22,4 +22,5 @@ public interface IOrderService
     Task<ServiceResponse<bool>> DeliverOrderAsync(int orderId, int driverId);
     Task<ServiceResponse<bool>> CancelOrderAsync(int orderId);
     Task<ServiceResponse<OrderCartViewDto>> GetCartAsync(int customerId);
+    Task<ServiceResponse<bool>> DeleteCartAsync(int orderId);
 }
