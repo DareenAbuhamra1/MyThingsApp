@@ -34,8 +34,12 @@ public class DeliveryFeeService : IDeliveryFeeService
         if (Partner == null || CustomerLocation == null)
         throw new KeyNotFoundException("Partner or Customer Location not found.");
 
-        decimal lat1 = Partner.Location.Latitude;
-        decimal lon1 = Partner.Location.Longitude;
+        var PartnerLocation = await _readUnitOfWork.Locations.GetByIdAsync(Partner.LocationId);
+        if (PartnerLocation == null)
+            throw new KeyNotFoundException("Partner Location not found.");
+
+        decimal lat1 = PartnerLocation.Latitude;
+        decimal lon1 = PartnerLocation.Longitude;
         decimal lat2 = CustomerLocation.Latitude;
         decimal lon2 = CustomerLocation.Longitude;
         

@@ -74,7 +74,7 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     public async Task<IReadOnlyList<Order?>> GetPartnerPreparingOrdersAsync(int parterId)
     {
         return await _context.Orders
-            .Where(o => o.PartnerId == parterId && o.Status == OrderStatusEnum.Accepted ||o.Status == OrderStatusEnum.Assigned)
+            .Where(o => o.PartnerId == parterId && o.Status == OrderStatusEnum.Accepted || o.Status == OrderStatusEnum.Assigned)
             .Include(o => o.OrderLines)
                 .ThenInclude(ol => ol.OrderLineOptions)
             .ToListAsync();

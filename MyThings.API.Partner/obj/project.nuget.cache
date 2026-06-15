@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "N9Q6iNAJits=",
+  "dgSpecHash": "F6j4AGQs86Q=",
   "success": true,
-  "projectFilePath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj",
+  "projectFilePath": "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/MyThings.API.Partner.csproj",
   "expectedPackageFiles": [
     "/Users/dareenabuhamra/.nuget/packages/amazon.lambda.apigatewayevents/2.7.0/amazon.lambda.apigatewayevents.2.7.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/amazon.lambda.applicationloadbalancerevents/2.2.0/amazon.lambda.applicationloadbalancerevents.2.2.0.nupkg.sha512",

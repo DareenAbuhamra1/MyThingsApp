@@ -81,9 +81,7 @@ namespace PartnerController.Controllers
         }
 
         [HttpPost("auth/login-partner")]
-        public async Task<IActionResult> LoginPartner([FromBody] Logi this.snackBar.open("Invalid OTP or session expired", 'Close', { duration: 3000 });
-          this.router.navigate(['request-otp']);nDto loginDto)
-        {
+        public async Task<IActionResult> LoginPartner([FromBody] LoginDto loginDto){
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

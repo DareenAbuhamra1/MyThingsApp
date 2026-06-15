@@ -24,7 +24,7 @@ public class PartnerOrderItemOption
 {
     public required int ItemOptionId {get;set;}
     public required string ItemOptionName {get;set;}
-public required int ItemOptionQuantity {get;set;}
+    public required int ItemOptionQuantity {get;set;}
     public required decimal ItemOptionPrice {get;set;}
 
 }
