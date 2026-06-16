@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/MyThings.API.Partner.csproj": {}
+    "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj": {}
   },
   "projects": {
-    "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/MyThings.API.Partner.csproj": {
+    "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/MyThings.API.Partner.csproj",
+        "projectUniqueName": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj",
         "projectName": "MyThings.API.Partner",
-        "projectPath": "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/MyThings.API.Partner.csproj",
+        "projectPath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj",
         "packagesPath": "/Users/dareenabuhamra/.nuget/packages/",
-        "outputPath": "/Users/dareenabuhamra/MyThingsApp/Mythings.API.Partner/obj/",
+        "outputPath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/dareenabuhamra/.nuget/NuGet/NuGet.Config"

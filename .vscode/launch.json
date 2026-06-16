@@ -56,6 +56,14 @@
       "args": [],
       "cwd": "${workspaceFolder}/MyThings.API.Admin",
       "program": "${workspaceFolder}/MyThings.API.Admin/bin/Debug/net10.0/MyThings.API.Admin.dll"
+    },
+    {
+      "name": "Debug API Driver",
+      "type": "coreclr",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}/MyThings.API.Driver",
+      "program": "${workspaceFolder}/MyThings.API.Driver/bin/Debug/net10.0/MyThings.API.Driver.dll"
     }
   ]
 }

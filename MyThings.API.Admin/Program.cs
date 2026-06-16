@@ -71,7 +71,8 @@ try
             policy.WithOrigins("http://localhost:4200")
                 .AllowAnyMethod()
                 .AllowAnyHeader() // This allows the Authorization header!
-                .AllowCredentials(); // Required if I use cookies or specific auth headers
+                .AllowCredentials() // Required if I use cookies or specific auth headers
+                .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS");
         });
     });
 
@@ -89,7 +90,7 @@ try
     var app = builder.Build();
 
 
-    app.UseCors("AllowAngularUI");
+   
     
     if (app.Environment.IsDevelopment())
     {
@@ -101,9 +102,11 @@ try
     Console.WriteLine(passwordHash);
     */
     app.UseHttpsRedirection();
+    app.UseCors("AllowAngularUI");
     app.UseMiddleware<JWTMiddleware>();
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
+    
     app.Run();
 
 }

@@ -23,7 +23,7 @@ namespace LocationController.Controllers
         }
 
         [Authorize(RoleEnum.Customer)]
-        [HttpGet("default/{customerId}:int")]
+        [HttpGet("default/{customerId:int}")]
         public async Task<IActionResult> GetDefaultLocation([FromRoute] int customerId)
         {
             try

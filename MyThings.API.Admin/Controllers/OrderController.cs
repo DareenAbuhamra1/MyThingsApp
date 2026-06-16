@@ -49,6 +49,20 @@ namespace OrderController.Controllers
                 return StatusCode(500,"An error in Canceling Order");
             }
         }
-        
+        [Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
+        [HttpGet("order-details/{orderId:int}")]
+        public async Task<IActionResult> GetOrderDetails([FromRoute]  int orderId){
+            try
+            {
+                var result = await _orderService.GetOrderDetailsAsync(orderId);
+                if(!result.Success) return StatusCode(result.StatusCode,new {Message = result.Message});
+                return Ok(result.Data);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, "An error in Getting Order Details");
+                return StatusCode(500,"An error in Getting Order Details");
+            }
+        }
     }
 }

@@ -110,10 +110,34 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
             .FirstOrDefaultAsync();  
     }
 
-    public IQueryable<Order> GetPartnerOrdersAsync(int partnerId)
+    public IQueryable<Order> GetPartnerOrders(int partnerId)
     {
         return _context.Orders
             .Where(o => o.PartnerId == partnerId)
+            .AsQueryable();
+    }
+
+    public IQueryable<Order> GetDriverAssignedOrder(int driverId)
+    {
+        return  _context.Orders
+            .Where(o => o.DriverId == driverId && (o.Status == OrderStatusEnum.Assigned || o.Status ==OrderStatusEnum.ReadyForPickUp))
+            .Include(o => o.Customer)
+            .Include(o => o.DeliveryLocation)
+            .Include(o => o.Partner)
+                .ThenInclude(pl => pl.Location)
+            .AsQueryable();
+    }
+
+    public IQueryable<Order> GetOrderDetails(int orderId)
+    {
+        return _context.Orders
+            .Where(o => o.Id == orderId)
+            .Include(o => o.Customer)
+            .Include(o => o.DeliveryLocation)
+            .Include(o => o.Partner)
+                .ThenInclude(pl => pl.Location)
+            .Include(o => o.OrderLines)
+                .ThenInclude(olp => olp.OrderLineOptions)
             .AsQueryable();
     }
 }

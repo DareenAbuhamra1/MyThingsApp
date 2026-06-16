@@ -492,6 +492,7 @@ public class OrderService : IOrderService
             return ServiceResponse<List<DriverOrderInfo>>.Failure("Driver Location is null", 404);
 
         var Orders = await _orderReadRepository.FindNearestOrdersAsync((decimal)driver.Latitude, (decimal)driver.Longitude);
+        
         return ServiceResponse<List<DriverOrderInfo>>.Ok(Orders);
     }
 
@@ -732,29 +733,29 @@ public class OrderService : IOrderService
 
     public async Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAsync(OrderHistoryQueryDto query, int partnerId)
     {
-        var orders =  _orderReadRepository.GetPartnerOrdersAsync(partnerId);
-        if (orders != null)
+        var ordersQuery =  _orderReadRepository.GetPartnerOrders(partnerId);
+        if (ordersQuery != null)
         {
             if (query.Status.HasValue)
             {
-                orders = orders.Where(o => o.Status == query.Status.Value);
+                ordersQuery = ordersQuery.Where(o => o.Status == query.Status.Value);
             }
             if (query.From.HasValue)
             {
-                orders = orders.Where(o => o.CreatedAt >= query.From.Value);
+                ordersQuery = ordersQuery.Where(o => o.CreatedAt >= query.From.Value);
             }
             if (query.To.HasValue)
             {
-                orders = orders.Where(o => o.CreatedAt <= query.To.Value);
+                ordersQuery = ordersQuery.Where(o => o.CreatedAt <= query.To.Value);
             }
-            orders = orders.OrderByDescending(o => o.CreatedAt);
+            ordersQuery = ordersQuery.OrderByDescending(o => o.CreatedAt);
 
-            var totalCount = await orders.CountAsync();
+            var totalCount = await ordersQuery.CountAsync();
             var totalPages = (int)Math.Ceiling(
                 (double)totalCount / query.PageSize
             );
             
-            var pageOrders = await orders
+            var pageOrders = await ordersQuery
                 .Skip((query.Page -1) * query.PageSize)
                 .Take(query.PageSize)
                 .ToListAsync();
@@ -799,6 +800,81 @@ public class OrderService : IOrderService
                 TotalPages = 0
             });
     }
+
+    public async Task<ServiceResponse<DriverAssignedOrder?>> GetDriverAssignedOrderAsync(int driverId)
+    {
+        var orderQuery =  _orderReadRepository.GetDriverAssignedOrder(driverId);
+
+        var assingedOrder = await orderQuery.Select(
+            o => new DriverAssignedOrder
+            {
+                OrderId = o.Id,
+                PartnerName = o.Partner.Name,
+                PartnerLocation = $"{o.Partner.Location.Street} {o.Partner.Location.Area} {o.Partner.Location.City.ToString()}",
+                CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
+                CustomerPhone = o.Customer.Phone,
+                DeliveryLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
+                IsReadyForPickup = o.Status == OrderStatusEnum.ReadyForPickUp?true:false,
+                SubTotal = o.SubTotal,
+                ServiceFee = o.ServiceFee,
+                DeliveryFee = o.DeliveryFees,
+                TotalPayment = o.TotalPayment,
+                StartEstimation = o.StartEstimation.Value,
+                EndEstimation = o.EndEstimation.Value,
+            } 
+        ).FirstOrDefaultAsync();
+
+        if(assingedOrder == null) return ServiceResponse<DriverAssignedOrder?>.Ok(null);
+
+        return ServiceResponse<DriverAssignedOrder?>.Ok(assingedOrder);
+    }
+
+    public async Task<ServiceResponse<OrderDetailedDto>> GetOrderDetailsAsync(int orderId)
+    {
+        var detailedOrderQuery = _orderReadRepository.GetOrderDetails(orderId);
+
+        var detailedOrder = await detailedOrderQuery.Select(
+            o => new OrderDetailedDto
+            {
+                PartnerName = o.Partner.Name,
+                PartnerLocation = $"{o.Partner.Location.Street} {o.Partner.Location.Area} {o.Partner.Location.City.ToString()}",
+                CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
+                CustomerLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
+                DriverName = o.Driver != null ? $"{o.Driver.FirstName} {o.Driver.LastName}" : null,
+                SubTotal = o.SubTotal,
+                ServiceFee = o.ServiceFee,
+                DeliveryFee = o.DeliveryFees,
+                TotalPayment = o.TotalPayment,
+                PaymentType = o.PaymentType != null ? o.PaymentType.ToString()! : "Unknown",
+                AcceptedTime = o.AcceptedTime,
+                DeliveredTime = o.DeliveredTime,
+                PickedUpTime = o.PickedUpTime,
+                PlacementTime = o.PlacementTime,
+                OrderItems = o.OrderLines.Select(
+                    ol => new OrderLineDetils
+                    {
+                        OrderItemId = ol.Id,
+                        OrderItemName = ol.ProductName,
+                        OrderItemPrice = ol.Price,
+                        Quantity = ol.Quantity,
+                        OrderItemOptions = ol.OrderLineOptions.Select(
+                            olo => new OrderOptionDetails
+                            {
+                                OrderOptionId = olo.ProductOptionId,
+                                OrderOptionName = olo.Option,
+                                OrderOptionQuantity = olo.Quantity,
+                                OrderOptionPrice = olo.Price
+                            }).ToList()
+                    }
+                ).ToList()
+            }
+        ).FirstOrDefaultAsync();
+
+        if (detailedOrder == null)
+        {
+            return ServiceResponse<OrderDetailedDto>.Failure("Order not found", 404);
+        }
+
+        return ServiceResponse<OrderDetailedDto>.Ok(detailedOrder);
+    }
 }
-
-

@@ -1,0 +1,27 @@
+2026-06-17 00:01:44.317 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:01:44.3177070"
+2026-06-17 00:01:44.504 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: false
+2026-06-17 00:01:44.510 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: false
+2026-06-17 00:04:44.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:04:44.3148920"
+2026-06-17 00:07:44.318 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:07:44.3177960"
+2026-06-17 00:10:44.331 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:10:44.3300600"
+2026-06-17 00:13:44.316 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:13:44.3168530"
+2026-06-17 00:16:44.318 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:16:44.3183710"
+2026-06-17 00:19:44.345 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:19:44.3418060"
+2026-06-17 00:22:44.321 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:22:44.3211880"
+2026-06-17 00:25:44.332 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:25:44.3321730"
+2026-06-17 00:39:58.873 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 00:39:58.933 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 00:39:58.935 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 00:39:58.937 +03:00 [INF] Hosting environment: Development
+2026-06-17 00:39:58.937 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 00:40:38.207 +03:00 [INF] Application is shutting down...
+2026-06-17 00:41:43.864 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 00:41:43.896 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 00:41:43.897 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 00:41:43.897 +03:00 [INF] Hosting environment: Development
+2026-06-17 00:41:43.897 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 00:44:44.074 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:44:44.0741410"
+2026-06-17 00:47:44.373 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:47:44.3611920"
+2026-06-17 00:50:43.924 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:50:43.9220850"
+2026-06-17 00:53:43.954 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:53:43.9512170"
+2026-06-17 00:56:43.875 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:56:43.8750560"

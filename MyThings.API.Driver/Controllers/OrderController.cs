@@ -84,5 +84,36 @@ namespace OrderController.Controllers
                 return StatusCode(500, new { Message = "An internal error occurred while driver {driverId} delivered order {orderId} in DeliverOrder in OrderController "});
             }
         }
+        [Authorize(RoleEnum.Driver)]
+        [HttpGet("get-assigned-order/{driverId:int}")]
+        public async Task<IActionResult> GetAssignedOrder([FromRoute] int driverId)
+        {
+            try
+            {
+                var result = await _orderService.GetDriverAssignedOrderAsync(driverId);
+                if(!result.Success) return StatusCode(result.StatusCode, new {Message = result.Message});
+                return Ok(result.Data);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, $"An error occurred while driver {driverId} get-assigned-order in OrderController ");
+                return StatusCode(500, new { Message = "An internal error occurred in get-assigned-order"});
+            }
+        }
+        [Authorize(RoleEnum.Driver)]
+        [HttpGet("order-details/{orderId:int}")]
+        public async Task<IActionResult> GetOrderDetails([FromRoute]  int orderId){
+            try
+            {
+                var result = await _orderService.GetOrderDetailsAsync(orderId);
+                if(!result.Success) return StatusCode(result.StatusCode,new {Message = result.Message});
+                return Ok(result.Data);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, "An error in Getting Order Details");
+                return StatusCode(500,"An error in Getting Order Details");
+            }
+        }
     }
 }
