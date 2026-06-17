@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyThings.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e97f1f79e5899cccd2dc84b0c513260a6504c4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+213482b0d820f77dba9198e5edc3dfd9a2a9f373")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyThings.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyThings.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

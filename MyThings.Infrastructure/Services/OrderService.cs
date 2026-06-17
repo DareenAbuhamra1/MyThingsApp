@@ -815,6 +815,7 @@ public class OrderService : IOrderService
                 CustomerPhone = o.Customer.Phone,
                 DeliveryLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
                 IsReadyForPickup = o.Status == OrderStatusEnum.ReadyForPickUp?true:false,
+                Status = o.Status,
                 SubTotal = o.SubTotal,
                 ServiceFee = o.ServiceFee,
                 DeliveryFee = o.DeliveryFees,

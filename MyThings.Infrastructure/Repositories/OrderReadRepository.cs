@@ -120,7 +120,7 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     public IQueryable<Order> GetDriverAssignedOrder(int driverId)
     {
         return  _context.Orders
-            .Where(o => o.DriverId == driverId && (o.Status == OrderStatusEnum.Assigned || o.Status ==OrderStatusEnum.ReadyForPickUp))
+            .Where(o => o.DriverId == driverId && (o.Status == OrderStatusEnum.Assigned || o.Status ==OrderStatusEnum.ReadyForPickUp ||o.Status == OrderStatusEnum.PickedUp))
             .Include(o => o.Customer)
             .Include(o => o.DeliveryLocation)
             .Include(o => o.Partner)

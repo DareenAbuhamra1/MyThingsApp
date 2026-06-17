@@ -31,5 +31,6 @@ namespace AuditController.Controllers
                 return StatusCode(500, new { Message = "An internal error occurred" });   
             }
         }
+        
     }
 }

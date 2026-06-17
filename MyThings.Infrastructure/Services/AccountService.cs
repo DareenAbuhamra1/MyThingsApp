@@ -88,6 +88,9 @@ public class AccountService : IAccountService
 
     public async Task<ServiceResponse<PartnerRegisterResponseDto>> CreatePartnerAsync(PartnerRegisterDto partnerInfo)
     {
+        var user = _unitOfWork.Users.GetByPhoneAsync(partnerInfo.Phone);
+        if(user != null) return ServiceResponse<PartnerRegisterResponseDto>.Failure("The phone must be unique",409);
+        
         var partnerLocation = new Location
         {
             Title = $"{partnerInfo.Name} {partnerInfo.Area}",

@@ -1,3 +1,5 @@
+using MyThings.Core.Enums;
+
 namespace MyThings.Core.DTOs;
 
 public class DriverAssignedOrder
@@ -9,6 +11,7 @@ public class DriverAssignedOrder
     public string CustomerPhone {get;set;} = null!;
     public string DeliveryLocation {get;set;} = null!;
     public bool IsReadyForPickup {get;set;}
+    public OrderStatusEnum Status {get;set;}
     public decimal SubTotal {get;set;}
     public decimal ServiceFee {get;set;}
     public decimal DeliveryFee {get;set;}

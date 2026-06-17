@@ -52,6 +52,7 @@ namespace DriverController.Controllers
             try
             {
                 var authResult = await _authService.VerifyOtpAsync(verifyOtp);
+                
                 if (!authResult.IsSuccess)
                 {
                     _logger.LogWarning("OTP verification failed for phone {Phone}: {Message}", verifyOtp.Phone, authResult.Message);
@@ -100,6 +101,10 @@ namespace DriverController.Controllers
             try
             {
                 var loginResult = await _authService.LoginAsync(loginDto);
+                if ((bool)!loginResult.IsRegistered)
+                {
+                    return Ok(loginResult);
+                }
                 if (!loginResult.IsSuccess)
                 {
                     _logger.LogWarning("Driver login failed for {Phone}: {Message}", loginDto.Phone, loginResult.Message);

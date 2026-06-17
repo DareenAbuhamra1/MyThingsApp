@@ -62,13 +62,13 @@ namespace AccountController.Controllers
             }
             try
             {
-                var createPartnerResult = await _accountService.CreatePartnerAsync(partnerRegister);
+                var result = await _accountService.CreatePartnerAsync(partnerRegister);
 
-                if (createPartnerResult == null)
+                if (!result.Success)
                 {
-                    return BadRequest(new { Message = "Failed to create the partner. Please try again." });
+                    return StatusCode(result.StatusCode, new {Message = result.Message});
                 }
-                return Ok(new { Message = "Partner created successfully.", Partner = createPartnerResult });
+                return Ok(result.Data);
             }
             catch(Exception e)
             {

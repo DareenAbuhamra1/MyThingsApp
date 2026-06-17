@@ -15,3 +15,75 @@
 2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
 2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'SubTotal' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
 2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'TotalPayment' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 20:48:38.213 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 20:48:43.738 +03:00 [INF] OTP verified successfully for phone 0797777777.
+2026-06-17 20:48:43.770 +03:00 [WRN] Driver login failed for 0797777777: User not found.
+2026-06-17 20:50:44.426 +03:00 [INF] Application is shutting down...
+2026-06-17 20:50:57.515 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-17 20:50:57.526 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 20:50:57.526 +03:00 [INF] Hosting environment: Development
+2026-06-17 20:50:57.527 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 20:51:07.877 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 20:51:07.981 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 20:51:12.679 +03:00 [WRN] Driver login failed for 0797777777: User not found.
+2026-06-17 20:52:28.027 +03:00 [INF] Application is shutting down...
+2026-06-17 20:52:38.098 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-17 20:52:38.109 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 20:52:38.110 +03:00 [INF] Hosting environment: Development
+2026-06-17 20:52:38.110 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 20:52:44.974 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 20:52:45.081 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 20:52:49.998 +03:00 [INF] OTP verified successfully for phone 0797777777.
+2026-06-17 20:57:14.840 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 20:57:23.625 +03:00 [INF] OTP verified successfully for phone 0797777777.
+2026-06-17 20:59:05.635 +03:00 [INF] Driver with 0797777777 registered successfully.
+2026-06-17 21:05:21.572 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 21:05:27.433 +03:00 [WRN] OTP verification failed for phone 0797777777: Your account is suspended or waiting for approval. Please contact support.
+2026-06-17 21:07:15.217 +03:00 [INF] OTP requested successfully for phone 0797777777.
+2026-06-17 21:07:20.203 +03:00 [WRN] OTP verification failed for phone 0797777777: Your account is suspended or waiting for approval. Please contact support.
+2026-06-17 21:43:24.447 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 21:43:29.431 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 21:43:29.473 +03:00 [INF] Driver with 0781234900 logged in successfully.
+2026-06-17 21:43:30.196 +03:00 [WRN] No store type was specified for the decimal property 'DeliveryFees' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:43:30.196 +03:00 [WRN] No store type was specified for the decimal property 'Latitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:43:30.197 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:43:30.197 +03:00 [WRN] No store type was specified for the decimal property 'SubTotal' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:43:30.197 +03:00 [WRN] No store type was specified for the decimal property 'TotalPayment' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:45:33.343 +03:00 [INF] Application is shutting down...
+2026-06-17 21:45:48.199 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-17 21:45:48.210 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 21:45:48.210 +03:00 [INF] Hosting environment: Development
+2026-06-17 21:45:48.210 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 21:45:56.223 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 21:45:58.760 +03:00 [WRN] No store type was specified for the decimal property 'DeliveryFees' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:45:58.761 +03:00 [WRN] No store type was specified for the decimal property 'Latitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:45:58.761 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:45:58.763 +03:00 [WRN] No store type was specified for the decimal property 'SubTotal' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 21:45:58.763 +03:00 [WRN] No store type was specified for the decimal property 'TotalPayment' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:14:45.622 +03:00 [INF] Application is shutting down...
+2026-06-17 22:14:56.444 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-17 22:14:56.455 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 22:14:56.455 +03:00 [INF] Hosting environment: Development
+2026-06-17 22:14:56.455 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 22:15:02.606 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 22:15:04.714 +03:00 [WRN] No store type was specified for the decimal property 'DeliveryFees' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:15:04.716 +03:00 [WRN] No store type was specified for the decimal property 'Latitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:15:04.716 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:15:04.716 +03:00 [WRN] No store type was specified for the decimal property 'SubTotal' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:15:04.716 +03:00 [WRN] No store type was specified for the decimal property 'TotalPayment' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 22:31:47.883 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 22:31:53.845 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 22:31:53.893 +03:00 [INF] Driver with 0781234900 logged in successfully.
+2026-06-17 22:33:58.812 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 22:34:04.373 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 22:34:04.392 +03:00 [INF] Driver with 0781234900 logged in successfully.
+2026-06-17 22:39:16.731 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 22:39:21.327 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 22:39:21.378 +03:00 [INF] Driver with 0781234900 logged in successfully.
+2026-06-17 22:39:22.475 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-17 22:46:30.864 +03:00 [INF] OTP requested successfully for phone 0791443777.
+2026-06-17 22:46:37.318 +03:00 [INF] OTP verified successfully for phone 0791443777.
+2026-06-17 22:46:37.340 +03:00 [INF] Driver with 0791443777 logged in successfully.
+2026-06-17 22:47:05.557 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 22:47:10.345 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 22:47:10.368 +03:00 [INF] Driver with 0781234900 logged in successfully.
