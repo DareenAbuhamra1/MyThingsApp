@@ -3,6 +3,7 @@ using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
+using MyThings.Core.Dto;
 
 namespace MyThings.Infrastructure.Repositories;
 
@@ -33,5 +34,9 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
             .ToListAsync();
     }
 
-    
+    public IQueryable<Partner> GetPartnersList()
+    {
+        return _context.Partners
+            .Include(p => p.Location);
+    }
 }

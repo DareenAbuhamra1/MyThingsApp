@@ -25,3 +25,182 @@
 2026-06-17 00:50:43.924 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:50:43.9220850"
 2026-06-17 00:53:43.954 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:53:43.9512170"
 2026-06-17 00:56:43.875 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="21:56:43.8750560"
+2026-06-17 01:15:48.177 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="22:15:48.1747710"
+2026-06-17 07:41:45.658 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="04:41:45.6570950"
+2026-06-17 13:48:26.416 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="10:48:26.4159250"
+2026-06-17 13:48:26.469 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: true
+2026-06-17 13:48:26.474 +03:00 [INF] Database State Mutated: Store 'Dimirti’s Coffee' transitioned availability to: true
+2026-06-17 14:19:51.056 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:19:51.0530060"
+2026-06-17 14:22:51.027 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:22:51.0252350"
+2026-06-17 14:25:51.034 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:25:51.0333370"
+2026-06-17 14:28:51.028 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:28:51.0277660"
+2026-06-17 14:31:51.030 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:31:51.0303330"
+2026-06-17 14:33:03.363 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 14:33:04.213 +03:00 [INF] Login successful.
+2026-06-17 14:33:04.321 +03:00 [INF] Login successful.
+2026-06-17 14:34:51.026 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:34:51.0259150"
+2026-06-17 14:37:51.028 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:37:51.0282520"
+2026-06-17 14:40:51.030 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:40:51.0288930"
+2026-06-17 14:43:51.029 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:43:51.0288770"
+2026-06-17 14:46:51.041 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:46:51.0384180"
+2026-06-17 14:49:51.051 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:49:51.0506410"
+2026-06-17 14:52:51.045 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:52:51.0431650"
+2026-06-17 14:55:51.025 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:55:51.0253080"
+2026-06-17 14:58:51.027 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="11:58:51.0272090"
+2026-06-17 14:59:37.826 +03:00 [INF] Application is shutting down...
+2026-06-17 14:59:48.306 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 14:59:48.354 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 14:59:48.355 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 14:59:48.355 +03:00 [INF] Hosting environment: Development
+2026-06-17 14:59:48.355 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:00:28.438 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:00:39.183 +03:00 [INF] Login successful.
+2026-06-17 15:01:02.417 +03:00 [INF] Application is shutting down...
+2026-06-17 15:01:13.296 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 15:01:13.330 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 15:01:13.330 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 15:01:13.330 +03:00 [INF] Hosting environment: Development
+2026-06-17 15:01:13.330 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:01:17.738 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:01:19.844 +03:00 [INF] Login successful.
+2026-06-17 15:01:19.844 +03:00 [INF] Login successful.
+2026-06-17 15:04:13.324 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:04:13.3219640"
+2026-06-17 15:07:13.312 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:07:13.3106550"
+2026-06-17 15:10:13.298 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:10:13.2983540"
+2026-06-17 15:27:18.373 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 15:27:18.431 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 15:27:18.431 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 15:27:18.431 +03:00 [INF] Hosting environment: Development
+2026-06-17 15:27:18.431 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:27:28.770 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:27:30.417 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.IReadOnlyList`1[MyThings.Core.Dto.PartnerListDto],MyThings.Infrastructure.Services.PartnerService+<GetPartnerListAsync>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, NullabilityInfoContext nullabilityCtx, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, NullabilityInfoContext nullabilityCtx, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo, NullabilityInfoContext nullabilityCtx)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-17 15:28:53.358 +03:00 [INF] Application is shutting down...
+2026-06-17 15:33:23.866 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 15:33:23.901 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 15:33:23.901 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 15:33:23.901 +03:00 [INF] Hosting environment: Development
+2026-06-17 15:33:23.901 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:34:42.974 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:34:44.191 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The type 'System.Threading.ExecutionContext&' of property 'Context' on type 'System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1+AsyncStateMachineBox`1[System.Collections.Generic.IReadOnlyList`1[MyThings.Core.Dto.PartnerListDto],MyThings.Infrastructure.Services.PartnerService+<GetPartnerListAsync>d__2]' is invalid for serialization or deserialization because it is a pointer type, is a ref struct, or contains generic parameters that have not been replaced by specific types.
+   at System.Text.Json.ThrowHelper.ThrowInvalidOperationException_CannotSerializeInvalidType(Type typeToConvert, Type declaringType, MemberInfo memberInfo)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreatePropertyInfo(JsonTypeInfo typeInfo, Type typeToConvert, MemberInfo memberInfo, NullabilityInfoContext nullabilityCtx, JsonSerializerOptions options, Boolean shouldCheckForRequiredKeyword, Boolean hasJsonIncludeAttribute)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.AddMembersDeclaredBySuperType(JsonTypeInfo typeInfo, Type currentType, NullabilityInfoContext nullabilityCtx, Boolean constructorHasSetsRequiredMembersAttribute, PropertyHierarchyResolutionState& state)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.PopulateProperties(JsonTypeInfo typeInfo, NullabilityInfoContext nullabilityCtx)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.CreateTypeInfoCore(Type type, JsonConverter converter, JsonSerializerOptions options)
+   at System.Text.Json.Serialization.Metadata.DefaultJsonTypeInfoResolver.GetTypeInfo(Type type, JsonSerializerOptions options)
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoNoCaching(Type type)
+   at System.Text.Json.JsonSerializerOptions.CachingContext.CreateCacheEntry(Type type, CachingContext context)
+--- End of stack trace from previous location ---
+   at System.Text.Json.JsonSerializerOptions.GetTypeInfoInternal(Type type, Boolean ensureConfigured, Nullable`1 ensureNotNull, Boolean resolveIfMutable, Boolean fallBackToNearestAncestorType)
+   at Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-17 15:35:38.604 +03:00 [INF] Application is shutting down...
+2026-06-17 15:35:43.504 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 15:35:43.534 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 15:35:43.535 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 15:35:43.535 +03:00 [INF] Hosting environment: Development
+2026-06-17 15:35:43.535 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:35:52.348 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:38:12.652 +03:00 [INF] Application is shutting down...
+2026-06-17 15:38:21.723 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 15:38:21.770 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 15:38:21.770 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 15:38:21.770 +03:00 [INF] Hosting environment: Development
+2026-06-17 15:38:21.770 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 15:38:28.739 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 15:41:21.791 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:41:21.7890140"
+2026-06-17 15:44:21.735 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:44:21.7335520"
+2026-06-17 15:44:31.057 +03:00 [INF] Login successful.
+2026-06-17 15:47:21.738 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:47:21.7345780"
+2026-06-17 15:50:21.727 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:50:21.7265420"
+2026-06-17 15:53:21.730 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:53:21.7298150"
+2026-06-17 15:56:21.730 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:56:21.7299870"
+2026-06-17 15:59:21.726 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="12:59:21.7262730"
+2026-06-17 16:02:21.727 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:02:21.7270550"
+2026-06-17 16:05:21.727 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:05:21.7267980"
+2026-06-17 16:08:21.729 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:08:21.7293530"
+2026-06-17 16:11:21.727 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:11:21.7273570"
+2026-06-17 16:14:21.726 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:14:21.7256010"
+2026-06-17 16:15:21.551 +03:00 [INF] Partner with id 1002 attached to domain with id 1 successfully.
+2026-06-17 16:15:45.686 +03:00 [INF] Partner with id 1002 attached to domain with id 1 successfully.
+2026-06-17 16:17:21.725 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:17:21.7243400"
+2026-06-17 16:20:21.731 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:20:21.7301640"
+2026-06-17 16:23:21.731 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:23:21.7310930"
+2026-06-17 16:26:21.729 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:26:21.7267900"
+2026-06-17 16:29:21.730 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:29:21.7302250"
+2026-06-17 16:32:21.726 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:32:21.7255910"
+2026-06-17 16:35:21.729 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:35:21.7292860"
+2026-06-17 16:38:21.730 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:38:21.7300180"
+2026-06-17 16:38:32.144 +03:00 [INF] Application is shutting down...
+2026-06-17 16:38:36.642 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-17 16:38:36.703 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-17 16:38:36.703 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 16:38:36.704 +03:00 [INF] Hosting environment: Development
+2026-06-17 16:38:36.704 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-17 16:41:13.755 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 16:41:36.649 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:41:36.6494240"
+2026-06-17 16:44:36.647 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:44:36.6472970"
+2026-06-17 16:47:36.643 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:47:36.6433380"
+2026-06-17 16:50:36.644 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:50:36.6444320"
+2026-06-17 16:53:36.655 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:53:36.6522340"
+2026-06-17 16:56:36.646 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:56:36.6454940"
+2026-06-17 16:59:36.648 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="13:59:36.6478900"
+2026-06-17 17:02:36.652 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:02:36.6524260"
+2026-06-17 17:05:36.648 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:05:36.6475120"
+2026-06-17 17:08:36.646 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:08:36.6459770"
+2026-06-17 17:11:36.646 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:11:36.6459210"
+2026-06-17 17:14:36.646 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:14:36.6460540"
+2026-06-17 17:17:36.643 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:17:36.6432700"
+2026-06-17 17:20:36.654 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:20:36.6506700"
+2026-06-17 17:23:36.673 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:23:36.6674970"
+2026-06-17 17:26:36.655 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:26:36.6486560"
+2026-06-17 17:29:36.647 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:29:36.6464070"
+2026-06-17 17:32:36.650 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:32:36.6504490"
+2026-06-17 17:35:36.674 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:35:36.6683700"
+2026-06-17 17:38:36.660 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:38:36.6588650"
+2026-06-17 17:41:36.674 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:41:36.6685840"
+2026-06-17 17:44:36.647 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:44:36.6471520"
+2026-06-17 17:47:36.686 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:47:36.6787340"
+2026-06-17 17:50:36.644 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:50:36.6445290"
+2026-06-17 17:53:36.647 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:53:36.6469210"
+2026-06-17 17:56:36.645 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Wednesday" (3), Time="14:56:36.6443210"

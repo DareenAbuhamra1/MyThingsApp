@@ -4,6 +4,7 @@ using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
 using MyThings.Core.Enums;
 using MyThings.Infrastructure.Services;
+using StackExchange.Redis;
 
 namespace DomainController.Controllers
 {
@@ -68,6 +69,23 @@ namespace DomainController.Controllers
             {
                 _logger.LogError(e, "An error occurred while creating partner-domain.");
                 return StatusCode(500, new { Message = "An internal error occurred while creating the partner-domain." });
+            }
+        }
+        [Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
+        [HttpGet("domains")]
+        public async Task<IActionResult> GetAllDomains()
+        {
+            try
+            {
+                var domains = await _domainService.GetAllDomainsAsync();
+                if(domains == null) return NotFound("No domains found.");
+
+                return Ok(domains);
+            }
+            catch(Exception ex)
+            {
+                _logger.LogError(ex, "An error occurred in GetAllProductsForStore method");
+                return StatusCode(500, "An internal server error occurred. Please try again later.");
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using Mythings.Core.Interaces.Repositories;
+using Mythings.Core.Interaces.Services;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure;
@@ -48,6 +49,8 @@ try
     builder.Services.AddScoped<IAuditService, AuditService>();
     builder.Services.AddScoped<IUserAccessor, UserAccessor>();
     builder.Services.AddScoped<IJobService, JobService>();
+    builder.Services.AddScoped<IPartnerService, PartnerService>();
+    builder.Services.AddScoped<IPartnerReadRepository, PartnerReadRepository>();
 
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");
 

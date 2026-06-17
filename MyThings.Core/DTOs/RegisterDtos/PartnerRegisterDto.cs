@@ -25,5 +25,5 @@ public class PartnerRegisterDto : RegisterRequestDto{
     [Required]
     public required decimal Longitude { get; set; }
     [Required]
-    public required int DeliveryRuleId { get; set; }
+    public required int DeliveryRuleId { get; set; } = 1;
 }

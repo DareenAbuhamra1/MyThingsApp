@@ -2,3 +2,16 @@
 2026-06-17 00:41:12.693 +03:00 [INF] Application started. Press Ctrl+C to shut down.
 2026-06-17 00:41:12.693 +03:00 [INF] Hosting environment: Development
 2026-06-17 00:41:12.693 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 17:33:55.519 +03:00 [INF] Now listening on: http://localhost:5002
+2026-06-17 17:33:55.532 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-17 17:33:55.532 +03:00 [INF] Hosting environment: Development
+2026-06-17 17:33:55.532 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-06-17 17:34:14.718 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-17 17:34:16.851 +03:00 [INF] OTP requested successfully for phone 0781234900.
+2026-06-17 17:34:24.518 +03:00 [INF] OTP verified successfully for phone 0781234900.
+2026-06-17 17:34:24.570 +03:00 [INF] Driver with 0781234900 logged in successfully.
+2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'DeliveryFees' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'Latitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'Longitude' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'SubTotal' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-06-17 17:34:24.912 +03:00 [WRN] No store type was specified for the decimal property 'TotalPayment' on entity type 'DriverOrderInfo'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
