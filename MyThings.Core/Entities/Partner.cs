@@ -14,6 +14,12 @@ public class Partner : User, IActivatable
        public int? ParentStoreId { get; set; }
        public int DeliveryRuleId { get; set; }
        public bool IsManuallyClosed {get;set;}
+       public decimal Rating {get;set;}
+       public int RatingCount {get;set;}
+       public string DescriptionAr{get;set;} = null!;
+       public string DescriptionEn {get;set;} = null!;
+       public int PreparingTime {get;set;} 
+       public int AvailabilityId {get;set;} = 1;
        public virtual DeliveryRule DeliveryRule { get; set; } = null!;
        public virtual Partner? ParentStore { get; set; }
        public virtual Location Location { get; set; } = null!;
@@ -48,6 +54,22 @@ public class Partner : User, IActivatable
                      builder.Property(p => p.CommissionRate)
                             .HasColumnType("decimal(5,2)");
 
+                     builder.Property(p => p.Rating)
+                            .HasColumnType("decimal(5,2)");
+
+                     builder.Property(p => p.RatingCount);
+
+                     builder.Property(p => p.DescriptionAr)
+                            .HasMaxLength(255);
+                     
+                     builder.Property(p => p.DescriptionEn)
+                            .HasMaxLength(255);
+
+                     builder.Property(p => p.PreparingTime);
+
+                     builder.Property(p => p.AvailabilityId)
+                            .HasDefaultValue(1);
+                            
                      builder.HasOne(p => p.ParentStore)
                             .WithMany(p => p.InverseParentStore)
                             .HasForeignKey(p => p.ParentStoreId)

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Mythings.Core.Interaces.Services;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Context;
@@ -38,7 +39,8 @@ try
     builder.Services.AddScoped<ILocationService, LocationService>();
     builder.Services.AddScoped<ITimeEstimationService, TimeEstimationService>();
     builder.Services.AddScoped<IAuditService, AuditService>();
-
+    builder.Services.AddScoped<IPartnerService, PartnerService>();
+    
     builder.Services.AddDbContext<WriteDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("PrimaryWrite")));
 

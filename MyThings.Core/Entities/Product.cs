@@ -11,6 +11,7 @@ public class Product : BaseEntity
     //public decimal SalePrice { get; set; }
     public int Stock { get; set; }
     public string? Description { get; set; }
+    public int AvailabilityId {get;set;}
     public virtual ICollection<OrderLine> OrderLines { get; set; } = [];
     public virtual ICollection<OptionGroup> OptionGroups { get; set; } = [];
     public virtual Partner Partner { get; set; } = null!;
@@ -39,6 +40,9 @@ public class Product : BaseEntity
 
             builder.Property(e => e.Description)
                 .HasMaxLength(255);
+
+            builder.Property(e => e.AvailabilityId)
+                .HasDefaultValue(1);
 
             builder.HasOne(s => s.Partner)
                 .WithMany(p => p.Products)

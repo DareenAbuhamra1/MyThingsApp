@@ -140,4 +140,14 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
                 .ThenInclude(olp => olp.OrderLineOptions)
             .AsQueryable();
     }
+
+    public IQueryable<Order> GetAllOrders()
+    {
+        return _context.Orders
+            .Include(o => o.Customer)
+            .Include(o => o.DeliveryLocation)
+            .Include(o => o.Partner)
+                .ThenInclude(pl => pl.Location)
+            .AsQueryable();
+    }
 }

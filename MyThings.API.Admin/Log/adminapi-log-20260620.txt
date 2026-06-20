@@ -1,0 +1,428 @@
+2026-06-20 20:16:45.792 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 20:16:50.265 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 20:16:50.327 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 20:16:50.367 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 20:16:50.369 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 20:16:50.369 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 20:16:50.369 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 20:16:50.373 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 20:16:50.374 +03:00 [INF] Hosting environment: Development
+2026-06-20 20:16:50.374 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 20:16:50.644 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 successfully announced in 270.6503 ms
+2026-06-20 20:16:50.645 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 20:16:50.650 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 all the dispatchers started
+2026-06-20 20:17:14.236 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 20:17:36.144 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:26.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:18:06.313 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:16.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:18:36.381 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 3 of 10 will be performed in 00:01:16.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:18:51.434 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 1 of 10 will be performed in 00:00:40.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:19:36.544 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 2 of 10 will be performed in 00:00:20.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:19:50.358 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:19:50.3575400"
+2026-06-20 20:20:06.637 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:32.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:20:06.657 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 3 of 10 will be performed in 00:00:52.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:21:06.714 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 4 of 10 will be performed in 00:03:00.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:22:50.330 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:22:50.3300700"
+2026-06-20 20:23:51.881 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 5 of 10 will be performed in 00:06:06.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:24:06.927 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 5 of 10 will be performed in 00:04:36.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:25:50.336 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:25:50.3359590"
+2026-06-20 20:28:50.331 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:28:50.3310640"
+2026-06-20 20:28:52.176 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:16.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:30:07.300 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 6 of 10 will be performed in 00:12:52.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:31:50.331 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:31:50.3309300"
+2026-06-20 20:34:50.335 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:34:50.3349320"
+2026-06-20 20:36:42.593 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 caught stopping signal...
+2026-06-20 20:36:42.602 +03:00 [INF] Application is shutting down...
+2026-06-20 20:36:43.128 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 caught stopped signal...
+2026-06-20 20:36:43.330 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 All dispatchers stopped
+2026-06-20 20:36:43.414 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 successfully reported itself as stopped in 79.2818 ms
+2026-06-20 20:36:43.414 +03:00 [INF] Server dareens-macbook-air:12474:a62b9c48 has been stopped in total 814.2344 ms
+2026-06-20 20:36:51.581 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 20:36:51.804 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 20:36:51.843 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 20:36:51.872 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 20:36:51.874 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 20:36:51.875 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 20:36:51.875 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 20:36:51.879 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 20:36:51.879 +03:00 [INF] Hosting environment: Development
+2026-06-20 20:36:51.879 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 20:36:51.932 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 successfully announced in 51.9556 ms
+2026-06-20 20:36:51.933 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 20:36:51.937 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 all the dispatchers started
+2026-06-20 20:37:02.475 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 20:39:51.893 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:39:51.8912780"
+2026-06-20 20:41:22.394 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 7 of 10 will be performed in 00:25:14.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:42:51.853 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="17:42:51.8533850"
+2026-06-20 20:43:07.533 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 7 of 10 will be performed in 00:21:58.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 20:43:33.221 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 caught stopping signal...
+2026-06-20 20:43:33.232 +03:00 [INF] Application is shutting down...
+2026-06-20 20:43:33.362 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 All dispatchers stopped
+2026-06-20 20:43:33.387 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 successfully reported itself as stopped in 22.8782 ms
+2026-06-20 20:43:33.387 +03:00 [INF] Server dareens-macbook-air:22990:d726ae71 has been stopped in total 155.073 ms
+2026-06-20 20:57:32.905 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 20:57:33.360 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 20:57:33.850 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 20:57:33.880 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 20:57:33.882 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 20:57:33.883 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 20:57:33.883 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 20:57:33.887 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 20:57:33.887 +03:00 [INF] Hosting environment: Development
+2026-06-20 20:57:33.887 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 20:57:33.957 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 successfully announced in 69.6864 ms
+2026-06-20 20:57:33.959 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 20:57:33.962 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 all the dispatchers started
+2026-06-20 20:58:04.477 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 8:58:04 PM
+2026-06-20 20:58:44.243 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 20:59:04.541 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 8:59:04 PM
+2026-06-20 21:00:04.648 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:00:04 PM
+2026-06-20 21:00:33.870 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:00:33.8699020"
+2026-06-20 21:01:04.757 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:01:04 PM
+2026-06-20 21:02:04.914 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:02:04 PM
+2026-06-20 21:03:05.038 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:03:05 PM
+2026-06-20 21:03:33.860 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:03:33.8594870"
+2026-06-20 21:04:05.138 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:04:05 PM
+2026-06-20 21:05:05.220 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:05:05 PM
+2026-06-20 21:05:19.611 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 8 of 10 will be performed in 00:40:56.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 21:06:05.337 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:06:05 PM
+2026-06-20 21:06:33.861 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:06:33.8614060"
+2026-06-20 21:06:49.811 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 8 of 10 will be performed in 00:42:56.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 21:07:05.420 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:07:05 PM
+2026-06-20 21:08:05.628 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:08:05 PM
+2026-06-20 21:09:05.651 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:09:05 PM
+2026-06-20 21:09:33.853 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:09:33.8528840"
+2026-06-20 21:10:05.742 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:10:05 PM
+2026-06-20 21:11:05.831 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:11:05 PM
+2026-06-20 21:12:05.933 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:12:05 PM
+2026-06-20 21:12:33.854 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:12:33.8540190"
+2026-06-20 21:13:06.038 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:13:06 PM
+2026-06-20 21:14:06.104 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:14:06 PM
+2026-06-20 21:15:06.185 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:15:06 PM
+2026-06-20 21:15:33.876 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:15:33.8763920"
+2026-06-20 21:16:06.314 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:16:06 PM
+2026-06-20 21:17:06.395 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:17:06 PM
+2026-06-20 21:18:06.478 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:18:06 PM
+2026-06-20 21:18:33.852 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:18:33.8519920"
+2026-06-20 21:19:06.562 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:19:06 PM
+2026-06-20 21:20:06.656 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:20:06 PM
+2026-06-20 21:21:06.745 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:21:06 PM
+2026-06-20 21:21:33.865 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:21:33.8656670"
+2026-06-20 21:22:06.829 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:22:06 PM
+2026-06-20 21:23:06.920 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:23:06 PM
+2026-06-20 21:24:06.986 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:24:06 PM
+2026-06-20 21:24:33.858 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:24:33.8576720"
+2026-06-20 21:25:07.082 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:25:07 PM
+2026-06-20 21:26:07.189 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:26:07 PM
+2026-06-20 21:27:07.270 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:27:07 PM
+2026-06-20 21:27:33.852 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:27:33.8526340"
+2026-06-20 21:28:07.363 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:28:07 PM
+2026-06-20 21:29:07.436 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:29:07 PM
+2026-06-20 21:30:07.491 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:30:07 PM
+2026-06-20 21:30:33.861 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:30:33.8610190"
+2026-06-20 21:31:07.545 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:31:07 PM
+2026-06-20 21:32:07.638 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:32:07 PM
+2026-06-20 21:33:07.697 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:33:07 PM
+2026-06-20 21:33:33.852 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:33:33.8527450"
+2026-06-20 21:34:07.792 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:34:07 PM
+2026-06-20 21:35:07.876 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:35:07 PM
+2026-06-20 21:36:07.948 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:36:07 PM
+2026-06-20 21:36:33.853 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:36:33.8534220"
+2026-06-20 21:37:08.033 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:37:08 PM
+2026-06-20 21:38:08.099 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:38:08 PM
+2026-06-20 21:39:08.156 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:39:08 PM
+2026-06-20 21:39:33.853 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:39:33.8535940"
+2026-06-20 21:40:08.239 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:40:08 PM
+2026-06-20 21:41:08.299 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:41:08 PM
+2026-06-20 21:42:08.447 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:42:08 PM
+2026-06-20 21:42:33.856 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:42:33.8559250"
+2026-06-20 21:43:08.451 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:43:08 PM
+2026-06-20 21:44:08.537 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:44:08 PM
+2026-06-20 21:45:08.636 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:45:08 PM
+2026-06-20 21:45:33.854 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="18:45:33.8545830"
+2026-06-20 21:46:08.701 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:46:08 PM
+2026-06-20 21:46:22.043 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 9 of 10 will be performed in 01:08:58.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 21:54:25.793 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 9 of 10 will be performed in 01:11:04.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 21:54:27.420 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:54:27 PM
+2026-06-20 22:09:04.408 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 10:09:04 PM
+2026-06-20 22:09:14.632 +03:00 [INF] 1 servers were removed due to timeout

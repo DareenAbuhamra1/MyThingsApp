@@ -19,5 +19,6 @@ public interface IOrderReadRepository
     IQueryable<Order> GetPartnerOrders(int partnerId);
     IQueryable<Order> GetDriverAssignedOrder(int driverId);
     IQueryable<Order> GetOrderDetails(int orderId);
+    IQueryable<Order> GetAllOrders();
 }
 

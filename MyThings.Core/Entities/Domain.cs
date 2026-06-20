@@ -7,6 +7,7 @@ namespace MyThings.Core.Entities;
 public class Domain : BaseEntity
 {
     public string Name { get; set; } =null!;
+    public int AvailabilityId {get;set;}
     public virtual ICollection<PartnerDomain> PartnerDomains { get; set; } = [];
     public virtual ICollection<Order> Orders { get; set; } = [];
 
@@ -21,6 +22,9 @@ public class Domain : BaseEntity
             builder.Property(e => e.Name)
                 .HasMaxLength(100)
                 .IsRequired();
+                
+            builder.Property(p => p.AvailabilityId)
+                .HasDefaultValue(1);
         }
     }
 }

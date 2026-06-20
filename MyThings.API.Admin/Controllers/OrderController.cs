@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyThings.Core.DTOs;
 using MyThings.Core.Enums;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Helper;
@@ -62,6 +63,22 @@ namespace OrderController.Controllers
             {
                 _logger.LogError(e, "An error in Getting Order Details");
                 return StatusCode(500,"An error in Getting Order Details");
+            }
+        }
+        [Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
+        [HttpGet("history")]
+        public async Task<IActionResult> GetOrders([FromQuery] OrderAdminQueryDto queryDto)
+        {
+            try
+            {
+                var result = await _orderService.GetOrderHistoryAdminAsync(queryDto);
+                
+                return Ok(result.Data);
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, "An error occurred in SetOrderReadyForPickup");
+                return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
             }
         }
     }

@@ -26,4 +26,5 @@ public interface IOrderService
     Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAsync(OrderHistoryQueryDto query, int partnerId);
     Task<ServiceResponse<DriverAssignedOrder?>> GetDriverAssignedOrderAsync(int driverId);
     Task<ServiceResponse<OrderDetailedDto>> GetOrderDetailsAsync(int orderId);
+    Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAdminAsync(OrderAdminQueryDto query);
 }

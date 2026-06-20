@@ -9,6 +9,8 @@
       "MyThings.API.Admin/1.0.0": {
         "dependencies": {
           "Grafana.OpenTelemetry": "1.7.0",
+          "Hangfire.AspNetCore": "1.8.23",
+          "Hangfire.SqlServer": "1.8.23",
           "Microsoft.AspNetCore.OpenApi": "10.0.5",
           "Microsoft.EntityFrameworkCore.Design": "10.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7",
@@ -245,25 +247,91 @@
           }
         }
       },
-      "Hangfire.Core/1.7.0": {
+      "Hangfire.AspNetCore/1.8.23": {
+        "dependencies": {
+          "Hangfire.NetCore": "1.8.23"
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
+            "assemblyVersion": "1.8.23.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Hangfire.Core/1.8.23": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.3"
         },
         "runtime": {
           "lib/netstandard2.0/Hangfire.Core.dll": {
-            "assemblyVersion": "1.7.0.0",
+            "assemblyVersion": "1.8.23.0",
             "fileVersion": "0.0.0.0"
           }
         },
         "resources": {
+          "lib/netstandard2.0/ca/Hangfire.Core.resources.dll": {
+            "locale": "ca"
+          },
+          "lib/netstandard2.0/de/Hangfire.Core.resources.dll": {
+            "locale": "de"
+          },
           "lib/netstandard2.0/es/Hangfire.Core.resources.dll": {
             "locale": "es"
+          },
+          "lib/netstandard2.0/fa/Hangfire.Core.resources.dll": {
+            "locale": "fa"
+          },
+          "lib/netstandard2.0/fr/Hangfire.Core.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard2.0/nb/Hangfire.Core.resources.dll": {
+            "locale": "nb"
+          },
+          "lib/netstandard2.0/nl/Hangfire.Core.resources.dll": {
+            "locale": "nl"
+          },
+          "lib/netstandard2.0/pt-BR/Hangfire.Core.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard2.0/pt-PT/Hangfire.Core.resources.dll": {
+            "locale": "pt-PT"
+          },
+          "lib/netstandard2.0/pt/Hangfire.Core.resources.dll": {
+            "locale": "pt"
+          },
+          "lib/netstandard2.0/sv/Hangfire.Core.resources.dll": {
+            "locale": "sv"
+          },
+          "lib/netstandard2.0/tr-TR/Hangfire.Core.resources.dll": {
+            "locale": "tr-TR"
           },
           "lib/netstandard2.0/zh-TW/Hangfire.Core.resources.dll": {
             "locale": "zh-TW"
           },
           "lib/netstandard2.0/zh/Hangfire.Core.resources.dll": {
             "locale": "zh"
+          }
+        }
+      },
+      "Hangfire.NetCore/1.8.23": {
+        "dependencies": {
+          "Hangfire.Core": "1.8.23"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Hangfire.NetCore.dll": {
+            "assemblyVersion": "1.8.23.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Hangfire.SqlServer/1.8.23": {
+        "dependencies": {
+          "Hangfire.Core": "1.8.23"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.SqlServer.dll": {
+            "assemblyVersion": "1.8.23.0",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1069,7 +1137,7 @@
       },
       "OpenTelemetry.Instrumentation.Hangfire/1.15.1-beta.1": {
         "dependencies": {
-          "Hangfire.Core": "1.7.0",
+          "Hangfire.Core": "1.8.23",
           "Newtonsoft.Json": "13.0.3",
           "OpenTelemetry.Api.ProviderBuilderExtensions": "1.15.3"
         },
@@ -1792,12 +1860,33 @@
       "path": "grpc.net.common/2.70.0",
       "hashPath": "grpc.net.common.2.70.0.nupkg.sha512"
     },
-    "Hangfire.Core/1.7.0": {
+    "Hangfire.AspNetCore/1.8.23": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZWfWcE+kOWjKy7l/rsVtZmxs5XdltJY5ndx+vy7enD85ZVgc0Z+nIOZ/PfBhQQ68vGOfwOudpQVHuwXlSn7/fQ==",
-      "path": "hangfire.core/1.7.0",
-      "hashPath": "hangfire.core.1.7.0.nupkg.sha512"
+      "sha512": "sha512-TXpOl7kX4xXq5bLEqqWCpt9zh3TaouDwtb3GDtzGHX5uSC2RaAqZzn2swevivx3Uki16slXIigiPtgr4TPKpsg==",
+      "path": "hangfire.aspnetcore/1.8.23",
+      "hashPath": "hangfire.aspnetcore.1.8.23.nupkg.sha512"
+    },
+    "Hangfire.Core/1.8.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YCOTtF3NNOQI83PlfjeNDDBkofJDfdET2CwhfQsiVBwmsU6lP19QW9NVTIH9epl+MnOsyFC2G1RnlPSGV8F1FQ==",
+      "path": "hangfire.core/1.8.23",
+      "hashPath": "hangfire.core.1.8.23.nupkg.sha512"
+    },
+    "Hangfire.NetCore/1.8.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SmvUJF/u5MCP666R5Y1V+GntqBc4RCWJqn5ztMMN67d53Cx5cuaWR0YNLMrabjylwLarFYJ7EdR9RnGEZzp/dg==",
+      "path": "hangfire.netcore/1.8.23",
+      "hashPath": "hangfire.netcore.1.8.23.nupkg.sha512"
+    },
+    "Hangfire.SqlServer/1.8.23": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HiRUbwveK0+wop8iY98Z5DrtfjP+1QCly6IO+21Bnolb5kTO5eCrtKbGErHfhSN0BzKk9ehmTLk9uDHQdAtfcQ==",
+      "path": "hangfire.sqlserver/1.8.23",
+      "hashPath": "hangfire.sqlserver.1.8.23.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

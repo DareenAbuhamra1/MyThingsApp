@@ -1,0 +1,272 @@
+2026-06-18 10:26:46.232 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-18 10:26:46.261 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-18 10:26:46.261 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-18 10:26:46.261 +03:00 [INF] Hosting environment: Development
+2026-06-18 10:26:46.261 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-18 10:29:04.070 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-18 10:29:05.964 +03:00 [INF] Login successful.
+2026-06-18 10:29:05.967 +03:00 [INF] Login successful.
+2026-06-18 10:29:46.241 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:29:46.2401850"
+2026-06-18 10:32:46.237 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:32:46.2361850"
+2026-06-18 10:35:46.234 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:35:46.2339910"
+2026-06-18 10:38:46.247 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:38:46.2453590"
+2026-06-18 10:41:37.505 +03:00 [INF] Login successful.
+2026-06-18 10:41:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:41:46.2364060"
+2026-06-18 10:44:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:44:46.2365340"
+2026-06-18 10:47:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:47:46.2348640"
+2026-06-18 10:50:46.240 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:50:46.2387660"
+2026-06-18 10:53:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:53:46.2349150"
+2026-06-18 10:56:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:56:46.2362080"
+2026-06-18 10:59:46.239 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:59:46.2370760"
+2026-06-18 11:02:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:02:46.2349660"
+2026-06-18 11:05:46.237 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:05:46.2352740"
+2026-06-18 11:08:46.234 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:08:46.2345450"
+2026-06-18 11:11:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:11:46.2356230"
+2026-06-18 11:14:46.244 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:14:46.2430030"
+2026-06-18 11:14:59.564 +03:00 [INF] Login successful.
+2026-06-18 11:17:46.248 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:17:46.2437280"
+2026-06-18 11:20:46.245 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:20:46.2439790"
+2026-06-18 11:23:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:23:46.2348810"
+2026-06-18 11:26:46.241 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:26:46.2405910"
+2026-06-18 11:29:46.236 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:29:46.2359450"
+2026-06-18 11:32:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:32:46.2351840"
+2026-06-18 11:35:11.940 +03:00 [INF] Login successful.
+2026-06-18 11:35:46.234 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:35:46.2342330"
+2026-06-18 11:38:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:38:46.2345290"
+2026-06-18 11:41:46.234 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:41:46.2342620"
+2026-06-18 11:44:46.239 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:44:46.2384930"
+2026-06-18 11:47:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:47:46.2350200"
+2026-06-18 11:50:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:50:46.2350940"
+2026-06-18 11:53:46.239 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:53:46.2393260"
+2026-06-18 11:56:46.241 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:56:46.2408630"
+2026-06-18 11:59:46.234 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:59:46.2340640"
+2026-06-18 12:02:46.239 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:02:46.2392120"
+2026-06-18 12:05:46.243 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:05:46.2411700"
+2026-06-18 12:08:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:08:46.2349150"
+2026-06-18 12:11:46.235 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:11:46.2356080"
+2026-06-18 12:12:38.384 +03:00 [INF] Application is shutting down...
+2026-06-18 12:12:51.771 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-18 12:12:51.805 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-18 12:12:51.806 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-18 12:12:51.806 +03:00 [INF] Hosting environment: Development
+2026-06-18 12:12:51.806 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-18 12:15:51.858 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:15:51.8580200"
+2026-06-18 12:18:51.808 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:18:51.8057520"
+2026-06-18 12:21:51.783 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:21:51.7831730"
+2026-06-18 12:23:02.247 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-18 12:23:02.910 +03:00 [INF] Login successful.
+2026-06-18 12:23:02.928 +03:00 [INF] Login successful.
+2026-06-18 12:24:51.784 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:24:51.7836410"
+2026-06-18 12:39:19.634 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:39:19.6343030"
+2026-06-18 12:50:17.457 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:50:17.4572900"
+2026-06-18 12:53:17.456 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:53:17.4566020"
+2026-06-18 12:56:17.461 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:56:17.4606800"
+2026-06-18 12:56:58.645 +03:00 [INF] Application is shutting down...
+2026-06-18 12:57:23.427 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-18 12:57:23.502 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-18 12:57:23.504 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-18 12:57:23.504 +03:00 [INF] Hosting environment: Development
+2026-06-18 12:57:23.504 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-18 12:57:27.813 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-18 13:00:23.456 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:00:23.4554790"
+2026-06-18 13:03:23.497 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:03:23.4890090"
+2026-06-18 13:06:23.431 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:06:23.4308170"
+2026-06-18 13:09:23.429 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:09:23.4291390"
+2026-06-18 13:12:23.431 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:12:23.4309880"
+2026-06-18 13:15:23.428 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:15:23.4276900"
+2026-06-18 13:17:38.773 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-18 13:18:23.428 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:18:23.4284880"
+2026-06-18 13:21:23.438 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:21:23.4346800"
+2026-06-18 13:24:23.431 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:24:23.4307170"
+2026-06-18 13:27:23.439 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:27:23.4381450"
+2026-06-18 13:41:44.648 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:41:44.6476880"
+2026-06-18 13:44:44.642 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:44:44.6423270"
+2026-06-18 13:47:44.641 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:47:44.6417030"
+2026-06-18 13:50:44.642 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:50:44.6423590"
+2026-06-18 13:53:44.656 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:53:44.6528430"
+2026-06-18 13:56:44.642 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:56:44.6416350"
+2026-06-18 13:59:44.642 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="10:59:44.6422860"
+2026-06-18 14:02:44.643 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="11:02:44.6433130"
+2026-06-18 14:05:52.043 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="11:05:52.0429330"
+2026-06-18 14:08:52.043 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="11:08:52.0431550"
+2026-06-18 14:49:48.674 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="11:49:48.6731930"
+2026-06-18 15:59:50.371 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="12:59:50.3569280"
+2026-06-18 16:02:50.342 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:02:50.3421450"
+2026-06-18 16:05:50.344 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:05:50.3437790"
+2026-06-18 16:08:50.346 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:08:50.3463280"
+2026-06-18 16:11:50.342 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:11:50.3414800"
+2026-06-18 16:14:50.341 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:14:50.3414200"
+2026-06-18 16:17:50.342 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:17:50.3416240"
+2026-06-18 16:20:50.343 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:20:50.3429190"
+2026-06-18 16:23:50.343 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:23:50.3429380"
+2026-06-18 16:26:50.348 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:26:50.3476710"
+2026-06-18 16:29:50.343 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:29:50.3428940"
+2026-06-18 16:32:50.345 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:32:50.3453700"
+2026-06-18 16:44:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:44:17.2651650"
+2026-06-18 16:47:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:47:17.2651180"
+2026-06-18 16:50:17.263 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:50:17.2638580"
+2026-06-18 16:53:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:53:17.2648740"
+2026-06-18 16:56:17.263 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:56:17.2634810"
+2026-06-18 16:59:17.264 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="13:59:17.2644360"
+2026-06-18 17:02:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:02:17.2654600"
+2026-06-18 17:05:17.278 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:05:17.2762740"
+2026-06-18 17:08:17.270 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:08:17.2697890"
+2026-06-18 17:08:49.166 +03:00 [ERR] Failed executing DbCommand (31,796ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[DateOfBirth], [u].[DeletedAt], [u].[Email], [u].[FirstName], [u].[Gender], [u].[IsActive], [u].[IsDeleted], [u].[LastLogin], [u].[LastName], [u].[Phone], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[Role], [u].[UpdatedAt], [p].[CommissionRate], [p].[DeliveryRuleId], [p].[IsAvailable], [p].[IsManuallyClosed], [p].[LocationId], [p].[Name], [p].[ParentStoreId], [p].[RegistrationNo], [w].[Id], [w].[CreatedAt], [w].[Day], [w].[DeletedAt], [w].[IsDeleted], [w].[PartnerId], [w].[ShiftBegin], [w].[ShiftEnd], [w].[UpdatedAt]
+FROM [User] AS [u]
+INNER JOIN [Partner] AS [p] ON [u].[Id] = [p].[Id]
+LEFT JOIN [WorkingHour] AS [w] ON [u].[Id] = [w].[PartnerId]
+ORDER BY [u].[Id]
+2026-06-18 17:08:49.251 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MyThings.Infrastructure.Context.WriteDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+2026-06-18 17:08:49.269 +03:00 [ERR] Error processing background availability transitions.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MyThings.Infrastructure.BackgroundWorkers.PartnerAvailabilityWorker.EvaluateAvailabilityAsync() in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/BackgroundWorkers/PartnerAvailabilityWorker.cs:line 60
+   at MyThings.Infrastructure.BackgroundWorkers.PartnerAvailabilityWorker.ExecuteAsync(CancellationToken stoppingToken) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/BackgroundWorkers/PartnerAvailabilityWorker.cs:line 31
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+2026-06-18 17:11:17.266 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:11:17.2660970"
+2026-06-18 17:14:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:14:17.2652660"
+2026-06-18 17:17:17.268 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:17:17.2681950"
+2026-06-18 17:20:17.267 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:20:17.2663390"
+2026-06-18 17:23:17.403 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:23:17.3913960"
+2026-06-18 17:23:52.584 +03:00 [ERR] Failed executing DbCommand (35,062ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [u].[Id], [u].[CreatedAt], [u].[DateOfBirth], [u].[DeletedAt], [u].[Email], [u].[FirstName], [u].[Gender], [u].[IsActive], [u].[IsDeleted], [u].[LastLogin], [u].[LastName], [u].[Phone], [u].[RefreshToken], [u].[RefreshTokenExpiry], [u].[Role], [u].[UpdatedAt], [p].[CommissionRate], [p].[DeliveryRuleId], [p].[IsAvailable], [p].[IsManuallyClosed], [p].[LocationId], [p].[Name], [p].[ParentStoreId], [p].[RegistrationNo], [w].[Id], [w].[CreatedAt], [w].[Day], [w].[DeletedAt], [w].[IsDeleted], [w].[PartnerId], [w].[ShiftBegin], [w].[ShiftEnd], [w].[UpdatedAt]
+FROM [User] AS [u]
+INNER JOIN [Partner] AS [p] ON [u].[Id] = [p].[Id]
+LEFT JOIN [WorkingHour] AS [w] ON [u].[Id] = [w].[PartnerId]
+ORDER BY [u].[Id]
+2026-06-18 17:23:52.616 +03:00 [ERR] An exception occurred while iterating over the results of a query for context type 'MyThings.Infrastructure.Context.WriteDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+2026-06-18 17:23:52.624 +03:00 [ERR] Error processing background availability transitions.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Execution Timeout Expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+ ---> System.ComponentModel.Win32Exception (258): Unknown error: 258
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at MyThings.Infrastructure.BackgroundWorkers.PartnerAvailabilityWorker.EvaluateAvailabilityAsync() in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/BackgroundWorkers/PartnerAvailabilityWorker.cs:line 60
+   at MyThings.Infrastructure.BackgroundWorkers.PartnerAvailabilityWorker.ExecuteAsync(CancellationToken stoppingToken) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/BackgroundWorkers/PartnerAvailabilityWorker.cs:line 31
+ClientConnectionId:03824af7-707f-41e3-bc8f-4fd68cb9a4ed
+Error Number:-2,State:0,Class:11
+2026-06-18 17:26:17.273 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:26:17.2728830"
+2026-06-18 17:29:17.271 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:29:17.2712360"
+2026-06-18 17:32:17.266 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:32:17.2658270"
+2026-06-18 17:35:17.275 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:35:17.2746190"
+2026-06-18 17:38:17.287 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:38:17.2810210"
+2026-06-18 17:41:17.265 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:41:17.2657500"
+2026-06-18 17:44:17.278 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:44:17.2777440"
+2026-06-18 17:47:17.267 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="14:47:17.2658530"
+2026-06-18 18:03:35.705 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:03:35.7021570"
+2026-06-18 18:06:35.692 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:06:35.6923200"
+2026-06-18 18:09:35.693 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:09:35.6834570"
+2026-06-18 18:12:35.691 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:12:35.6891110"
+2026-06-18 18:15:35.681 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:15:35.6815830"
+2026-06-18 18:18:35.694 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:18:35.6910090"
+2026-06-18 18:21:36.315 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:21:36.3154290"
+2026-06-18 18:33:22.096 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="15:33:22.0963380"

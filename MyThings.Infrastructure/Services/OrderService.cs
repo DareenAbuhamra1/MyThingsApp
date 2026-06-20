@@ -139,6 +139,7 @@ public class OrderService : IOrderService
                         Price = ProductOption.Price,
                         Quantity = olp.Quantity,
                     };
+
                     line.OrderLineOptions.Add(lineOption); // link orderLineOptions to OrderLine
                     SubTotal += ProductOption.Price * olp.Quantity;
                 }
@@ -176,7 +177,7 @@ public class OrderService : IOrderService
                     OrderLineOptions = line.OrderLineOptions?.Select(opt => new OrderLineOptionsCartResponse
                     {
                         ProductOptionId = opt.ProductOptionId,
-                        ProductOption = opt.Option, 
+                        ProductOption = opt.Option,
                         Quantity = opt.Quantity
                     }).ToList()
                 }
@@ -184,9 +185,9 @@ public class OrderService : IOrderService
         }
         else
         {
-            if(product.PartnerId != orderCart.PartnerId)
+            if (product.PartnerId != orderCart.PartnerId)
             {
-                return ServiceResponse<OrderCartResponseDto>.Failure("Bad request",400);
+                return ServiceResponse<OrderCartResponseDto>.Failure("Bad request", 400);
             }
             var line = new OrderLineCartDto
             {
@@ -247,8 +248,9 @@ public class OrderService : IOrderService
             }
         }
         order.DeliveryFees = await _deliveryFeeService.CalculateDeliveryFee(order.PartnerId, order.DeliveryLocationId, order.DeliveryRuleId, order.SubTotal);
-        order.TotalPayment = order.SubTotal + order.ServiceFee + order.DeliveryFees;
         order.ServiceFee = Math.Round(order.SubTotal * 0.1m, 3);
+        order.TotalPayment = order.SubTotal + order.ServiceFee + order.DeliveryFees;
+
         order.OrderLines.Add(line);
 
         _unitOfWork.Orders.Update(order);
@@ -492,7 +494,7 @@ public class OrderService : IOrderService
             return ServiceResponse<List<DriverOrderInfo>>.Failure("Driver Location is null", 404);
 
         var Orders = await _orderReadRepository.FindNearestOrdersAsync((decimal)driver.Latitude, (decimal)driver.Longitude);
-        
+
         return ServiceResponse<List<DriverOrderInfo>>.Ok(Orders);
     }
 
@@ -684,10 +686,11 @@ public class OrderService : IOrderService
     {
         var order = await _orderReadRepository.GetCustomerCartAsync(customerId);
 
-        if(order == null) return ServiceResponse<OrderCartViewDto>.Failure("The order is not found", 404);
+        if (order == null) return ServiceResponse<OrderCartViewDto>.Failure("The order is not found", 404);
 
-        
-        var response = new OrderCartViewDto{
+
+        var response = new OrderCartViewDto
+        {
             OrderId = order.Id,
             PartnerName = order.Partner?.Name ?? "Unknown",
             DeliveryLocation =
@@ -696,7 +699,7 @@ public class OrderService : IOrderService
             CustomerId = order.CustomerId,
             PartnerId = order.PartnerId,
             SubTotal = order.SubTotal,
-            ServiceFee = order.TotalPayment-order.SubTotal-order.DeliveryFees,
+            ServiceFee = order.TotalPayment - order.SubTotal - order.DeliveryFees,
             DeliveryFees = order.DeliveryFees,
             TotalPrice = order.TotalPayment,
             OrderLines = order.OrderLines.Select(
@@ -711,10 +714,10 @@ public class OrderService : IOrderService
                                 ProductOptionId = olp.ProductOptionId,
                                 ProductOption = olp.Option,
                                 Quantity = olp.Quantity,
-                            }).ToList()?? new List<OrderLineOptionsView>()
+                            }).ToList() ?? new List<OrderLineOptionsView>()
                     }
                 ).ToList()
-            };
+        };
 
         return ServiceResponse<OrderCartViewDto>.Ok(response);
     }
@@ -728,12 +731,12 @@ public class OrderService : IOrderService
             await _unitOfWork.CompleteAsync();
         }
         return ServiceResponse<bool>.Ok(true);
-        
+
     }
 
     public async Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAsync(OrderHistoryQueryDto query, int partnerId)
     {
-        var ordersQuery =  _orderReadRepository.GetPartnerOrders(partnerId);
+        var ordersQuery = _orderReadRepository.GetPartnerOrders(partnerId);
         if (ordersQuery != null)
         {
             if (query.Status.HasValue)
@@ -754,9 +757,9 @@ public class OrderService : IOrderService
             var totalPages = (int)Math.Ceiling(
                 (double)totalCount / query.PageSize
             );
-            
+
             var pageOrders = await ordersQuery
-                .Skip((query.Page -1) * query.PageSize)
+                .Skip((query.Page - 1) * query.PageSize)
                 .Take(query.PageSize)
                 .ToListAsync();
 
@@ -803,7 +806,7 @@ public class OrderService : IOrderService
 
     public async Task<ServiceResponse<DriverAssignedOrder?>> GetDriverAssignedOrderAsync(int driverId)
     {
-        var orderQuery =  _orderReadRepository.GetDriverAssignedOrder(driverId);
+        var orderQuery = _orderReadRepository.GetDriverAssignedOrder(driverId);
 
         var assingedOrder = await orderQuery.Select(
             o => new DriverAssignedOrder
@@ -814,7 +817,7 @@ public class OrderService : IOrderService
                 CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
                 CustomerPhone = o.Customer.Phone,
                 DeliveryLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
-                IsReadyForPickup = o.Status == OrderStatusEnum.ReadyForPickUp?true:false,
+                IsReadyForPickup = o.Status == OrderStatusEnum.ReadyForPickUp ? true : false,
                 Status = o.Status,
                 SubTotal = o.SubTotal,
                 ServiceFee = o.ServiceFee,
@@ -822,10 +825,10 @@ public class OrderService : IOrderService
                 TotalPayment = o.TotalPayment,
                 StartEstimation = o.StartEstimation.Value,
                 EndEstimation = o.EndEstimation.Value,
-            } 
+            }
         ).FirstOrDefaultAsync();
 
-        if(assingedOrder == null) return ServiceResponse<DriverAssignedOrder?>.Ok(null);
+        if (assingedOrder == null) return ServiceResponse<DriverAssignedOrder?>.Ok(null);
 
         return ServiceResponse<DriverAssignedOrder?>.Ok(assingedOrder);
     }
@@ -878,4 +881,85 @@ public class OrderService : IOrderService
 
         return ServiceResponse<OrderDetailedDto>.Ok(detailedOrder);
     }
+
+    public async Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAdminAsync(OrderAdminQueryDto query)
+    {
+        var ordersQuery = _orderReadRepository.GetAllOrders();
+
+        if (ordersQuery != null)
+        {
+            if (query.Status != null)
+            {
+                var statuses = query.Status
+                .Split(',')
+                .Select(s => Enum.Parse<OrderStatusEnum>(s, true))
+                .ToList();
+
+                ordersQuery = ordersQuery.Where(o => statuses.Contains(o.Status));
+            }
+            if (query.From.HasValue)
+            {
+                ordersQuery = ordersQuery.Where(o => o.CreatedAt >= query.From.Value);
+            }
+            if (query.To.HasValue)
+            {
+                ordersQuery = ordersQuery.Where(o => o.CreatedAt <= query.To.Value);
+            }
+
+            ordersQuery = ordersQuery.OrderByDescending(o => o.CreatedAt);
+
+            var totalCount = await ordersQuery
+                .CountAsync();
+
+            var totalPages = (int)Math.Ceiling(
+                (double)totalCount / query.PageSize
+            );
+
+            var pageOrders = await ordersQuery
+            .Skip((query.Page - 1) * query.PageSize)
+            .Take(query.PageSize)
+            .ToListAsync();
+
+            var data = pageOrders.Select(
+                o => new OrderForPaginationDto
+                {
+                    OrderId = o.Id,
+                    Status = o.Status,
+                    SubTotal = o.SubTotal,
+                    ServiceFee = o.ServiceFee,
+                    DeliveryFees = o.DeliveryFees,
+                    TotalPayment = o.TotalPayment,
+                    StartEstimation = o.StartEstimation,
+                    EndEstimation = o.EndEstimation,
+                    PlacementTime = o.PlacementTime,
+                    AcceptedTime = o.AcceptedTime,
+                    PickedUpTime = o.PickedUpTime,
+                    DeliveredTime = o.DeliveredTime,
+                    Note = o.Note,
+                }
+            ).ToList();
+            var response = new PageResponse<OrderForPaginationDto>
+            {
+                Data = data,
+                Page = totalPages,
+                PageSize = query.PageSize,
+                TotalCount = totalCount,
+                TotalPages = totalPages,
+            };
+
+            return ServiceResponse<PageResponse<OrderForPaginationDto>>.Ok(response);
+        }
+        return ServiceResponse<PageResponse<OrderForPaginationDto>>.Ok(
+            new PageResponse<OrderForPaginationDto>
+            {
+                Data = new List<OrderForPaginationDto>(),
+                Page = query.Page,
+                PageSize = query.PageSize,
+                TotalCount = 0,
+                TotalPages = 0
+            });
+
+    }
+
 }
+

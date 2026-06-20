@@ -1,0 +1,86 @@
+2026-06-20 19:05:06.368 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:05:06.378 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:05:06.378 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:05:06.378 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:05:09.595 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:05:53.298 +03:00 [INF] Application is shutting down...
+2026-06-20 19:05:59.451 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:05:59.461 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:05:59.461 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:05:59.461 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:06:20.541 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:06:20.655 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Mythings.Core.Interaces.Services.IPartnerService' while attempting to activate 'PartnerController.Controllers.PartnerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method51(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-20 19:07:56.655 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'Mythings.Core.Interaces.Services.IPartnerService' while attempting to activate 'PartnerController.Controllers.PartnerController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method51(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-06-20 19:08:47.313 +03:00 [INF] Application is shutting down...
+2026-06-20 19:08:56.495 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:08:56.505 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:08:56.506 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:08:56.506 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:09:13.656 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:10:26.790 +03:00 [INF] Application is shutting down...
+2026-06-20 19:10:37.259 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-20 19:10:37.269 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:10:37.270 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:10:37.271 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:10:37.271 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:13:26.199 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-20 19:13:26.213 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:13:26.214 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:13:26.214 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:13:26.214 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:15:24.248 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:15:24.259 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:15:24.259 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:15:24.259 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:15:34.175 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:34:33.113 +03:00 [INF] Application is shutting down...
+2026-06-20 19:34:41.551 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:34:41.561 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:34:41.562 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:34:41.562 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:34:48.501 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:36:59.504 +03:00 [INF] Application is shutting down...
+2026-06-20 19:37:08.011 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:37:08.021 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:37:08.021 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:37:08.021 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:37:09.214 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:47:27.757 +03:00 [INF] Application is shutting down...
+2026-06-20 19:47:42.233 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-20 19:47:42.243 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 19:47:42.243 +03:00 [INF] Hosting environment: Development
+2026-06-20 19:47:42.243 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-20 19:47:49.505 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 19:56:04.554 +03:00 [INF] Application is shutting down...

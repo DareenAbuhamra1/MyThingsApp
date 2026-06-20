@@ -160,6 +160,11 @@ namespace MyThings.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AvailabilityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -663,6 +668,11 @@ namespace MyThings.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("AvailabilityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<DateTime>("CreatedAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
@@ -978,11 +988,26 @@ namespace MyThings.Infrastructure.Migrations
                 {
                     b.HasBaseType("MyThings.Core.Entities.User");
 
+                    b.Property<int>("AvailabilityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<decimal>("CommissionRate")
                         .HasColumnType("decimal(5,2)");
 
                     b.Property<int>("DeliveryRuleId")
                         .HasColumnType("int");
+
+                    b.Property<string>("DescriptionAr")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("DescriptionEn")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<bool>("IsAvailable")
                         .HasColumnType("bit");
@@ -1001,6 +1026,15 @@ namespace MyThings.Infrastructure.Migrations
                         .HasColumnType("nvarchar(200)");
 
                     b.Property<int?>("ParentStoreId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PreparingTime")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Rating")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<int>("RatingCount")
                         .HasColumnType("int");
 
                     b.Property<string>("RegistrationNo")

@@ -4,6 +4,7 @@ using MyThings.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
 using MyThings.Core.Dto;
+using System.Security.Cryptography;
 
 namespace MyThings.Infrastructure.Repositories;
 
@@ -38,5 +39,74 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
     {
         return _context.Partners
             .Include(p => p.Location);
+    }
+
+    public IQueryable<Partner> SearchPartnersByNameAndDescription(string searchTerm, int domainId)
+    {
+        return _context.Partners
+            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
+            .Where(p => p.PartnerDomains.Any(pd => pd.DomainId == domainId))
+            .Where(p => p.DescriptionEn.Contains(searchTerm) 
+                || p.DescriptionAr.Contains(searchTerm)
+                || p.Name.Contains(searchTerm))
+            .Include(p => p.Location)
+            .AsQueryable();
+    }
+
+    public IQueryable<Partner> SearchPartnerByCategory(string searchTerm)
+    {
+        return _context.Partners
+            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
+            .Where(p => p.PartnerCategories.Any(pc => pc.Category != null 
+                && pc.Category.Name.Contains(searchTerm)))
+            .Include(p => p.Location)
+            .AsQueryable();
+    }
+
+    public IQueryable<Partner> SearchPartnerByProduct(string searchTerm)
+    {
+        return _context.Partners
+            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
+            .Where(p => p.Products.Any(pp => pp.AvailabilityId ==1 
+                && pp.Name.Contains(searchTerm)))
+            .Include(p => p.Location)
+            .AsQueryable();
+    }
+
+    public IQueryable<PartnerSearchResult> SearchPartners(string searchTerm, int? domainId, double? userLat, double? userLon)
+    {
+        var query = _context.Partners
+            .Where(p => p.AvailabilityId == 1)
+            .Where(p => !domainId.HasValue || p.PartnerDomains.Any(pd => pd.DomainId == domainId))
+            .Where(p => p.Name.Contains(searchTerm) 
+                || p.DescriptionEn.Contains(searchTerm) 
+                || p.DescriptionAr.Contains(searchTerm)
+                || p.PartnerCategories.Any( 
+                    pc => pc.Category != null &&
+                    pc.Category.Name.Contains(searchTerm) )
+                || p.Products.Any(pp => pp.AvailabilityId == 1 && pp.Name.Contains(searchTerm))
+            )
+            .Include(pl => pl.Location);
+
+        double userLatRadians = userLat.HasValue? userLat.Value * Math.PI / 180.0 : 0;
+        double userLonRadians = userLon.HasValue? userLon.Value * Math.PI / 180.0 : 0;
+
+        return query.Select(p => new PartnerSearchResult
+        {
+            Partner = p,
+            Order = p.Name.Contains(searchTerm) 
+                || p.DescriptionEn.Contains(searchTerm) 
+                || p.DescriptionAr.Contains(searchTerm) ? 0:
+                p.PartnerCategories.Any(pc => pc.Category != null
+                && pc.Category.Name.Contains(searchTerm)) ? 1:3, // order = 3 like in the SP
+
+            Distance = !userLat.HasValue || !userLon.HasValue ? 0:
+                6371 * Math.Acos(
+                    Math.Cos(userLatRadians) * Math.Cos( (double)p.Location.Latitude * Math.PI / 180.0)
+                    * Math.Cos((double)p.Location.Longitude * Math.PI /180.0 - userLonRadians) +
+                    Math.Sin(userLatRadians) *Math.Sin((double)p.Location.Latitude * Math.PI /180.0 )
+
+                )
+        });
     }
 }
