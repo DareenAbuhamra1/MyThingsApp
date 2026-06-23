@@ -111,6 +111,130 @@ namespace MyThings.Infrastructure.Migrations
                     b.ToTable("Category", (string)null);
                 });
 
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerStatus", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CustomerStatus", (string)null);
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerStatusTranslation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<int>("CustomerStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("CustomerStatusId", "LanguageId")
+                        .IsUnique();
+
+                    b.ToTable("CustomerStatusTranslation", (string)null);
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerTypeTranslation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<int>("CustomerTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("LanguageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("CustomerTypeId", "LanguageId")
+                        .IsUnique();
+
+                    b.ToTable("CustomerTypeTranslation", (string)null);
+                });
+
             modelBuilder.Entity("MyThings.Core.Entities.DeliveryRule", b =>
                 {
                     b.Property<int>("Id")
@@ -251,6 +375,53 @@ namespace MyThings.Infrastructure.Migrations
                         });
                 });
 
+            modelBuilder.Entity("MyThings.Core.Entities.Language", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("Language", (string)null);
+                });
+
             modelBuilder.Entity("MyThings.Core.Entities.Location", b =>
                 {
                     b.Property<int>("Id")
@@ -329,6 +500,74 @@ namespace MyThings.Infrastructure.Migrations
                     b.HasIndex("CustomerId");
 
                     b.ToTable("Location", (string)null);
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.Media", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Alt")
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("Color")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("DisplayOrder")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<bool>("IsVideo")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<string>("RoundTextColor")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<string>("TextColor")
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal?>("WHRatio")
+                        .HasColumnType("decimal(5,2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Media", (string)null);
                 });
 
             modelBuilder.Entity("MyThings.Core.Entities.OptionGroup", b =>
@@ -941,10 +1180,56 @@ namespace MyThings.Infrastructure.Migrations
                 {
                     b.HasBaseType("MyThings.Core.Entities.User");
 
+                    b.Property<int>("AvailabilityId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<int?>("CityId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CountryId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CustomerStatusId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LanguageId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
+                    b.Property<int?>("MediaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TenantId")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)")
+                        .HasDefaultValue("default");
+
+                    b.Property<int>("TypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(1);
+
                     b.Property<decimal>("WalletBalance")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("decimal(18,3)")
                         .HasDefaultValue(0.0m);
+
+                    b.HasIndex("AvailabilityId");
+
+                    b.HasIndex("CustomerStatusId");
+
+                    b.HasIndex("LanguageId");
+
+                    b.HasIndex("MediaId");
+
+                    b.HasIndex("TenantId");
+
+                    b.HasIndex("TenantId", "AvailabilityId", "CustomerStatusId");
 
                     b.ToTable("Customer", (string)null);
                 });
@@ -957,6 +1242,11 @@ namespace MyThings.Infrastructure.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("DriverLicenseExpiry")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValue(new DateTime(2026, 6, 21, 9, 14, 39, 555, DateTimeKind.Utc).AddTicks(6850));
 
                     b.Property<bool>("IsAssigned")
                         .ValueGeneratedOnAdd()
@@ -1073,6 +1363,36 @@ namespace MyThings.Infrastructure.Migrations
                         .IsRequired();
 
                     b.Navigation("Domain");
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerStatusTranslation", b =>
+                {
+                    b.HasOne("MyThings.Core.Entities.CustomerStatus", "CustomerStatus")
+                        .WithMany("Translations")
+                        .HasForeignKey("CustomerStatusId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("MyThings.Core.Entities.Language", "Language")
+                        .WithMany("CustomerStatusTranslations")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("CustomerStatus");
+
+                    b.Navigation("Language");
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerTypeTranslation", b =>
+                {
+                    b.HasOne("MyThings.Core.Entities.Language", "Language")
+                        .WithMany("CustomerTypeTranslations")
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Language");
                 });
 
             modelBuilder.Entity("MyThings.Core.Entities.Location", b =>
@@ -1270,11 +1590,34 @@ namespace MyThings.Infrastructure.Migrations
 
             modelBuilder.Entity("MyThings.Core.Entities.Customer", b =>
                 {
+                    b.HasOne("MyThings.Core.Entities.CustomerStatus", "CustomerStatus")
+                        .WithMany()
+                        .HasForeignKey("CustomerStatusId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("MyThings.Core.Entities.User", null)
                         .WithOne()
                         .HasForeignKey("MyThings.Core.Entities.Customer", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("MyThings.Core.Entities.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("MyThings.Core.Entities.Media", "Media")
+                        .WithMany()
+                        .HasForeignKey("MediaId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.Navigation("CustomerStatus");
+
+                    b.Navigation("Language");
+
+                    b.Navigation("Media");
                 });
 
             modelBuilder.Entity("MyThings.Core.Entities.Driver", b =>
@@ -1323,11 +1666,23 @@ namespace MyThings.Infrastructure.Migrations
                     b.Navigation("PartnerCategories");
                 });
 
+            modelBuilder.Entity("MyThings.Core.Entities.CustomerStatus", b =>
+                {
+                    b.Navigation("Translations");
+                });
+
             modelBuilder.Entity("MyThings.Core.Entities.Domain", b =>
                 {
                     b.Navigation("Orders");
 
                     b.Navigation("PartnerDomains");
+                });
+
+            modelBuilder.Entity("MyThings.Core.Entities.Language", b =>
+                {
+                    b.Navigation("CustomerStatusTranslations");
+
+                    b.Navigation("CustomerTypeTranslations");
                 });
 
             modelBuilder.Entity("MyThings.Core.Entities.Location", b =>

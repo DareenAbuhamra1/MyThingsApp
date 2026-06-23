@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.Interfaces;
+using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Context;
 using MyThings.Infrastructure.Extensions;
 using MyThings.Infrastructure.Helper;
@@ -17,7 +18,7 @@ try
 {
 
     builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("Jwt"));
-    
+
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
@@ -34,24 +35,24 @@ try
     builder.Services.AddScoped<IOrderReadRepository, OrderReadRepository>();
     builder.Services.AddScoped<IDeliveryFeeService, DeliveryFeeService>();
     builder.Services.AddScoped<ITimeEstimationService, TimeEstimationService>();
-    builder.Services.AddScoped<IAuditService, AuditService>(); 
-
+    builder.Services.AddScoped<IAuditService, AuditService>();
+    builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
     builder.Services.AddDbContext<WriteDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("PrimaryWrite")));
 
     builder.Services.AddDbContext<ReadDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("SecondaryRead"))
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
-      builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("AllowAngularUI", policy =>
-        {
-            policy.WithOrigins("http://localhost:4200") // Replace with your Angular app URL
-                .AllowAnyMethod()
-                .AllowAnyHeader() // This allows the Authorization header!
-                .AllowCredentials(); // Required if you use cookies or specific auth headers
-        });
-    });
+    builder.Services.AddCors(options =>
+  {
+      options.AddPolicy("AllowAngularUI", policy =>
+      {
+          policy.WithOrigins("http://localhost:4200") // Replace with your Angular app URL
+              .AllowAnyMethod()
+              .AllowAnyHeader() // This allows the Authorization header!
+              .AllowCredentials(); // Required if you use cookies or specific auth headers
+      });
+  });
 
     var app = builder.Build();
 
@@ -71,7 +72,7 @@ try
 }
 catch (Exception e)
 {
-    Log.Fatal(e,"The hosting application terminated unexpectedly");
+    Log.Fatal(e, "The hosting application terminated unexpectedly");
 }
 finally
 {

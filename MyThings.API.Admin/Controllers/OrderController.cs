@@ -81,5 +81,24 @@ namespace OrderController.Controllers
                 return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
             }
         }
+        [HttpGet("get-orders-with-details")]
+        public async Task<IActionResult> GetOrdersWithDetails([FromQuery] AdminOrderDetails query)
+        {
+            try
+            {
+                var response = await _orderService.GetOrdersWithDetailsAsync(query);
+
+                return response.Success
+                ? Ok(response.Data)
+                : BadRequest(response.Message);
+                
+            }
+            catch(Exception e)
+            {
+                _logger.LogError(e, "An error occurred in GetOrdersWithDetails");
+                return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
+            }
+            
+        }
     }
 }

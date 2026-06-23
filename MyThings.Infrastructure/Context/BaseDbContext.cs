@@ -11,11 +11,16 @@ public abstract class BaseDbContext : DbContext
     public virtual DbSet<AuditLog> AuditLogs {get;set;}
     public virtual DbSet<Category> Categories {get;set;}
     public virtual DbSet<Customer> Customers {get;set;}
+    public virtual DbSet<CustomerStatus> CustomerStatuses {get;set;}
+    public virtual DbSet<CustomerStatusTranslation> CustomerStatusTranslations {get;set;}
+    public virtual DbSet<CustomerTypeTranslation> CustomerTypeTranslations {get;set;}
     public virtual DbSet<DeliveryRule> DeliveryRules {get;set;}
     public virtual DbSet<Domain> Domains {get;set;}
     public virtual DbSet<Driver> Drivers {get;set;}
     public virtual DbSet<Job> Jobs {get;set;}
+    public virtual DbSet<Language> Languages {get;set;}
     public virtual DbSet<Location> Locations {get;set;}
+    public virtual DbSet<Media> Medias {get;set;}
     public virtual DbSet<OptionGroup> OptionGroups {get;set;}
     public virtual DbSet<Order> Orders {get;set;}
     public virtual DbSet<OrderLine> OrderLines {get;set;}

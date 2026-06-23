@@ -15,6 +15,7 @@ using Serilog;
 using Hangfire;
 using Hangfire.SqlServer;
 using Hangfire.Common;
+using MyThings.Core.Interfaces.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -54,7 +55,9 @@ try
     builder.Services.AddScoped<IJobService, JobService>();
     builder.Services.AddScoped<IPartnerService, PartnerService>();
     builder.Services.AddScoped<IPartnerReadRepository, PartnerReadRepository>();
+    builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
 
+    
     builder.Services.AddHangfireServer();
     
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");
@@ -120,13 +123,7 @@ try
     app.MapControllers(); // This tells the API to look in your Controllers folder
     app.UseHangfireDashboard();
 
-    RecurringJob.AddOrUpdate<RecurringLogJob>(
-        "log-job",
-        j => j.Run(),
-        Cron.Minutely
-
-    );
-
+    HangfireJobSchedular.ScheduleJob();
 
     app.Run();
 

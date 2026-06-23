@@ -961,5 +961,125 @@ public class OrderService : IOrderService
 
     }
 
+    public async Task<ServiceResponse<PageResponse<AdminOrderResponse>>> GetOrdersWithDetailsAsync(AdminOrderDetails query)
+    {
+        try
+        {
+
+            var orderQuery = _orderReadRepository.GetAllOrders();
+
+            if (query.OrderIds != null)
+            {
+                var orderIds = query.OrderIds
+                    .Split(',')
+                    .Select(int.Parse)
+                    .ToList();
+
+                orderQuery = orderQuery.Where(o => orderIds.Contains(o.Id));
+            }
+            if (query.From != null)
+            {
+                orderQuery = orderQuery.Where(o => o.CreatedAt > query.From);
+            }
+            if (query.To != null)
+            {
+                orderQuery = orderQuery.Where(o => o.CreatedAt < query.To);
+            }
+
+            if (query.PartnerIds != null)
+            {
+                var partnerIds = query.PartnerIds
+                    .Split(',')
+                    .Select(int.Parse)
+                    .ToList();
+
+                orderQuery = orderQuery.Where(o => partnerIds.Contains(o.PartnerId));
+            }
+            if (query.OrderStatuses != null)
+            {
+                var statuses = query.OrderStatuses
+                    .Split(',')
+                    .Select(s => Enum.Parse<OrderStatusEnum>(s, true))
+                    .ToList();
+
+                orderQuery = orderQuery.Where(o => statuses.Contains(o.Status));
+            }
+
+            orderQuery = orderQuery
+                .Include(o => o.DeliveryRule)
+                .Include(o => o.Driver)
+                .Include(o => o.OrderLines)
+                    .ThenInclude(ol => ol.OrderLineOptions);
+
+            var totalCount = await orderQuery.CountAsync();
+
+            var totalPages = (int)Math.Ceiling(
+                (double)totalCount / query.PageSize
+            );
+
+            var response = await orderQuery.Select(o => new AdminOrderResponse
+            {
+                CustomerId = o.CustomerId,
+                CustomerFullName = $"{o.Customer.FirstName} {o.Customer.LastName}",
+                CustomerPhone = o.Customer.Phone,
+                CustomerLocation = $"{o.DeliveryLocation.Street}, {o.DeliveryLocation.Area}, {o.DeliveryLocation.City.ToString()} ",
+                PartnerId = o.PartnerId,
+                PartnerName = o.Partner.Name,
+                PartnerLocation = $"{o.Partner.Location.Street}, {o.Partner.Location.Area}, {o.Partner.Location.City.ToString()} ",
+                CommissionRate = o.Partner.CommissionRate,
+                DriverId = o.DriverId.HasValue ? o.DriverId.Value : null,
+                DriverFullName = o.Driver == null
+                                ? null: $"{o.Driver.FirstName} {o.Driver.LastName}",
+                OrderId = o.Id,
+                DomainId = o.DomainId,
+                Status = o.Status.ToString(),
+                Note = o.Note ?? "",
+                PlacementTime = o.PlacementTime,
+                AcceptedTime = o.AcceptedTime,
+                PickedUpTime = o.PickedUpTime,
+                DeliveredTime = o.DeliveredTime,
+                SubTotal = o.SubTotal,
+                DeliveryFee = o.DeliveryFees,
+                ServiceFee = o.ServiceFee,
+                Total = o.TotalPayment,
+                PartnerCommissionAmount = o.Partner.CommissionRate * o.SubTotal,
+                DeliveryRuleId = o.DeliveryRuleId,
+                BaseFee = o.DeliveryRule.BaseFee,
+                PerKmFee = o.DeliveryRule.PerKmFee,
+                MinForFreeDelivery = o.DeliveryRule.MinTotalForFreeDelivery,
+                OrderLines = o.OrderLines.Select(ol => new AdminOrderLine
+                {
+                    OrderLineId = ol.Id,
+                    ProductId = ol.ProductId,
+                    ProductName = ol.ProductName,
+                    Price = ol.Price,
+                    Quantity = ol.Quantity,
+                    OrderLineOptions = ol.OrderLineOptions.Select(olp => new AdminOrderLineOptions
+                    {
+                        OrderLineOptionId = olp.Id,
+                        ProductOptionId = olp.ProductOptionId,
+                        Option = olp.Option,
+                        Price = olp.Price,
+                        Quantity = olp.Quantity,
+                    }).ToList() ?? new List<AdminOrderLineOptions>()
+                }).ToList()
+            }).ToListAsync();
+
+            return ServiceResponse<PageResponse<AdminOrderResponse>>.Ok(
+                new PageResponse<AdminOrderResponse>
+                {
+                    Data = response,
+                    PageSize = query.PageSize,
+                    TotalPages = totalPages,
+                    Page = query.PageNumber
+                }
+            );
+        }
+        catch (Exception e)
+        {
+            return ServiceResponse<PageResponse<AdminOrderResponse>>.Failure($"Exception in GetOrdersWithDetailsAsync {e.Message}", 400);
+        }
+
+    }
 }
 

@@ -13,6 +13,7 @@ public class Driver : User
     public string DriverLicense {get;set;} = null!;
     public decimal? Latitude { get; set; }
     public decimal? Longitude { get; set; }
+    public DateTime? DriverLicenseExpiry { get;set; }
     public virtual ICollection<Order> Orders {get;set;} =[];
 
     internal class DriverConfiguration : BaseEntityConfiguration<Driver>
@@ -40,6 +41,10 @@ public class Driver : User
                 .HasMaxLength(100)
                 .IsRequired();
 
+            builder.Property(e => e.DriverLicenseExpiry)
+                .HasDefaultValue(DateTime.UtcNow)
+                .IsRequired();
+            
             builder.Property(e => e.Latitude)
             .HasPrecision(8, 6);
 

@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
 using MyThings.Core.Entities;
 using MyThings.Core.Interfaces;
@@ -74,17 +75,38 @@ public class DriverService : IDriverService
         {
             DriversInfoList.Add(new DriverInfoDto
             {
-                DriverId = d.Id,
+                Id = d.Id,
                 FirstName = d.FirstName,
                 LastName = d.LastName, 
                 Phone = d.Phone,
                 IsActive = d.IsActive,
                 IsAssigned = d.IsAssigned,
                 VehicleLicense = d.VehicleLicense,
-                DriverLicense = d.DriverLicense 
+                DriverLicense = d.DriverLicense ,
+                DriverLicenseExpiry = d.DriverLicenseExpiry.HasValue? d.DriverLicenseExpiry.Value:null,
             });
         }
 
         return ServiceResponse<IReadOnlyList<DriverInfoDto>>.Ok(DriversInfoList);
+    }
+
+    public async Task<IReadOnlyList<DriverInfoDto>> GetDriversWithExpiredLicenseAsync()
+    {
+        var drivers = _readUnitOfWork.Drivers.GetQueryable()
+            .Where(d => d.DriverLicenseExpiry <= DateTime.UtcNow)
+            .Select(d => new DriverInfoDto
+            {
+                Id = d.Id,
+                FirstName = d.FirstName,
+                LastName = d.LastName,
+                Phone = d.Phone,
+                IsActive = d.IsActive,
+                IsAssigned = d.IsAssigned,
+                DriverLicense = d.DriverLicense,
+                VehicleLicense = d.VehicleLicense,
+                DriverLicenseExpiry = d.DriverLicenseExpiry.HasValue? d.DriverLicenseExpiry.Value:null,
+            });
+
+        return await drivers.ToListAsync();
     }
 }

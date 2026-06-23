@@ -27,4 +27,5 @@ public interface IOrderService
     Task<ServiceResponse<DriverAssignedOrder?>> GetDriverAssignedOrderAsync(int driverId);
     Task<ServiceResponse<OrderDetailedDto>> GetOrderDetailsAsync(int orderId);
     Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAdminAsync(OrderAdminQueryDto query);
+    Task<ServiceResponse<PageResponse<AdminOrderResponse>>> GetOrdersWithDetailsAsync(AdminOrderDetails query);
 }

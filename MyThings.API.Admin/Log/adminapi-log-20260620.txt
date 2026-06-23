@@ -426,3 +426,142 @@ Newtonsoft.Json.JsonSerializationException: Could not create an instance of type
 2026-06-20 21:54:27.420 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 9:54:27 PM
 2026-06-20 22:09:04.408 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 10:09:04 PM
 2026-06-20 22:09:14.632 +03:00 [INF] 1 servers were removed due to timeout
+2026-06-20 22:09:16.755 +03:00 [WRN] Server dareens-macbook-air:34153:501aca43 was considered dead by other servers, restarting...
+2026-06-20 22:09:16.757 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 caught restart signal...
+2026-06-20 22:09:16.775 +03:00 [WRN] Server dareens-macbook-air:34153:501aca43 stopped non-gracefully due to ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler. Outstanding work on those dispatchers could be aborted, and there can be delays in background processing. This server instance will be incorrectly shown as active for a while. To avoid non-graceful shutdowns, investigate what prevents from stopping gracefully and add CancellationToken support for those methods.
+2026-06-20 22:09:16.797 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 successfully reported itself as stopped in 11.6803 ms
+2026-06-20 22:09:16.797 +03:00 [INF] Server dareens-macbook-air:34153:501aca43 has been stopped in total 32.3201 ms
+2026-06-20 22:09:16.819 +03:00 [INF] Server dareens-macbook-air:34153:aa70e759 successfully announced in 18.7235 ms
+2026-06-20 22:09:16.823 +03:00 [INF] Server dareens-macbook-air:34153:aa70e759 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 22:09:16.827 +03:00 [INF] Server dareens-macbook-air:34153:aa70e759 all the dispatchers started
+2026-06-20 22:10:01.952 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 10:10:01 PM
+2026-06-20 22:10:14.447 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="19:10:14.4463430"
+2026-06-20 22:11:02.039 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 10:11:02 PM
+2026-06-20 22:59:39.191 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 22:59:39.755 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 22:59:39.898 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 22:59:39.921 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 22:59:39.923 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 22:59:39.923 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 22:59:39.923 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 22:59:39.927 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 22:59:39.927 +03:00 [INF] Hosting environment: Development
+2026-06-20 22:59:39.927 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 22:59:39.971 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d successfully announced in 44.1735 ms
+2026-06-20 22:59:39.973 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 22:59:39.976 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d all the dispatchers started
+2026-06-20 22:59:40.139 +03:00 [INF] 1 servers were removed due to timeout
+2026-06-20 22:59:40.498 +03:00 [WRN] Failed to process the job '1': an exception occurred. Retry attempt 10 of 10 will be performed in 01:51:16.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 22:59:40.616 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 10:59:40 PM
+2026-06-20 23:00:10.684 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:00:10 PM
+2026-06-20 23:00:30.744 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 23:01:10.757 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:01:10 PM
+2026-06-20 23:02:11.063 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:02:11 PM
+2026-06-20 23:02:39.909 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:02:39.9082930"
+2026-06-20 23:03:11.124 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:03:11 PM
+2026-06-20 23:04:11.197 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:04:11 PM
+2026-06-20 23:05:11.422 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:05:11 PM
+2026-06-20 23:05:39.902 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:05:39.9012340"
+2026-06-20 23:05:41.013 +03:00 [WRN] Failed to process the job '2': an exception occurred. Retry attempt 10 of 10 will be performed in 01:49:46.
+Newtonsoft.Json.JsonSerializationException: Could not create an instance of type Microsoft.Extensions.Logging.ILogger. Type is an interface or abstract class and cannot be instantiated. Path '', line 1, position 2.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateNewObject(JsonReader reader, JsonObjectContract objectContract, JsonProperty containerMember, JsonProperty containerProperty, String id, Boolean& createdFromNonDefaultCreator)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.Deserialize(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Hangfire.Common.SerializationHelper.Deserialize(String value, Type type, SerializationOption option) in C:\projects\hangfire-525\src\Hangfire.Core\Common\SerializationHelper.cs:line 177
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 366
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 385
+--- End of stack trace from previous location ---
+   at Hangfire.Storage.InvocationData.DeserializeArgument(String argument, Type type) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 400
+   at Hangfire.Storage.InvocationData.DeserializeArguments(MethodInfo methodInfo, String[] arguments) in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 300
+   at Hangfire.Storage.InvocationData.DeserializeJob() in C:\projects\hangfire-525\src\Hangfire.Core\Storage\InvocationData.cs:line 107
+2026-06-20 23:06:11.472 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:06:11 PM
+2026-06-20 23:07:11.567 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:07:11 PM
+2026-06-20 23:08:12.433 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:08:12 PM
+2026-06-20 23:08:39.931 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:08:39.9280870"
+2026-06-20 23:09:12.511 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:09:12 PM
+2026-06-20 23:10:12.621 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:10:12 PM
+2026-06-20 23:11:12.753 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:11:12 PM
+2026-06-20 23:11:22.693 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d caught stopping signal...
+2026-06-20 23:11:22.710 +03:00 [INF] Application is shutting down...
+2026-06-20 23:11:23.273 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d caught stopped signal...
+2026-06-20 23:11:23.686 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d All dispatchers stopped
+2026-06-20 23:11:23.725 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d successfully reported itself as stopped in 35.6121 ms
+2026-06-20 23:11:23.725 +03:00 [INF] Server dareens-macbook-air:76859:98608c9d has been stopped in total 1019.1139 ms
+2026-06-20 23:11:32.828 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 23:11:33.765 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 23:11:33.902 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 23:11:33.930 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 23:11:33.933 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 23:11:33.933 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 23:11:33.933 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 23:11:33.939 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 23:11:33.939 +03:00 [INF] Hosting environment: Development
+2026-06-20 23:11:33.940 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 23:11:33.971 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 successfully announced in 33.6288 ms
+2026-06-20 23:11:33.972 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 23:11:33.975 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 all the dispatchers started
+2026-06-20 23:11:43.176 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-20 23:12:04.295 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:12:04 PM
+2026-06-20 23:13:04.344 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:13:04 PM
+2026-06-20 23:14:04.413 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:14:04 PM
+2026-06-20 23:14:33.914 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:14:33.9135470"
+2026-06-20 23:15:04.528 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:15:04 PM
+2026-06-20 23:16:04.622 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:16:04 PM
+2026-06-20 23:17:04.727 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:17:04 PM
+2026-06-20 23:17:33.915 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:17:33.9142930"
+2026-06-20 23:18:04.812 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:18:04 PM
+2026-06-20 23:19:04.878 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:19:04 PM
+2026-06-20 23:20:04.942 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:20:04 PM
+2026-06-20 23:20:33.906 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Saturday" (6), Time="20:20:33.9058750"
+2026-06-20 23:20:35.401 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 caught stopping signal...
+2026-06-20 23:20:35.406 +03:00 [INF] Application is shutting down...
+2026-06-20 23:20:35.518 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 All dispatchers stopped
+2026-06-20 23:20:35.540 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 successfully reported itself as stopped in 20.8633 ms
+2026-06-20 23:20:35.541 +03:00 [INF] Server dareens-macbook-air:92927:dae2c5e7 has been stopped in total 135.667 ms
+2026-06-20 23:22:11.040 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-20 23:22:11.315 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-20 23:22:11.425 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-20 23:22:11.445 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-20 23:22:11.447 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-20 23:22:11.447 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-20 23:22:11.447 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-20 23:22:11.450 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-20 23:22:11.450 +03:00 [INF] Hosting environment: Development
+2026-06-20 23:22:11.451 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-20 23:22:11.518 +03:00 [INF] Server dareens-macbook-air:8160:43dc79b2 successfully announced in 67.262 ms
+2026-06-20 23:22:11.519 +03:00 [INF] Server dareens-macbook-air:8160:43dc79b2 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-20 23:22:11.522 +03:00 [INF] Server dareens-macbook-air:8160:43dc79b2 all the dispatchers started
+2026-06-20 23:22:11.762 +03:00 [INF] HELLO FROM RECURRING JOB 20/06/2026 11:22:11 PM
+2026-06-20 23:22:24.101 +03:00 [WRN] Failed to determine the https port for redirect.

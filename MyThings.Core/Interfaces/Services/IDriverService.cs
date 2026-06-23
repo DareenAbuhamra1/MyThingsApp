@@ -11,4 +11,5 @@ public interface IDriverService
     Task<Driver?> ActivateDriverAsync(int driverId, bool active);
     Task<ServiceResponse<bool>> ToggleOnlineAsync(int driverId, bool isOnline);
     Task<ServiceResponse<IReadOnlyList<DriverInfoDto>>> GetAllDriversAsync();
+    Task<IReadOnlyList<DriverInfoDto>> GetDriversWithExpiredLicenseAsync();
 }

@@ -1,0 +1,22 @@
+2026-06-21 10:13:44.551 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-21 10:13:44.562 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-21 10:13:44.562 +03:00 [INF] Hosting environment: Development
+2026-06-21 10:13:44.563 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-21 10:16:13.597 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-21 10:38:10.193 +03:00 [INF] Application is shutting down...
+2026-06-21 10:38:23.415 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-21 10:38:23.426 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-21 10:38:23.426 +03:00 [INF] Hosting environment: Development
+2026-06-21 10:38:23.426 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-21 12:12:16.104 +03:00 [INF] Application is shutting down...
+2026-06-21 17:40:36.668 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-21 17:40:36.680 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-21 17:40:36.681 +03:00 [INF] Hosting environment: Development
+2026-06-21 17:40:36.681 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-21 17:41:03.926 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-21 18:14:18.980 +03:00 [INF] Application is shutting down...
+2026-06-21 18:14:27.771 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-21 18:14:27.782 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-21 18:14:27.782 +03:00 [INF] Hosting environment: Development
+2026-06-21 18:14:27.782 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-21 18:14:33.925 +03:00 [WRN] Failed to determine the https port for redirect.
