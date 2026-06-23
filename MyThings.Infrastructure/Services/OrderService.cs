@@ -1,3 +1,4 @@
+using System.Data;
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
@@ -1029,7 +1030,7 @@ public class OrderService : IOrderService
                 CommissionRate = o.Partner.CommissionRate,
                 DriverId = o.DriverId.HasValue ? o.DriverId.Value : null,
                 DriverFullName = o.Driver == null
-                                ? null: $"{o.Driver.FirstName} {o.Driver.LastName}",
+                                ? null : $"{o.Driver.FirstName} {o.Driver.LastName}",
                 OrderId = o.Id,
                 DomainId = o.DomainId,
                 Status = o.Status.ToString(),
@@ -1080,6 +1081,65 @@ public class OrderService : IOrderService
             return ServiceResponse<PageResponse<AdminOrderResponse>>.Failure($"Exception in GetOrdersWithDetailsAsync {e.Message}", 400);
         }
 
+    }
+
+    public async Task<ServiceResponse<DataTable>> GetOrdersForExcelAsync()
+    {
+        try
+        {
+            var orders = await _orderReadRepository.GetAllOrders().ToListAsync();
+
+            if (orders != null)
+            {
+                DataTable data = new DataTable();
+                data.TableName = "All_Orders";
+
+                data.Columns.Add("Delivery Location");
+                data.Columns.Add("Partner Location");
+                data.Columns.Add("Status");
+                data.Columns.Add("Domain Id");
+                data.Columns.Add("Customer FullName");
+                data.Columns.Add("Partner Name");
+                //data.Columns.Add("Driver Name");
+                data.Columns.Add("SubTotal");
+                data.Columns.Add("Service Fee");
+                data.Columns.Add("Delivery Fee");
+                data.Columns.Add("Total Payment");
+                data.Columns.Add("Created At");
+                data.Columns.Add("Placement Time");
+                data.Columns.Add("Accepted Time");
+                data.Columns.Add("Picked Up Time");
+                data.Columns.Add("Delivered Time");
+
+                foreach(var o in orders)
+                {
+                    data.Rows.Add(
+                        $"{o.DeliveryLocation.Street}, {o.DeliveryLocation.Area}", 
+                        $"{o.Partner.Location.Street}, {o.Partner.Location.Area}",
+                        o.Status.ToString(),
+                        o.DomainId,
+                        $"{o.Customer.FirstName} {o.Customer.LastName}",
+                        o.Partner.Name,
+                        o.SubTotal,
+                        o.ServiceFee,
+                        o.DeliveryFees,
+                        o.TotalPayment,
+                        o.CreatedAt,
+                        o.PlacementTime,
+                        o.AcceptedTime,
+                        o.PickedUpTime,
+                        o.DeliveredTime
+                    );
+                }
+                return ServiceResponse<DataTable>.Ok(data);
+            }
+
+            return ServiceResponse<DataTable>.Failure($"No orders found", 404);
+        }
+        catch (Exception e)
+        {
+            return ServiceResponse<DataTable>.Failure($"Exception in GetOrdersForExcelAsync {e.Message}", 500);
+        }
     }
 }
 

@@ -1,8 +1,11 @@
+using System.ServiceModel.Channels;
+using Grpc.Core;
 using Microsoft.AspNetCore.Mvc;
 using MyThings.Core.DTOs;
 using MyThings.Core.Enums;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Helper;
+using OfficeOpenXml;
 
 namespace OrderController.Controllers
 {
@@ -97,8 +100,40 @@ namespace OrderController.Controllers
             {
                 _logger.LogError(e, "An error occurred in GetOrdersWithDetails");
                 return StatusCode(500, new { Message = "An internal error occurred while setting order to ready for pickup." });
+            } 
+        }
+        [HttpGet("orders/excel")]
+        public async Task<IActionResult> GetOrdersExcel()
+        {
+            try
+            {
+                var result = await _orderService.GetOrdersForExcelAsync();
+
+                if (!result.Success)
+                {
+                    return StatusCode(result.StatusCode, new {Message = result.Message});
+                }          
+                ExcelPackage.License.SetNonCommercialPersonal("DareenAbuhamra");
+
+                using var package = new ExcelPackage();
+
+                var worksheet = package.Workbook.Worksheets.Add("Orders");
+
+                worksheet.Cells["A1"].LoadFromDataTable(result.Data,true);
+
+                var bytes = package.GetAsByteArray();
+
+                return File(
+                    bytes,
+                    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                    "Orders.xlsx"
+                );
             }
-            
+            catch(Exception e)
+            {
+                _logger.LogError(e,"An error while downloading orders excel");
+                return StatusCode(500, new {Message = "An interal error in downloading orders excel"});
+            }
         }
     }
 }

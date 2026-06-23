@@ -1,3 +1,4 @@
+using System.Data;
 using MyThings.Core.DTOs;
 using MyThings.Core.Enums;
 using MyThings.Core.Wrappers;
@@ -28,4 +29,5 @@ public interface IOrderService
     Task<ServiceResponse<OrderDetailedDto>> GetOrderDetailsAsync(int orderId);
     Task<ServiceResponse<PageResponse<OrderForPaginationDto>>> GetOrderHistoryAdminAsync(OrderAdminQueryDto query);
     Task<ServiceResponse<PageResponse<AdminOrderResponse>>> GetOrdersWithDetailsAsync(AdminOrderDetails query);
+    Task<ServiceResponse<DataTable>> GetOrdersForExcelAsync();
 }
