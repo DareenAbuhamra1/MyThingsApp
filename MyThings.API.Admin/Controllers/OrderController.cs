@@ -68,7 +68,7 @@ namespace OrderController.Controllers
                 return StatusCode(500,"An error in Getting Order Details");
             }
         }
-        [Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
+        //[Authorize(RoleEnum.Admin,RoleEnum.SuperAdmin)]
         [HttpGet("history")]
         public async Task<IActionResult> GetOrders([FromQuery] OrderAdminQueryDto queryDto)
         {

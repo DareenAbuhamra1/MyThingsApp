@@ -14,5 +14,5 @@ public interface IPartnerReadRepository : IReadOnlyRepository<Partner>
     IQueryable<Partner> SearchPartnersByNameAndDescription(string searchTerm, int domainId);
     IQueryable<Partner> SearchPartnerByCategory(string searchTerm);
     IQueryable<Partner> SearchPartnerByProduct(string searchTerm);
-    IQueryable<PartnerSearchResult> SearchPartners(string searchTerm, int? domainId, double? userLat, double? userLon);
+    IQueryable<PartnerSearchResult> SearchPartners(string searchTerm, int domainId, double? userLat, double? userLon);
 }

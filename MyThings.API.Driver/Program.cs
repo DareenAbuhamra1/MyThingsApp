@@ -1,10 +1,12 @@
 using Microsoft.EntityFrameworkCore;
 using MyThings.Auth.AuthServices;
+using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Context;
 using MyThings.Infrastructure.Extensions;
 using MyThings.Infrastructure.Helper;
+using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
 using Serilog;
@@ -37,6 +39,25 @@ try
     builder.Services.AddScoped<ITimeEstimationService, TimeEstimationService>();
     builder.Services.AddScoped<IAuditService, AuditService>();
     builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
+
+    builder.Services.AddSingleton<PartnerOrderMapper>();
+    builder.Services.AddSingleton<OrderPaginationMapper>();
+    builder.Services.AddSingleton<OrderInfoMapper>();
+    builder.Services.AddSingleton<OrderDetailedMapper>();
+    builder.Services.AddSingleton<OrderPlacementResponseMapper>();
+    builder.Services.AddSingleton<OrderCartResponseMapper>();
+    builder.Services.AddSingleton<AdminOrderMapper>();
+    builder.Services.AddSingleton<OrderCartViewMapper>();
+    builder.Services.AddSingleton<AdminOrderResponseMapper>();
+    builder.Services.AddSingleton<DriverAssignedOrderMapper>();
+    builder.Services.AddSingleton<CutomerLocationMapper>();
+    builder.Services.AddSingleton<LocationMapper>();
+    builder.Services.AddSingleton<DriverInfoMapper>();
+    builder.Services.AddSingleton<ProductOptionDisplayMapper>();
+    builder.Services.AddSingleton<ProductDisplayMapper>();
+    builder.Services.AddSingleton<StoreDisplayMapper>();
+    builder.Services.AddSingleton<CustomerAdminMapper>();
+    
     builder.Services.AddDbContext<WriteDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("PrimaryWrite")));
 

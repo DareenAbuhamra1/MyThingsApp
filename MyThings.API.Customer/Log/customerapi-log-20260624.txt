@@ -1,0 +1,315 @@
+2026-06-24 10:45:55.498 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 10:45:55.508 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 10:45:55.508 +03:00 [INF] Hosting environment: Development
+2026-06-24 10:45:55.508 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 10:46:18.586 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 10:46:18.732 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 10:46:25.388 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 10:46:25.462 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 10:46:27.754 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 10:46:30.530 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 10:47:00.707 +03:00 [INF] Application is shutting down...
+2026-06-24 10:47:07.813 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 10:47:07.823 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 10:47:07.823 +03:00 [INF] Hosting environment: Development
+2026-06-24 10:47:07.823 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 10:47:12.553 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 10:47:13.626 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 10:47:14.917 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 10:50:17.494 +03:00 [INF] Application is shutting down...
+2026-06-24 10:50:23.113 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 10:50:23.123 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 10:50:23.123 +03:00 [INF] Hosting environment: Development
+2026-06-24 10:50:23.123 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 10:50:27.168 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 10:50:29.276 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:09:18.417 +03:00 [INF] Application is shutting down...
+2026-06-24 11:10:27.713 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 11:10:27.727 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 11:10:27.727 +03:00 [INF] Hosting environment: Development
+2026-06-24 11:10:27.727 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 11:10:36.804 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 11:10:38.156 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 11:10:43.753 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 11:10:43.796 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 11:10:45.972 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:11:10.906 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:11:13.504 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:13:43.391 +03:00 [INF] Application is shutting down...
+2026-06-24 11:13:50.369 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 11:13:50.380 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 11:13:50.380 +03:00 [INF] Hosting environment: Development
+2026-06-24 11:13:50.380 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 11:14:00.142 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 11:14:01.188 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:14:20.732 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:14:20.877 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:17:05.511 +03:00 [INF] Application is shutting down...
+2026-06-24 11:17:10.995 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 11:17:11.006 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 11:17:11.006 +03:00 [INF] Hosting environment: Development
+2026-06-24 11:17:11.006 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 11:17:14.797 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 11:17:15.921 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:17:26.491 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:17:26.673 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 11:21:05.378 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 12:07:27.447 +03:00 [INF] Application is shutting down...
+2026-06-24 12:07:37.010 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:07:37.021 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:07:37.021 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:07:37.022 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:07:54.116 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 12:07:54.237 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 12:08:01.200 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 12:08:01.263 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 12:08:08.722 +03:00 [ERR] An error occurred in AddCart method
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MyThings.Infrastructure.Mappers.OrderCartResponseMapper.Map(Order o) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartResponseMapper.g.cs:line 10
+   at MyThings.Infrastructure.Services.OrderService.AddOrderCartAsync(OrderCartDto orderCart) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/OrderService.cs:line 137
+   at OrderController.Controllers.OrderController.AddCart(OrderCartDto placementDto) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/OrderController.cs:line 49
+2026-06-24 12:08:09.674 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 12:13:14.895 +03:00 [INF] Application is shutting down...
+2026-06-24 12:13:26.194 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:13:26.206 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:13:26.206 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:13:26.206 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:13:36.102 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 12:13:46.096 +03:00 [ERR] An error occurred in AddCart method
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MyThings.Infrastructure.Mappers.OrderCartResponseMapper.Map(Order o) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartResponseMapper.g.cs:line 10
+   at MyThings.Infrastructure.Services.OrderService.AddOrderCartAsync(OrderCartDto orderCart) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/OrderService.cs:line 137
+   at OrderController.Controllers.OrderController.AddCart(OrderCartDto placementDto) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/OrderController.cs:line 49
+2026-06-24 12:15:37.394 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 12:20:14.700 +03:00 [INF] Application is shutting down...
+2026-06-24 12:20:29.302 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:20:29.312 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:20:29.313 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:20:29.313 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:20:31.988 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 12:20:39.966 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'MyThings.Infrastructure.Context.WriteDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Location' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:12cdf030-1386-44bd-ae7c-b7ee2b694192
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Location' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:12cdf030-1386-44bd-ae7c-b7ee2b694192
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-24 12:20:39.967 +03:00 [ERR] An error occurred in AddCart method
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert explicit value for identity column in table 'Location' when IDENTITY_INSERT is set to OFF.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, SqlCommand command, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:12cdf030-1386-44bd-ae7c-b7ee2b694192
+Error Number:544,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at MyThings.Infrastructure.Repositories.UnitOfWork.CompleteAsync() in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Repositories/UnitOfWork.cs:line 76
+   at MyThings.Infrastructure.Services.OrderService.AddOrderCartAsync(OrderCartDto orderCart) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/OrderService.cs:line 137
+   at OrderController.Controllers.OrderController.AddCart(OrderCartDto placementDto) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/OrderController.cs:line 49
+2026-06-24 12:21:03.416 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 12:21:08.336 +03:00 [INF] Application is shutting down...
+2026-06-24 12:22:03.481 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:22:03.492 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:22:03.493 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:22:03.493 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:22:03.493 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:22:17.275 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:22:17.285 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:22:17.286 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:22:17.286 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:22:17.286 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:22:34.562 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:22:34.574 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:22:34.575 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:22:34.575 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:22:34.575 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:23:37.214 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:23:37.226 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:23:37.227 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:23:37.227 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:23:37.227 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:24:08.739 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:24:08.750 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:24:08.750 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:24:08.751 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:24:08.751 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:25:34.353 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:25:34.365 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:25:34.365 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:25:34.366 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:25:34.366 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:27:11.196 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:27:11.208 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:27:11.208 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:27:11.208 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:27:17.687 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 12:27:19.562 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 12:27:25.824 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 12:27:25.878 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 12:27:32.010 +03:00 [INF] Application is shutting down...
+2026-06-24 12:27:44.200 +03:00 [INF] Now listening on: https://localhost:7001
+2026-06-24 12:27:44.212 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:27:44.213 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:27:44.213 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:27:44.213 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:29:17.662 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 12:29:17.673 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 12:29:17.673 +03:00 [INF] Hosting environment: Development
+2026-06-24 12:29:17.673 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 12:29:25.254 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 12:29:33.489 +03:00 [ERR] An error occurred in AddCart method
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MyThings.Infrastructure.Mappers.OrderCartResponseMapper.Map(Order o) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartResponseMapper.g.cs:line 10
+   at MyThings.Infrastructure.Services.OrderService.AddOrderCartAsync(OrderCartDto orderCart) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/OrderService.cs:line 137
+   at OrderController.Controllers.OrderController.AddCart(OrderCartDto placementDto) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/OrderController.cs:line 49
+2026-06-24 12:29:35.692 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 13:11:11.054 +03:00 [INF] Application is shutting down...
+2026-06-24 13:11:47.371 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 13:11:47.394 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 13:11:47.394 +03:00 [INF] Hosting environment: Development
+2026-06-24 13:11:47.394 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 13:12:00.759 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 13:12:12.004 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 13:12:16.602 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 13:12:16.869 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 13:41:11.888 +03:00 [INF] Application is shutting down...
+2026-06-24 13:41:23.220 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 13:41:23.231 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 13:41:23.231 +03:00 [INF] Hosting environment: Development
+2026-06-24 13:41:23.231 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 13:41:45.931 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 13:41:47.107 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 13:41:51.033 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 13:41:51.075 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 13:41:53.695 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 13:42:04.480 +03:00 [ERR] An error occurred in GetCart method
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MyThings.Infrastructure.Mappers.OrderCartViewMapper.MapToOrderLineOptionsView(OrderLineOption source) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartViewMapper.g.cs:line 57
+   at MyThings.Infrastructure.Mappers.OrderCartViewMapper.MapToListOfOrderLineOptionsView(ICollection`1 source) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartViewMapper.g.cs:line 68
+   at MyThings.Infrastructure.Mappers.OrderCartViewMapper.MapToOrderLineView(OrderLine source) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartViewMapper.g.cs:line 37
+   at MyThings.Infrastructure.Mappers.OrderCartViewMapper.MapToListOfOrderLineView(ICollection`1 source) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartViewMapper.g.cs:line 47
+   at MyThings.Infrastructure.Mappers.OrderCartViewMapper.Map(Order o) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/OrderCartViewMapper.g.cs:line 23
+   at MyThings.Infrastructure.Services.OrderService.GetCartAsync(Int32 customerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/OrderService.cs:line 471
+   at OrderController.Controllers.OrderController.GetCart(Int32 customerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/OrderController.cs:line 104
+2026-06-24 13:46:33.273 +03:00 [INF] Application is shutting down...
+2026-06-24 13:46:42.589 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 13:46:42.603 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 13:46:42.603 +03:00 [INF] Hosting environment: Development
+2026-06-24 13:46:42.603 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 13:46:58.778 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 13:47:01.550 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-24 14:15:55.900 +03:00 [INF] Application is shutting down...
+2026-06-24 16:01:25.612 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 16:01:25.626 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 16:01:25.626 +03:00 [INF] Hosting environment: Development
+2026-06-24 16:01:25.626 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 16:01:34.173 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 16:01:34.297 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 16:01:41.878 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 16:01:41.950 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 17:10:22.337 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 17:10:22.351 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 17:10:22.352 +03:00 [INF] Hosting environment: Development
+2026-06-24 17:10:22.352 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 17:10:32.483 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 17:18:44.921 +03:00 [INF] Application is shutting down...
+2026-06-24 17:19:12.677 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 17:19:12.688 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 17:19:12.688 +03:00 [INF] Hosting environment: Development
+2026-06-24 17:19:12.688 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 17:19:25.109 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 17:19:26.472 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-24 17:19:30.918 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-24 17:19:31.041 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-24 17:19:32.921 +03:00 [ERR] An error occurred in GetAllProductsForStore method
+System.ArgumentNullException: Value cannot be null. (Parameter 'Description')
+   at MyThings.Infrastructure.Mappers.ProductDisplayMapper.Map(Product p) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/ProductDisplayMapper.g.cs:line 10
+   at MyThings.Infrastructure.Services.CustomerPartnerService.<GetProductsAsync>b__6_0(Product p) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/CustomerPartnerService.cs:line 33
+   at System.Linq.Enumerable.ListSelectIterator`2.ToList()
+   at MyThings.Infrastructure.Services.CustomerPartnerService.GetProductsAsync(Int32 partnerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/CustomerPartnerService.cs:line 33
+   at ProductController.Controllers.ProductController.GetAllProductsForStore(Int32 partnerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/ProductController.cs:line 26
+2026-06-24 17:24:29.733 +03:00 [ERR] An error occurred in GetAllProductsForStore method
+System.ArgumentNullException: Value cannot be null. (Parameter 'Description')
+   at MyThings.Infrastructure.Mappers.ProductDisplayMapper.Map(Product p) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/obj/Debug/net10.0/Riok.Mapperly/Riok.Mapperly.MapperGenerator/ProductDisplayMapper.g.cs:line 10
+   at MyThings.Infrastructure.Services.CustomerPartnerService.<GetProductsAsync>b__6_0(Product p) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/CustomerPartnerService.cs:line 33
+   at System.Linq.Enumerable.ListSelectIterator`2.ToList()
+   at MyThings.Infrastructure.Services.CustomerPartnerService.GetProductsAsync(Int32 partnerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Services/CustomerPartnerService.cs:line 33
+   at ProductController.Controllers.ProductController.GetAllProductsForStore(Int32 partnerId) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Controllers/ProductController.cs:line 26
+2026-06-24 17:29:35.501 +03:00 [INF] Application is shutting down...
+2026-06-24 17:29:50.051 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-24 17:29:50.063 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-24 17:29:50.063 +03:00 [INF] Hosting environment: Development
+2026-06-24 17:29:50.063 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-24 17:29:56.774 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-24 17:52:05.120 +03:00 [INF] Application is shutting down...

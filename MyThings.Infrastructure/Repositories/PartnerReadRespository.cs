@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using MyThings.Core.DTOs;
 using MyThings.Core.Dto;
 using System.Security.Cryptography;
-
+using MyThings.Infrastructure.Extensions;
 namespace MyThings.Infrastructure.Repositories;
 
 public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRepository
@@ -16,8 +16,7 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
     public async Task<IReadOnlyList<Partner>> GetPartnersByDomainIdAsync(int domainId)
     {
         return await _context.Partners
-            .Where(p => p.PartnerDomains
-            .Any(d => d.DomainId == domainId))
+            .InDomain(domainId)
             .ToListAsync();
     }
     public async Task<IReadOnlyList<Product>> GetProductsByPartnerId(int partnerId)
@@ -44,11 +43,9 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
     public IQueryable<Partner> SearchPartnersByNameAndDescription(string searchTerm, int domainId)
     {
         return _context.Partners
-            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
-            .Where(p => p.PartnerDomains.Any(pd => pd.DomainId == domainId))
-            .Where(p => p.DescriptionEn.Contains(searchTerm) 
-                || p.DescriptionAr.Contains(searchTerm)
-                || p.Name.Contains(searchTerm))
+            .IsValidRow()
+            .InDomain(domainId)
+            .SearchText(searchTerm)
             .Include(p => p.Location)
             .AsQueryable();
     }
@@ -56,9 +53,8 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
     public IQueryable<Partner> SearchPartnerByCategory(string searchTerm)
     {
         return _context.Partners
-            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
-            .Where(p => p.PartnerCategories.Any(pc => pc.Category != null 
-                && pc.Category.Name.Contains(searchTerm)))
+            .IsValidRow()
+            .SearchInCategories(searchTerm)
             .Include(p => p.Location)
             .AsQueryable();
     }
@@ -66,26 +62,18 @@ public class PartnerReadRepository : ReadOnlyRepository<Partner>, IPartnerReadRe
     public IQueryable<Partner> SearchPartnerByProduct(string searchTerm)
     {
         return _context.Partners
-            .Where(p => p.AvailabilityId == 1 && p.IsDeleted == false)
-            .Where(p => p.Products.Any(pp => pp.AvailabilityId ==1 
-                && pp.Name.Contains(searchTerm)))
+            .IsValidRow()
+            .SearchInProducts(searchTerm)
             .Include(p => p.Location)
             .AsQueryable();
     }
 
-    public IQueryable<PartnerSearchResult> SearchPartners(string searchTerm, int? domainId, double? userLat, double? userLon)
+    public IQueryable<PartnerSearchResult> SearchPartners(string searchTerm, int domainId, double? userLat, double? userLon)
     {
         var query = _context.Partners
-            .Where(p => p.AvailabilityId == 1)
-            .Where(p => !domainId.HasValue || p.PartnerDomains.Any(pd => pd.DomainId == domainId))
-            .Where(p => p.Name.Contains(searchTerm) 
-                || p.DescriptionEn.Contains(searchTerm) 
-                || p.DescriptionAr.Contains(searchTerm)
-                || p.PartnerCategories.Any( 
-                    pc => pc.Category != null &&
-                    pc.Category.Name.Contains(searchTerm) )
-                || p.Products.Any(pp => pp.AvailabilityId == 1 && pp.Name.Contains(searchTerm))
-            )
+            .IsValidRow()
+            .InDomain(domainId)
+            .FullSearch(searchTerm)
             .Include(pl => pl.Location);
 
         double userLatRadians = userLat.HasValue? userLat.Value * Math.PI / 180.0 : 0;

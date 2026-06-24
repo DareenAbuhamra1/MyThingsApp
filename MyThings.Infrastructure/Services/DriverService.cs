@@ -3,6 +3,7 @@ using MyThings.Core.DTOs;
 using MyThings.Core.Entities;
 using MyThings.Core.Interfaces;
 using MyThings.Core.Wrappers;
+using MyThings.Infrastructure.Mappers;
 
 namespace MyThings.Infrastructure.Services;
 
@@ -10,11 +11,13 @@ public class DriverService : IDriverService
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IReadUnitOfWork _readUnitOfWork;
+    private readonly DriverInfoMapper _driverInfoMapper;
 
-    public DriverService(IUnitOfWork unitOfWork,IReadUnitOfWork readUnitOfWork)
+    public DriverService(IUnitOfWork unitOfWork,IReadUnitOfWork readUnitOfWork, DriverInfoMapper driverInfoMapper)
     {
         _unitOfWork = unitOfWork;
         _readUnitOfWork = readUnitOfWork;
+        _driverInfoMapper = driverInfoMapper;
     }
 
     public async Task<Driver?> ActivateDriverAsync(int driverId, bool active)
@@ -65,27 +68,11 @@ public class DriverService : IDriverService
 
     public async Task<ServiceResponse<IReadOnlyList<DriverInfoDto>>> GetAllDriversAsync()
     {
-        var Drivers = await _readUnitOfWork.Drivers.GetAllAsync();
+        var drivers = await _readUnitOfWork.Drivers.GetAllAsync();
 
-        if(Drivers == null) return ServiceResponse<IReadOnlyList<DriverInfoDto>>.Failure("No drivers found",404);
+        if(drivers == null) return ServiceResponse<IReadOnlyList<DriverInfoDto>>.Failure("No drivers found",404);
 
-        var DriversInfoList = new List<DriverInfoDto>(); 
-
-        foreach(var d in Drivers)
-        {
-            DriversInfoList.Add(new DriverInfoDto
-            {
-                Id = d.Id,
-                FirstName = d.FirstName,
-                LastName = d.LastName, 
-                Phone = d.Phone,
-                IsActive = d.IsActive,
-                IsAssigned = d.IsAssigned,
-                VehicleLicense = d.VehicleLicense,
-                DriverLicense = d.DriverLicense ,
-                DriverLicenseExpiry = d.DriverLicenseExpiry.HasValue? d.DriverLicenseExpiry.Value:null,
-            });
-        }
+        var DriversInfoList = drivers.Select(d => _driverInfoMapper.Map(d)).ToList();
 
         return ServiceResponse<IReadOnlyList<DriverInfoDto>>.Ok(DriversInfoList);
     }
@@ -94,18 +81,7 @@ public class DriverService : IDriverService
     {
         var drivers = _readUnitOfWork.Drivers.GetQueryable()
             .Where(d => d.DriverLicenseExpiry <= DateTime.UtcNow)
-            .Select(d => new DriverInfoDto
-            {
-                Id = d.Id,
-                FirstName = d.FirstName,
-                LastName = d.LastName,
-                Phone = d.Phone,
-                IsActive = d.IsActive,
-                IsAssigned = d.IsAssigned,
-                DriverLicense = d.DriverLicense,
-                VehicleLicense = d.VehicleLicense,
-                DriverLicenseExpiry = d.DriverLicenseExpiry.HasValue? d.DriverLicenseExpiry.Value:null,
-            });
+            .Select(d => _driverInfoMapper.Map(d));
 
         return await drivers.ToListAsync();
     }

@@ -6,6 +6,7 @@ using MyThings.Core.Entities;
 using MyThings.Core.Enums;
 using MyThings.Core.Interfaces;
 using MyThings.Core.Wrappers;
+using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 
 namespace MyThings.Infrastructure.Services;
@@ -18,62 +19,45 @@ public class OrderService : IOrderService
     private readonly IOrderReadRepository _orderReadRepository;
     private readonly IDeliveryFeeService _deliveryFeeService;
     private readonly ITimeEstimationService _timeEstimationService;
-
-    public OrderService(IReadUnitOfWork readUnitOfWork, IUnitOfWork unitOfWork, IOrderReadRepository orderReadRepository, IDeliveryFeeService deliveryFeeService, ITimeEstimationService timeEstimationService)
+    private readonly PartnerOrderMapper _partnerOrderMapper;
+    private readonly OrderPaginationMapper _orderPaginationMapper;
+    private readonly OrderInfoMapper _orderInfoMapper;
+    private readonly OrderDetailedMapper _orderDetailedMapper;
+    private readonly OrderPlacementResponseMapper _orderPlacementResponseMapper;
+    private readonly OrderCartResponseMapper _orderCartResponseMapper;
+    private readonly AdminOrderMapper _adminOrderMapper;
+    private readonly OrderCartViewMapper _orderCartViewMapper;
+    private readonly AdminOrderResponseMapper _adminOrderResponseMapper;
+    private readonly DriverAssignedOrderMapper _driverAssignedOrderMapper;
+    public OrderService(IReadUnitOfWork readUnitOfWork, IUnitOfWork unitOfWork, IOrderReadRepository orderReadRepository, IDeliveryFeeService deliveryFeeService, ITimeEstimationService timeEstimationService, PartnerOrderMapper partnerOrderMapper, OrderPaginationMapper orderPaginationMapper,
+        OrderInfoMapper orderInfoMapper, OrderDetailedMapper orderDetailedMapper, OrderPlacementResponseMapper orderPlacementResponseMapper, OrderCartResponseMapper orderCartResponseMapper, AdminOrderMapper adminOrderMapper, OrderCartViewMapper orderCartViewMapper,
+        AdminOrderResponseMapper adminOrderResponseMapper, DriverAssignedOrderMapper driverAssignedOrderMapper
+    )
     {
         _readUnitOfWork = readUnitOfWork;
         _unitOfWork = unitOfWork;
         _orderReadRepository = orderReadRepository;
         _deliveryFeeService = deliveryFeeService;
         _timeEstimationService = timeEstimationService;
+        _partnerOrderMapper = partnerOrderMapper;
+        _orderPaginationMapper = orderPaginationMapper;
+        _orderInfoMapper = orderInfoMapper;
+        _orderDetailedMapper = orderDetailedMapper;
+        _orderPlacementResponseMapper = orderPlacementResponseMapper;
+        _orderCartResponseMapper = orderCartResponseMapper;
+        _adminOrderMapper = adminOrderMapper;
+        _orderCartViewMapper = orderCartViewMapper;
+        _adminOrderResponseMapper = adminOrderResponseMapper;
+        _driverAssignedOrderMapper = driverAssignedOrderMapper;
     }
-    //fix this 
+
     public async Task<ServiceResponse<IReadOnlyList<OrderInfoDto>>> GetAllCustomerOrdersAsync(int customerId)
     {
         var orders = await _orderReadRepository.GetAllCustomerOrdersAsync(customerId);
 
-        var result = new List<OrderInfoDto>();
+        var mappedResult = orders.Select(o => _orderInfoMapper.Map(o)).ToList();
 
-        foreach (var o in orders)
-        {
-            result.Add(new OrderInfoDto
-            {
-                OrderId = o.Id,
-                Status = o.Status, // Cast from entity status to DTO enum
-                PartnerName = o.Partner?.Name ?? "Unknown Partner",
-                Area = o.Partner?.Location.Area ?? "N/A",
-                PlacedDate = DateOnly.FromDateTime(o.CreatedAt),
-                PlacedTime = TimeOnly.FromDateTime(o.CreatedAt),
-                SubTotal = o.SubTotal,
-                ServiceFee = o.ServiceFee,
-                DeliveryFees = o.DeliveryFees,
-                SavingAmount = o.SavingAmount ?? 0m,
-                TotalPrice = o.TotalPayment,
-                DeliveryLocation = $"{o.DeliveryLocation?.Street}, {o.DeliveryLocation?.Area}, {o.DeliveryLocation?.City.ToString()}" ?? "No address provided",
-                PaymentMethod = o.PaymentType?.ToString() ?? "Undefined",
-                DriverName = $"{o.Driver?.FirstName} {o.Driver?.LastName}".Trim() == "" ? "Waiting for assignment" : $"{o.Driver?.FirstName} {o.Driver?.LastName}",
-
-                // Mapping the nested OrderItems list
-                OrderItems = o.OrderLines?.Select(ol => new OrderItem
-                {
-                    OrderItemId = ol.ProductId,
-                    OrderItemName = ol.ProductName,
-                    OrderItemPrice = ol.Price,
-                    Quantity = ol.Quantity,
-
-                    // Mapping the nested Options list
-                    OrderItemOptions = ol.OrderLineOptions?.Select(olo => new OrderItemOption
-                    {
-                        OrderItemOptionId = olo.ProductOptionId,
-                        OrderItemOptionName = olo.Option,
-                        OrderItemOptionQuantity = olo.Quantity,
-                        OrderItemOptionPrice = olo.Price
-                    }).ToList() ?? new List<OrderItemOption>()
-                }).ToList() ?? new List<OrderItem>()
-            });
-        }
-
-        return ServiceResponse<IReadOnlyList<OrderInfoDto>>.Ok(result);
+        return ServiceResponse<IReadOnlyList<OrderInfoDto>>.Ok(mappedResult);
     }
     public async Task<ServiceResponse<OrderCartResponseDto>> AddOrderCartAsync(OrderCartDto orderCart)
     {
@@ -159,30 +143,15 @@ public class OrderService : IOrderService
             await _unitOfWork.Orders.AddAsync(newCart);
             await _unitOfWork.CompleteAsync();
 
-            return ServiceResponse<OrderCartResponseDto>.Ok(new OrderCartResponseDto
+            var order = await _orderReadRepository.GetCustomerCartAsync(newCart.Id);
+
+            if(order!= null)
             {
-                OrderId = newCart.Id,
-                DeliveryLocation = $"{deliveryLocation.Street} {deliveryLocation.Area}",
-                Status = newCart.Status,
-                CustomerId = newCart.CustomerId,
-                PartnerId = newCart.PartnerId,
-                PartnerName = partner.Name,
-                SubTotal = newCart.SubTotal,
-                DeliveryFees = newCart.DeliveryFees,
-                TotalPrice = newCart.TotalPayment,
-                OrderLine = new OrderLineCartResponse
-                {
-                    ProductId = line.ProductId,
-                    ProductName = line.ProductName,
-                    Quantity = line.Quantity,
-                    OrderLineOptions = line.OrderLineOptions?.Select(opt => new OrderLineOptionsCartResponse
-                    {
-                        ProductOptionId = opt.ProductOptionId,
-                        ProductOption = opt.Option,
-                        Quantity = opt.Quantity
-                    }).ToList()
-                }
-            });
+                var response = _orderCartResponseMapper.Map(order);
+                return ServiceResponse<OrderCartResponseDto>.Ok(response);
+            }
+            return ServiceResponse<OrderCartResponseDto>.Failure("Order is not found", 404);
+            
         }
         else
         {
@@ -257,30 +226,7 @@ public class OrderService : IOrderService
         _unitOfWork.Orders.Update(order);
         await _unitOfWork.CompleteAsync();
 
-        var responseDto = new OrderCartResponseDto
-        {
-            OrderId = order.Id,
-            PartnerName = order.Partner?.Name ?? "Unknown",
-            DeliveryLocation = $"{order.DeliveryLocation?.Street ?? ""} {order.DeliveryLocation?.Area ?? ""}",
-            Status = order.Status,
-            CustomerId = order.CustomerId,
-            PartnerId = order.PartnerId,
-            SubTotal = order.SubTotal,
-            DeliveryFees = order.DeliveryFees,
-            TotalPrice = order.TotalPayment,
-            OrderLine = new OrderLineCartResponse
-            {
-                ProductId = line.ProductId,
-                ProductName = line.ProductName,
-                Quantity = line.Quantity,
-                OrderLineOptions = line.OrderLineOptions?.Select(opt => new OrderLineOptionsCartResponse
-                {
-                    ProductOptionId = opt.ProductOptionId,
-                    ProductOption = opt.Option,
-                    Quantity = opt.Quantity
-                }).ToList()
-            }
-        };
+        var responseDto = _orderCartResponseMapper.Map(order);
 
         return ServiceResponse<OrderCartResponseDto>.Ok(responseDto);
     }
@@ -312,79 +258,9 @@ public class OrderService : IOrderService
             _unitOfWork.Orders.Update(order);
             await _unitOfWork.CompleteAsync();
         }
-        var responseDto = new OrderPlacementResponseDto
-        {
-            DeliveryLocationId = order.DeliveryLocationId,
-            Status = order.Status,
-            CustomerId = order.CustomerId,
-            SubTotal = order.SubTotal,
-            ServiceFee = order.ServiceFee,
-            DeliveryFees = order.DeliveryFees,
-            SavingAmount = order.SavingAmount ?? 0m,
-            DeliveryRuleId = order.DeliveryRuleId,
-            TotalPayment = order.TotalPayment,
-            PaymentType = order.PaymentType ?? OrderPaymentTypeEnum.Cash,
-            StartEstimation = order.StartEstimation ?? TimeOnly.MinValue,
-            EndEstimation = order.EndEstimation ?? TimeOnly.MinValue,
-            PartnerId = order.PartnerId,
-            DomainId = order.DomainId,
-            Note = order.Note ?? "",
-            OrderLines = order.OrderLines.Select(ol => new OrderLineDto
-            {
-                OrderId = order.Id,
-                ProductId = ol.ProductId,
-                ProductName = ol.ProductName,
-                Price = ol.Price,
-                Quantity = ol.Quantity,
-                Note = ol.Note ?? "",
+        var responseDto = _orderPlacementResponseMapper.Map(order);
 
-                OrderLineOptions = ol.OrderLineOptions?.Select(opt => new OrderLineOptionDto
-                {
-                    OrderLineId = ol.Id,
-                    ProductOptionId = opt.ProductOptionId,
-                    Option = opt.Option,
-                    Price = opt.Price,
-                    Quantity = opt.Quantity
-                }).ToList() ?? new List<OrderLineOptionDto>()
-            }).ToList()
-        };
         return ServiceResponse<OrderPlacementResponseDto>.Ok(responseDto);
-    }
-    private async Task<OrderInfoDto> GetOrderByIdAsync(Order order)
-    {
-
-        var result = new OrderInfoDto
-        {
-            OrderId = order.Id,
-            Status = order.Status,
-            PartnerName = order.Partner.Name,
-            Area = order.DeliveryLocation.Area,
-            SubTotal = order.SubTotal,
-            ServiceFee = order.ServiceFee,
-            DeliveryFees = order.DeliveryFees,
-            SavingAmount = order.SavingAmount ?? 0m,
-            TotalPrice = order.TotalPayment,
-            DeliveryLocation = $"{order.DeliveryLocation.Street}, {order.DeliveryLocation.Area}, {order.DeliveryLocation.City.ToString()}",
-            PaymentMethod = order.PaymentType?.ToString() ?? "Undefined",
-            DriverName = $"{order.Driver?.FirstName} {order.Driver?.LastName}",
-            OrderItems = order.OrderLines
-                .Select(ol => new OrderItem
-                {
-                    OrderItemId = ol.Id,
-                    OrderItemName = ol.ProductName,
-                    OrderItemPrice = ol.Price,
-                    Quantity = ol.Quantity,
-                    OrderItemOptions = (ol.OrderLineOptions ?? new List<OrderLineOption>())
-                        .Select(olp => new OrderItemOption
-                        {
-                            OrderItemOptionId = olp.Id,
-                            OrderItemOptionName = olp.Option,
-                            OrderItemOptionPrice = olp.Price,
-                            OrderItemOptionQuantity = olp.Quantity
-                        }).ToList()
-                }).ToList()
-        };
-        return result;
     }
 
     public async Task<ServiceResponse<bool>> ReceiveOrderAsync(int orderId, int partnerId, OrderStatusEnum status)
@@ -424,32 +300,9 @@ public class OrderService : IOrderService
 
         if (orders == null) return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Failure("Orders not found", 404);
 
-        var mappedDto = orders.Select(o => new PartnerOrderInfoDto
-        {
-            OrderId = o.Id,
-            Status = o.Status,
-            SubTotal = o.SubTotal,
-            TotalPrice = o.TotalPayment,
-            OrderItems = o.OrderLines
-                   .Select(ol => new PartnerOrderItem
-                   {
-                       OrderItemId = ol.Id,
-                       OrderItemName = ol.ProductName,
-                       OrderItemPrice = ol.Price,
-                       Quantity = ol.Quantity,
-                       OrderItemOptions = ol.OrderLineOptions
-                            .Select(olp => new PartnerOrderItemOption
-                            {
-                                ItemOptionId = olp.Id,
-                                ItemOptionName = olp.Option,
-                                ItemOptionQuantity = olp.Quantity,
-                                ItemOptionPrice = olp.Price
-                            }).ToList()
-                   }).ToList()
-        });
+        var mappedDto = orders.Select(o => _partnerOrderMapper.Map(o)).ToList();
 
-
-        return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Ok(mappedDto.ToList());
+        return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Ok(mappedDto);
     }
 
     public async Task<ServiceResponse<PartnerOrderInfoDto>> GetPartnerPlacedOrderAsync(int orderId, int partnerId)
@@ -458,29 +311,7 @@ public class OrderService : IOrderService
 
         if (order == null) return ServiceResponse<PartnerOrderInfoDto>.Failure("Order not found", 404);
 
-        var mappedDto = new PartnerOrderInfoDto
-        {
-            OrderId = order.Id,
-            Status = order.Status,
-            SubTotal = order.SubTotal,
-            TotalPrice = order.TotalPayment,
-            OrderItems = order.OrderLines
-                   .Select(ol => new PartnerOrderItem
-                   {
-                       OrderItemId = ol.Id,
-                       OrderItemName = ol.ProductName,
-                       OrderItemPrice = ol.Price,
-                       Quantity = ol.Quantity,
-                       OrderItemOptions = ol.OrderLineOptions
-                            .Select(olp => new PartnerOrderItemOption
-                            {
-                                ItemOptionId = olp.Id,
-                                ItemOptionName = olp.Option,
-                                ItemOptionQuantity = olp.Quantity,
-                                ItemOptionPrice = olp.Price
-                            }).ToList()
-                   }).ToList()
-        };
+        var mappedDto = _partnerOrderMapper.Map(order);
 
         return ServiceResponse<PartnerOrderInfoDto>.Ok(mappedDto);
     }
@@ -559,30 +390,9 @@ public class OrderService : IOrderService
         var orders = await _orderReadRepository.GetPartnerPreparingOrdersAsync(partnerId);
         if (orders == null) return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Ok(new List<PartnerOrderInfoDto>());
 
-        var mappedDto = orders.Select(o => new PartnerOrderInfoDto
-        {
-            OrderId = o.Id,
-            Status = o.Status,
-            SubTotal = o.SubTotal,
-            TotalPrice = o.TotalPayment,
-            OrderItems = o.OrderLines.Select(
-                ol => new PartnerOrderItem
-                {
-                    OrderItemId = ol.Id,
-                    OrderItemName = ol.ProductName,
-                    OrderItemPrice = ol.Price,
-                    Quantity = ol.Quantity,
-                    OrderItemOptions = ol.OrderLineOptions.Select(
-                        olp => new PartnerOrderItemOption
-                        {
-                            ItemOptionId = olp.Id,
-                            ItemOptionName = olp.Option,
-                            ItemOptionPrice = olp.Price,
-                            ItemOptionQuantity = olp.Quantity
-                        }).ToList()
-                }).ToList()
-        });
-        return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Ok(mappedDto.ToList());
+        var mappedDto = orders.Select(o => _partnerOrderMapper.Map(o)).ToList();
+
+        return ServiceResponse<IReadOnlyList<PartnerOrderInfoDto>>.Ok(mappedDto);
     }
 
     public async Task<ServiceResponse<bool>> PickOrderAsync(int orderId, int driverId)
@@ -636,35 +446,8 @@ public class OrderService : IOrderService
 
         if (orders is null) return ServiceResponse<IReadOnlyList<AdminOrderDto>>.Ok(new List<AdminOrderDto>());
 
-        var listOfOrders = new List<AdminOrderDto>();
+        var listOfOrders = orders.Select(o => _adminOrderMapper.Map(o)).ToList();
 
-        foreach (var o in orders)
-        {
-            listOfOrders.Add(
-                new AdminOrderDto
-                {
-                    OrderId = o.Id,
-                    CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
-                    PartnerName = o.Partner.Name,
-                    PartnerLocation = $"{o.Partner.Location.Street},{o.Partner.Location.Area},{o.Partner.Location.City.ToString()}, {o.Partner.Location.Country.ToString()}",
-                    DeliveryLocation = $"{o.DeliveryLocation.Street},{o.DeliveryLocation.Area},{o.DeliveryLocation.City.ToString()}, {o.DeliveryLocation.Country.ToString()}",
-                    Domain = o.Domain.Name,
-                    Status = o.Status.ToString(),
-                    DriverName = o.Driver != null ? $"{o.Driver.FirstName} {o.Driver.LastName}" : null,
-                    SubTotal = o.SubTotal,
-                    ServiceFee = o.ServiceFee,
-                    DeliveryFees = o.DeliveryFees,
-                    TotalPayment = o.TotalPayment,
-                    PaymentType = o.PaymentType != null ? o.PaymentType : null,
-                    StartEstimation = o.StartEstimation,
-                    EndEstimation = o.EndEstimation,
-                    AcceptedTime = o.AcceptedTime,
-                    PlacementTime = o.PlacementTime,
-                    DeliveredTime = o.DeliveredTime,
-                    PickedUpTime = o.PickedUpTime,
-                }
-            );
-        }
         return ServiceResponse<IReadOnlyList<AdminOrderDto>>.Ok(listOfOrders);
     }
 
@@ -690,35 +473,7 @@ public class OrderService : IOrderService
         if (order == null) return ServiceResponse<OrderCartViewDto>.Failure("The order is not found", 404);
 
 
-        var response = new OrderCartViewDto
-        {
-            OrderId = order.Id,
-            PartnerName = order.Partner?.Name ?? "Unknown",
-            DeliveryLocation =
-                $"{order.DeliveryLocation?.Street ?? ""} {order.DeliveryLocation?.Area ?? ""}",
-            Status = order.Status,
-            CustomerId = order.CustomerId,
-            PartnerId = order.PartnerId,
-            SubTotal = order.SubTotal,
-            ServiceFee = order.TotalPayment - order.SubTotal - order.DeliveryFees,
-            DeliveryFees = order.DeliveryFees,
-            TotalPrice = order.TotalPayment,
-            OrderLines = order.OrderLines.Select(
-                    ol => new OrderLineView
-                    {
-                        ProductId = ol.ProductId,
-                        ProductName = ol.ProductName,
-                        Quantity = ol.Quantity,
-                        OrderLineOptions = ol.OrderLineOptions?.Select(
-                            olp => new OrderLineOptionsView
-                            {
-                                ProductOptionId = olp.ProductOptionId,
-                                ProductOption = olp.Option,
-                                Quantity = olp.Quantity,
-                            }).ToList() ?? new List<OrderLineOptionsView>()
-                    }
-                ).ToList()
-        };
+        var response = _orderCartViewMapper.Map(order);
 
         return ServiceResponse<OrderCartViewDto>.Ok(response);
     }
@@ -765,22 +520,7 @@ public class OrderService : IOrderService
                 .ToListAsync();
 
             var data = pageOrders.Select(
-                o => new OrderForPaginationDto
-                {
-                    OrderId = o.Id,
-                    Status = o.Status,
-                    SubTotal = o.SubTotal,
-                    ServiceFee = o.ServiceFee,
-                    DeliveryFees = o.DeliveryFees,
-                    TotalPayment = o.TotalPayment,
-                    StartEstimation = o.StartEstimation,
-                    EndEstimation = o.EndEstimation,
-                    PlacementTime = o.PlacementTime,
-                    AcceptedTime = o.AcceptedTime,
-                    PickedUpTime = o.PickedUpTime,
-                    DeliveredTime = o.DeliveredTime,
-                    Note = o.Note,
-                }
+                o => _orderPaginationMapper.Map(o)
             ).ToList();
 
             var response = new PageResponse<OrderForPaginationDto>
@@ -810,23 +550,7 @@ public class OrderService : IOrderService
         var orderQuery = _orderReadRepository.GetDriverAssignedOrder(driverId);
 
         var assingedOrder = await orderQuery.Select(
-            o => new DriverAssignedOrder
-            {
-                OrderId = o.Id,
-                PartnerName = o.Partner.Name,
-                PartnerLocation = $"{o.Partner.Location.Street} {o.Partner.Location.Area} {o.Partner.Location.City.ToString()}",
-                CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
-                CustomerPhone = o.Customer.Phone,
-                DeliveryLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
-                IsReadyForPickup = o.Status == OrderStatusEnum.ReadyForPickUp ? true : false,
-                Status = o.Status,
-                SubTotal = o.SubTotal,
-                ServiceFee = o.ServiceFee,
-                DeliveryFee = o.DeliveryFees,
-                TotalPayment = o.TotalPayment,
-                StartEstimation = o.StartEstimation.Value,
-                EndEstimation = o.EndEstimation.Value,
-            }
+            o => _driverAssignedOrderMapper.Map(o)
         ).FirstOrDefaultAsync();
 
         if (assingedOrder == null) return ServiceResponse<DriverAssignedOrder?>.Ok(null);
@@ -839,40 +563,7 @@ public class OrderService : IOrderService
         var detailedOrderQuery = _orderReadRepository.GetOrderDetails(orderId);
 
         var detailedOrder = await detailedOrderQuery.Select(
-            o => new OrderDetailedDto
-            {
-                PartnerName = o.Partner.Name,
-                PartnerLocation = $"{o.Partner.Location.Street} {o.Partner.Location.Area} {o.Partner.Location.City.ToString()}",
-                CustomerName = $"{o.Customer.FirstName} {o.Customer.LastName}",
-                CustomerLocation = $"{o.DeliveryLocation.Street} {o.DeliveryLocation.Area} {o.DeliveryLocation.City.ToString()}",
-                DriverName = o.Driver != null ? $"{o.Driver.FirstName} {o.Driver.LastName}" : null,
-                SubTotal = o.SubTotal,
-                ServiceFee = o.ServiceFee,
-                DeliveryFee = o.DeliveryFees,
-                TotalPayment = o.TotalPayment,
-                PaymentType = o.PaymentType != null ? o.PaymentType.ToString()! : "Unknown",
-                AcceptedTime = o.AcceptedTime,
-                DeliveredTime = o.DeliveredTime,
-                PickedUpTime = o.PickedUpTime,
-                PlacementTime = o.PlacementTime,
-                OrderItems = o.OrderLines.Select(
-                    ol => new OrderLineDetils
-                    {
-                        OrderItemId = ol.Id,
-                        OrderItemName = ol.ProductName,
-                        OrderItemPrice = ol.Price,
-                        Quantity = ol.Quantity,
-                        OrderItemOptions = ol.OrderLineOptions.Select(
-                            olo => new OrderOptionDetails
-                            {
-                                OrderOptionId = olo.ProductOptionId,
-                                OrderOptionName = olo.Option,
-                                OrderOptionQuantity = olo.Quantity,
-                                OrderOptionPrice = olo.Price
-                            }).ToList()
-                    }
-                ).ToList()
-            }
+            o => _orderDetailedMapper.Map(o)
         ).FirstOrDefaultAsync();
 
         if (detailedOrder == null)
@@ -922,22 +613,7 @@ public class OrderService : IOrderService
             .ToListAsync();
 
             var data = pageOrders.Select(
-                o => new OrderForPaginationDto
-                {
-                    OrderId = o.Id,
-                    Status = o.Status,
-                    SubTotal = o.SubTotal,
-                    ServiceFee = o.ServiceFee,
-                    DeliveryFees = o.DeliveryFees,
-                    TotalPayment = o.TotalPayment,
-                    StartEstimation = o.StartEstimation,
-                    EndEstimation = o.EndEstimation,
-                    PlacementTime = o.PlacementTime,
-                    AcceptedTime = o.AcceptedTime,
-                    PickedUpTime = o.PickedUpTime,
-                    DeliveredTime = o.DeliveredTime,
-                    Note = o.Note,
-                }
+                o => _orderPaginationMapper.Map(o)
             ).ToList();
             var response = new PageResponse<OrderForPaginationDto>
             {
@@ -1018,54 +694,8 @@ public class OrderService : IOrderService
                 (double)totalCount / query.PageSize
             );
 
-            var response = await orderQuery.Select(o => new AdminOrderResponse
-            {
-                CustomerId = o.CustomerId,
-                CustomerFullName = $"{o.Customer.FirstName} {o.Customer.LastName}",
-                CustomerPhone = o.Customer.Phone,
-                CustomerLocation = $"{o.DeliveryLocation.Street}, {o.DeliveryLocation.Area}, {o.DeliveryLocation.City.ToString()} ",
-                PartnerId = o.PartnerId,
-                PartnerName = o.Partner.Name,
-                PartnerLocation = $"{o.Partner.Location.Street}, {o.Partner.Location.Area}, {o.Partner.Location.City.ToString()} ",
-                CommissionRate = o.Partner.CommissionRate,
-                DriverId = o.DriverId.HasValue ? o.DriverId.Value : null,
-                DriverFullName = o.Driver == null
-                                ? null : $"{o.Driver.FirstName} {o.Driver.LastName}",
-                OrderId = o.Id,
-                DomainId = o.DomainId,
-                Status = o.Status.ToString(),
-                Note = o.Note ?? "",
-                PlacementTime = o.PlacementTime,
-                AcceptedTime = o.AcceptedTime,
-                PickedUpTime = o.PickedUpTime,
-                DeliveredTime = o.DeliveredTime,
-                SubTotal = o.SubTotal,
-                DeliveryFee = o.DeliveryFees,
-                ServiceFee = o.ServiceFee,
-                Total = o.TotalPayment,
-                PartnerCommissionAmount = o.Partner.CommissionRate * o.SubTotal,
-                DeliveryRuleId = o.DeliveryRuleId,
-                BaseFee = o.DeliveryRule.BaseFee,
-                PerKmFee = o.DeliveryRule.PerKmFee,
-                MinForFreeDelivery = o.DeliveryRule.MinTotalForFreeDelivery,
-                OrderLines = o.OrderLines.Select(ol => new AdminOrderLine
-                {
-                    OrderLineId = ol.Id,
-                    ProductId = ol.ProductId,
-                    ProductName = ol.ProductName,
-                    Price = ol.Price,
-                    Quantity = ol.Quantity,
-                    OrderLineOptions = ol.OrderLineOptions.Select(olp => new AdminOrderLineOptions
-                    {
-                        OrderLineOptionId = olp.Id,
-                        ProductOptionId = olp.ProductOptionId,
-                        Option = olp.Option,
-                        Price = olp.Price,
-                        Quantity = olp.Quantity,
-                    }).ToList() ?? new List<AdminOrderLineOptions>()
-                }).ToList()
-            }).ToListAsync();
-
+            var response = await orderQuery.Select(o => _adminOrderResponseMapper.Map(o)).ToListAsync();
+        
             return ServiceResponse<PageResponse<AdminOrderResponse>>.Ok(
                 new PageResponse<AdminOrderResponse>
                 {
@@ -1111,10 +741,10 @@ public class OrderService : IOrderService
                 data.Columns.Add("Picked Up Time");
                 data.Columns.Add("Delivered Time");
 
-                foreach(var o in orders)
+                foreach (var o in orders)
                 {
                     data.Rows.Add(
-                        $"{o.DeliveryLocation.Street}, {o.DeliveryLocation.Area}", 
+                        $"{o.DeliveryLocation.Street}, {o.DeliveryLocation.Area}",
                         $"{o.Partner.Location.Street}, {o.Partner.Location.Area}",
                         o.Status.ToString(),
                         o.DomainId,

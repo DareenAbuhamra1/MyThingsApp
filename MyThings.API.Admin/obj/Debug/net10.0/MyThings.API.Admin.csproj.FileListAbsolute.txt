@@ -1,12 +1,3 @@
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.AssemblyReference.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rpswa.dswa.cache.json
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.GeneratedMSBuildEditorConfig.editorconfig
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfoInputs.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfo.cs
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.CoreCompileInputs.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cs
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/appsettings.Development.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/appsettings.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.API.Admin.staticwebassets.endpoints.json
@@ -101,6 +92,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/OpenTelemetry.Resources.Process.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/OpenTelemetry.Resources.ProcessRuntime.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Pipelines.Sockets.Unofficial.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Riok.Mapperly.Abstractions.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Serilog.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Serilog.Extensions.Hosting.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Serilog.Extensions.Logging.dll
@@ -241,6 +233,15 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Core.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Infrastructure.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Auth.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.AssemblyReference.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfoInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json

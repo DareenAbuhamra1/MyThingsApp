@@ -4,6 +4,7 @@ using MyThings.Core.Entities;
 using MyThings.Core.Enums;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Context;
+using MyThings.Infrastructure.Extensions;
 
 namespace MyThings.Infrastructure.Repositories;
 
@@ -16,25 +17,21 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
         return await _context.Orders
             .Where(o => o.CustomerId == customerId)
             .OrderByDescending(o => o.CreatedAt)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
             .Include(o => o.Driver)
             .Include(o => o.Domain)
             .Include(o => o.DeliveryLocation)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludePartnerLocation()
+            .IncludeOrderLineDetails()
             .ToListAsync();
     }
     public async Task<Order?> GetOrderByOrderIdAsync(int orderId)
     {
         return await _context.Orders
             .Where(o => o.Id == orderId)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
+            .IncludePartnerLocation()
             .Include(o => o.Driver)
             .Include(o => o.DeliveryLocation)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludeOrderLineDetails()
             .FirstOrDefaultAsync();
     }
   
@@ -42,8 +39,7 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     {
         return await _context.Orders
             .Where(o => o.PartnerId == partnerId && o.Status == OrderStatusEnum.Placed)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludeOrderLineDetails()
             .ToListAsync();
     }
 
@@ -52,8 +48,7 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
 
         return await _context.Orders
             .Where(o => o.Id == orderId)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludeOrderLineDetails()
             .FirstOrDefaultAsync();
     }
 
@@ -75,20 +70,17 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     {
         return await _context.Orders
             .Where(o => o.PartnerId == parterId && o.Status == OrderStatusEnum.Accepted || o.Status == OrderStatusEnum.Assigned)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludeOrderLineDetails()
             .ToListAsync();
     }
 
     public async Task<IEnumerable<Order>> GetAllOrdersAsync()
     {
         return await _context.Orders
-            .Include(o => o.Customer)
             .Include(o => o.Driver)
             .Include(o => o.Domain)
-            .Include(o => o.DeliveryLocation)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
+            .IncludeCustomerLocation()
+            .IncludePartnerLocation()
             .ToListAsync();
     }
 
@@ -105,8 +97,7 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
             .Where(o =>o.CustomerId == customerId && o.Status == OrderStatusEnum.Pending)
             .Include(o => o.DeliveryLocation)
             .Include(o => o.Partner)
-            .Include(o => o.OrderLines)
-                .ThenInclude(ol => ol.OrderLineOptions)
+            .IncludeOrderLineDetails()
             .FirstOrDefaultAsync();  
     }
 
@@ -121,10 +112,8 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     {
         return  _context.Orders
             .Where(o => o.DriverId == driverId && (o.Status == OrderStatusEnum.Assigned || o.Status ==OrderStatusEnum.ReadyForPickUp ||o.Status == OrderStatusEnum.PickedUp))
-            .Include(o => o.Customer)
-            .Include(o => o.DeliveryLocation)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
+            .IncludeCustomerLocation()
+            .IncludePartnerLocation()
             .AsQueryable();
     }
 
@@ -132,22 +121,15 @@ public class OrderReadRepository : ReadOnlyRepository<Order>, IOrderReadReposito
     {
         return _context.Orders
             .Where(o => o.Id == orderId)
-            .Include(o => o.Customer)
-            .Include(o => o.DeliveryLocation)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
-            .Include(o => o.OrderLines)
-                .ThenInclude(olp => olp.OrderLineOptions)
+            .IncludeAllDetails()
             .AsQueryable();
     }
 
     public IQueryable<Order> GetAllOrders()
     {
         return _context.Orders
-            .Include(o => o.Customer)
-            .Include(o => o.DeliveryLocation)
-            .Include(o => o.Partner)
-                .ThenInclude(pl => pl.Location)
+            .IncludeCustomerLocation()
+            .IncludePartnerLocation()
             .AsQueryable();
     }
 }

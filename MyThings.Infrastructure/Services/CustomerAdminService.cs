@@ -4,16 +4,18 @@ using MyThings.Core.Interfaces;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Core.Wrappers;
 using Microsoft.EntityFrameworkCore;
+using MyThings.Infrastructure.Mappers;
 
 namespace MyThings.Infrastructure.Services;
 
 public class CustomerAdminService : ICustomerAdminService
 {
     private readonly IReadUnitOfWork _readUnitOfWork;
-
-    public CustomerAdminService(IReadUnitOfWork readUnitOfWork)
+    private readonly CustomerAdminMapper _customerAdminMapper;
+    public CustomerAdminService(IReadUnitOfWork readUnitOfWork, CustomerAdminMapper customerAdminMapper)
     {
         _readUnitOfWork = readUnitOfWork;
+        _customerAdminMapper = customerAdminMapper;
     }
 
     public async Task<ServiceResponse<CustomerAdminResponseDto>> GetCustomersDetailsForAdminAsync(CustomerAdminFilterDto filter)
@@ -69,7 +71,7 @@ public class CustomerAdminService : ICustomerAdminService
             if (!string.IsNullOrWhiteSpace(filter.Search))
             {
                 var searchTerm = filter.Search.ToLower();
-                query = query.Where(c => 
+                query = query.Where(c =>
                                        c.FirstName.ToLower().Contains(searchTerm) ||
                                        c.LastName.ToLower().Contains(searchTerm) ||
                                        (c.Email != null && c.Email.ToLower().Contains(searchTerm)));
@@ -88,7 +90,27 @@ public class CustomerAdminService : ICustomerAdminService
                 .Take(filter.Take)
                 .ToListAsync();
 
-            var customerDtos = customers.Select(c => MapToCustomerDetailsDto(c, filter.LanguageId)).ToList();
+            var customerDtos = customers.Select(c =>
+            {
+                var statusTranslation = c.CustomerStatus?.Translations
+                    .FirstOrDefault(t => t.LanguageId == filter.LanguageId);
+
+                var statusName =
+                    statusTranslation?.Name ??
+                    c.CustomerStatus?.Name ??
+                    "Unknown";
+
+                var fullName = c.TypeId == 7
+                    ? $"{c.Email} {c.FirstName} {c.LastName}".Trim()
+                    : $"{c.FirstName} {c.LastName}".Trim();
+
+                return _customerAdminMapper.Map(
+                    c,
+                    statusName,
+                    GetCustomerTypeName(c.TypeId),
+                    fullName
+                );
+            }).ToList();
 
             var response = new CustomerAdminResponseDto
             {
@@ -106,52 +128,6 @@ public class CustomerAdminService : ICustomerAdminService
                 $"Error retrieving customer details: {ex.Message}", 500);
         }
     }
-
-    private CustomerDetailsForAdminDto MapToCustomerDetailsDto(Customer customer, int languageId)
-    {
-        // Get translated status name for the requested language
-        var statusTranslation = customer.CustomerStatus?.Translations
-            .FirstOrDefault(t => t.LanguageId == languageId);
-        
-        var statusName = statusTranslation?.Name ?? customer.CustomerStatus?.Name ?? "Unknown";
-
-        // Construct FullName
-        var fullName = customer.TypeId == 7 // Guest type
-            ? $"{customer.Email} {customer.FirstName} {customer.LastName}".Trim()
-            : $"{customer.FirstName} {customer.LastName}".Trim();
-
-        return new CustomerDetailsForAdminDto
-        {
-            Id = customer.Id,
-            FullName = fullName,
-            LanguageId = customer.LanguageId,
-            LanguageName = customer.Language?.Name,
-            TypeId = customer.TypeId,
-            CustomerTypeName = GetCustomerTypeName(customer.TypeId),
-            CustomerStatusId = customer.CustomerStatusId,
-            CustomerStatusName = statusName,
-            MediaId = customer.MediaId,
-            Media = customer.Media != null ? MapToMediaDetailDto(customer.Media) : null
-        };
-    }
-
-    private MediaDetailDto MapToMediaDetailDto(Media media)
-    {
-        return new MediaDetailDto
-        {
-            Id = media.Id,
-            Color = media.Color,
-            TextColor = media.TextColor,
-            IsVideo = media.IsVideo,
-            DisplayOrder = media.DisplayOrder,
-            Name = media.Name,
-            Alt = media.Alt,
-            RoundTextColor = media.RoundTextColor,
-            WHRatio = media.WHRatio,
-            ImageUrl = media.ImageUrl
-        };
-    }
-
     private string GetCustomerTypeName(int typeId)
     {
         return typeId switch
@@ -162,4 +138,52 @@ public class CustomerAdminService : ICustomerAdminService
             _ => "Unknown"
         };
     }
+    /*
+        private CustomerDetailsForAdminDto MapToCustomerDetailsDto(Customer customer, int languageId)
+        {
+            // Get translated status name for the requested language
+            var statusTranslation = customer.CustomerStatus?.Translations
+                .FirstOrDefault(t => t.LanguageId == languageId);
+
+            var statusName = statusTranslation?.Name ?? customer.CustomerStatus?.Name ?? "Unknown";
+
+            // Construct FullName
+            var fullName = customer.TypeId == 7 // Guest type
+                ? $"{customer.Email} {customer.FirstName} {customer.LastName}".Trim()
+                : $"{customer.FirstName} {customer.LastName}".Trim();
+
+            return new CustomerDetailsForAdminDto
+            {
+                Id = customer.Id,
+                FullName = fullName,
+                LanguageId = customer.LanguageId,
+                LanguageName = customer.Language?.Name,
+                TypeId = customer.TypeId,
+                CustomerTypeName = GetCustomerTypeName(customer.TypeId),
+                CustomerStatusId = customer.CustomerStatusId,
+                CustomerStatusName = statusName,
+                MediaId = customer.MediaId,
+                Media = customer.Media != null ? MapToMediaDetailDto(customer.Media) : null
+            };
+        }
+        private MediaDetailDto MapToMediaDetailDto(Media media)
+        {
+            return new MediaDetailDto
+            {
+                Id = media.Id,
+                Color = media.Color,
+                TextColor = media.TextColor,
+                IsVideo = media.IsVideo,
+                DisplayOrder = media.DisplayOrder,
+                Name = media.Name,
+                Alt = media.Alt,
+                RoundTextColor = media.RoundTextColor,
+                WHRatio = media.WHRatio,
+                ImageUrl = media.ImageUrl
+            };
+        }
+
+
+    }
+    */
 }

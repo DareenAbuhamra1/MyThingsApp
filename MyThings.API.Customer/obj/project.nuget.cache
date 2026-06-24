@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Uy+IiKzB2IM=",
+  "dgSpecHash": "6cB/pDVRbOs=",
   "success": true,
   "projectFilePath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/MyThings.API.Customer.csproj",
   "expectedPackageFiles": [
@@ -91,6 +91,7 @@
     "/Users/dareenabuhamra/.nuget/packages/opentelemetry.resources.process/1.15.1-beta.1/opentelemetry.resources.process.1.15.1-beta.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/opentelemetry.resources.processruntime/1.15.1-beta.1/opentelemetry.resources.processruntime.1.15.1-beta.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/riok.mapperly/4.3.1/riok.mapperly.4.3.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog/4.3.1/serilog.4.3.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog.extensions.hosting/10.0.0/serilog.extensions.hosting.10.0.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog.extensions.logging/10.0.0/serilog.extensions.logging.10.0.0.nupkg.sha512",

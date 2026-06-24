@@ -3,7 +3,7 @@ using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using MyThings.Core.Entities;
-using MyThings.Infrastructure.Repositories;
+using MyThings.Infrastructure.Mappers;
 
 namespace MyThings.Infrastructure.Services;
 
@@ -11,29 +11,21 @@ public class LocationService : ILocationService
 {
     private readonly ReadDbContext _context;
     private readonly IUnitOfWork _unitOfWork;
-    public LocationService(ReadDbContext context,IUnitOfWork unitOfWork)
+    private readonly CutomerLocationMapper _customerLocationMapper;
+    private readonly LocationMapper _locationMapper;
+    public LocationService(ReadDbContext context,IUnitOfWork unitOfWork, CutomerLocationMapper customerLocationMapper, LocationMapper locationMapper)
     {
         _context =context;
         _unitOfWork = unitOfWork;
+        _customerLocationMapper = customerLocationMapper;
+        _locationMapper = locationMapper;
     }
 
     public async Task<CustomerLocationDto?> GetCustomerDefaultLocation(int customerId)
     {
         var CustomerLocDto = await _context.Locations
             .Where(l => l.CustomerId == customerId && l.IsDefault == true)
-            .Select(l => new CustomerLocationDto
-            {
-                CustomerId = customerId,
-                LocationId = l.Id,
-                Country = l.Country,
-                City = l.City,
-                Area = l.Area,
-                Street = l.Street,
-                BuildingNo = l.BuildingNo??"",
-                ApartmentNo = l.ApartmentNo??"",
-                Latitude = l.Latitude,
-                Longitude = l.Longitude
-            })
+            .Select(l => _customerLocationMapper.Map(l))
             .FirstOrDefaultAsync();
 
         return CustomerLocDto;
@@ -60,20 +52,6 @@ public class LocationService : ILocationService
         await _unitOfWork.Locations.AddAsync(DefaultCustomerLocation);
         await _unitOfWork.CompleteAsync();
         
-        return new LocationDto
-        {
-            LocationId = DefaultCustomerLocation.Id,
-            CustomerId = locationDto.CustomerId,
-            Title = DefaultCustomerLocation.Title,
-            Country = DefaultCustomerLocation.Country.ToString(),
-            City = DefaultCustomerLocation.City.ToString(),
-            Area = DefaultCustomerLocation.Area,
-            Street = DefaultCustomerLocation.Street,
-            BuildingNo = DefaultCustomerLocation.BuildingNo??"",
-            ApartmentNo = DefaultCustomerLocation.ApartmentNo??"",
-            Latitude = DefaultCustomerLocation.Latitude,
-            Longitude = DefaultCustomerLocation.Longitude,
-            IsDefault = DefaultCustomerLocation.IsDefault,
-        };
+        return _locationMapper.Map(DefaultCustomerLocation);
     }
 }

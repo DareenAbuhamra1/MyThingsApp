@@ -1,55 +1,36 @@
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
+using MyThings.Infrastructure.Mappers;
 
 namespace MyThings.Infrastructure.Services;
 
 public class CustomerPartnerService : ICustomerPartnerService
 {
     private readonly IPartnerReadRepository _partnerRepository;
+    private readonly ProductOptionDisplayMapper _productOptionDisplayMapper;
+    private readonly ProductDisplayMapper _productDisplayMapper;
+    private readonly StoreDisplayMapper _storeDisplayMapper;
 
-    public CustomerPartnerService(IPartnerReadRepository partnerRepository)
+    public CustomerPartnerService(IPartnerReadRepository partnerRepository, ProductOptionDisplayMapper productOptionDisplayMapper, ProductDisplayMapper productDisplayMapper, StoreDisplayMapper storeDisplayMapper)
     {
         _partnerRepository = partnerRepository;
+        _productOptionDisplayMapper = productOptionDisplayMapper;
+        _productDisplayMapper = productDisplayMapper;
+        _storeDisplayMapper = storeDisplayMapper;
     }
 
     public async Task<List<StoreDisplayDto>> GetPartnersAsync(int DomainId)
     {
         var partners = await _partnerRepository.GetPartnersByDomainIdAsync(DomainId);
 
-        var partnersList = new List<StoreDisplayDto>();
-
-        foreach (var p in partners)
-        {
-            partnersList.Add(
-                new StoreDisplayDto
-                {
-                    Id = p.Id,
-                    Name = p.Name,
-                    IsAvailable = p.IsAvailable,
-                }
-            );
-        }
+        var partnersList = partners.Select(p => _storeDisplayMapper.Map(p)).ToList();
         return partnersList;
     }
     public async Task<List<ProductDisplayDto>> GetProductsAsync(int partnerId)
     {
         var products = await _partnerRepository.GetProductsByPartnerId(partnerId);
 
-        var productsList = new List<ProductDisplayDto>();
-
-        foreach (var product in products)
-        {
-            productsList.Add(
-                new ProductDisplayDto
-                {
-                    Id = product.Id,
-                    Name = product.Name,
-                    Price = product.Price,
-                    Stock = product.Stock,
-                    Description = product.Description??"",
-                }
-            );
-        }
+        var productsList = products.Select(p => _productDisplayMapper.Map(p)).ToList();
 
         return productsList;
     }
@@ -58,22 +39,7 @@ public class CustomerPartnerService : ICustomerPartnerService
         var productOptions = await _partnerRepository.GetProductOptionsByProductIdAsync(productId);
 
         return productOptions.Select(
-            og => new ProductOptionDisplayDto
-            {
-                OptionGroupId = og.Id,
-                ProductId = og.ProductId,
-                Title = og.Title,
-                IsRequired = og.IsRequired,
-                MinSelection = og.MinSelection,
-                MaxSelection = og.MaxSelection,
-                Options = (og.ProductOptions ?? [])
-                    .Select(po => new ProductOption
-                    {
-                        ProductOptionId = po.Id,
-                        Option = po.Option,
-                        Price = po.Price,
-                    }).ToList()
-            }
+            og => _productOptionDisplayMapper.Map(og)
         ).ToList();
     }
 }

@@ -16,6 +16,8 @@ using Hangfire;
 using Hangfire.SqlServer;
 using Hangfire.Common;
 using MyThings.Core.Interfaces.Services;
+using MyThings.Infrastructure.Mappers;
+using MyThings.Core.DTOs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -56,8 +58,25 @@ try
     builder.Services.AddScoped<IPartnerService, PartnerService>();
     builder.Services.AddScoped<IPartnerReadRepository, PartnerReadRepository>();
     builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
-
     
+    builder.Services.AddSingleton<PartnerOrderMapper>();
+    builder.Services.AddSingleton<OrderPaginationMapper>();
+    builder.Services.AddSingleton<OrderInfoMapper>();
+    builder.Services.AddSingleton<OrderDetailedMapper>();
+    builder.Services.AddSingleton<OrderPlacementResponseMapper>();
+    builder.Services.AddSingleton<OrderCartResponseMapper>();
+    builder.Services.AddSingleton<AdminOrderMapper>();
+    builder.Services.AddSingleton<OrderCartViewMapper>();
+    builder.Services.AddSingleton<AdminOrderResponseMapper>();
+    builder.Services.AddSingleton<DriverAssignedOrderMapper>();
+    builder.Services.AddSingleton<CutomerLocationMapper>();
+    builder.Services.AddSingleton<LocationMapper>();
+    builder.Services.AddSingleton<DriverInfoMapper>();
+    builder.Services.AddSingleton<ProductOptionDisplayMapper>();
+    builder.Services.AddSingleton<ProductDisplayMapper>();
+    builder.Services.AddSingleton<StoreDisplayMapper>();
+    builder.Services.AddSingleton<CustomerAdminMapper>();
+
     builder.Services.AddHangfireServer();
     
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");

@@ -90,6 +90,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/OpenTelemetry.Resources.Process.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/OpenTelemetry.Resources.ProcessRuntime.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/Pipelines.Sockets.Unofficial.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/Riok.Mapperly.Abstractions.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/Serilog.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/Serilog.Extensions.Hosting.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/bin/Debug/net10.0/Serilog.Extensions.Logging.dll

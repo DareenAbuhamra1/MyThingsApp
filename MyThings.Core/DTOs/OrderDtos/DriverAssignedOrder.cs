@@ -16,7 +16,7 @@ public class DriverAssignedOrder
     public decimal ServiceFee {get;set;}
     public decimal DeliveryFee {get;set;}
     public decimal TotalPayment {get;set;}
-    public TimeOnly StartEstimation {get;set;}
-    public TimeOnly EndEstimation {get;set;}
+    public TimeOnly? StartEstimation {get;set;}
+    public TimeOnly? EndEstimation {get;set;}
     
 }
