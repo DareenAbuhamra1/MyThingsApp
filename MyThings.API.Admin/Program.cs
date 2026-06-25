@@ -18,6 +18,12 @@ using Hangfire.Common;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Mappers;
 using MyThings.Core.DTOs;
+using Mythings.Infrastructure.Helper;
+using Microsoft.Extensions.Caching.StackExchangeRedis;
+using StackExchange.Redis;
+//using ZiggyCreatures.FusionCache;
+//using ZiggyCreatures.FusionCache.Serialization.SystemTextJson;
+//using ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -58,7 +64,7 @@ try
     builder.Services.AddScoped<IPartnerService, PartnerService>();
     builder.Services.AddScoped<IPartnerReadRepository, PartnerReadRepository>();
     builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
-    
+
     builder.Services.AddSingleton<PartnerOrderMapper>();
     builder.Services.AddSingleton<OrderPaginationMapper>();
     builder.Services.AddSingleton<OrderInfoMapper>();
@@ -76,9 +82,12 @@ try
     builder.Services.AddSingleton<ProductDisplayMapper>();
     builder.Services.AddSingleton<StoreDisplayMapper>();
     builder.Services.AddSingleton<CustomerAdminMapper>();
+    builder.Services.AddSingleton<RedisCacheService>();
+    builder.Services.AddSingleton<HybridCacheService>();
 
     builder.Services.AddHangfireServer();
-    
+    //builder.Services.AddFusionCache();
+
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");
 
     builder.Services.AddDbContext<WriteDbContext>(
@@ -121,7 +130,9 @@ try
 
         });
 
-   
+    builder.Services.Configure<RabbitMqSettings>(
+        builder.Configuration.GetRequiredSection("RabbitMQ")
+    );
 
     var app = builder.Build();
 

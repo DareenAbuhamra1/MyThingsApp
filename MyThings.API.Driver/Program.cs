@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Mythings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
@@ -10,6 +11,7 @@ using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
 using Serilog;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -57,24 +59,35 @@ try
     builder.Services.AddSingleton<ProductDisplayMapper>();
     builder.Services.AddSingleton<StoreDisplayMapper>();
     builder.Services.AddSingleton<CustomerAdminMapper>();
-    
+    builder.Services.AddSingleton<RedisCacheService>();
+    builder.Services.AddSingleton<HybridCacheService>();
+
+    builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+    {
+        var config = builder.Configuration.GetSection("Redis:ConnectionString").Value;
+        return ConnectionMultiplexer.Connect(config!);
+    });
+
     builder.Services.AddDbContext<WriteDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("PrimaryWrite")));
 
     builder.Services.AddDbContext<ReadDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("SecondaryRead"))
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));
-    builder.Services.AddCors(options =>
-  {
-      options.AddPolicy("AllowAngularUI", policy =>
-      {
-          policy.WithOrigins("http://localhost:4200") // Replace with your Angular app URL
-              .AllowAnyMethod()
-              .AllowAnyHeader() // This allows the Authorization header!
-              .AllowCredentials(); // Required if you use cookies or specific auth headers
-      });
-  });
 
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("AllowAngularUI", policy =>
+        {
+            policy.WithOrigins("http://localhost:4200") // Replace with your Angular app URL
+                .AllowAnyMethod()
+                .AllowAnyHeader() // This allows the Authorization header!
+                .AllowCredentials(); // Required if you use cookies or specific auth headers
+        });
+    });
+    builder.Services.Configure<RabbitMqSettings>(
+        builder.Configuration.GetRequiredSection("RabbitMQ")
+    );
     var app = builder.Build();
 
     // 2. CONFIGURE PIPELINE

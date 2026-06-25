@@ -824,6 +824,17 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
+        "dependencies": {
+          "StackExchange.Redis": "3.0.7"
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll": {
+            "assemblyVersion": "10.0.9.0",
+            "fileVersion": "10.0.926.27113"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyModel/10.0.7": {
         "runtime": {
           "lib/net10.0/Microsoft.Extensions.DependencyModel.dll": {
@@ -1207,7 +1218,7 @@
       "OpenTelemetry.Instrumentation.StackExchangeRedis/1.15.1-beta.1": {
         "dependencies": {
           "OpenTelemetry.Api.ProviderBuilderExtensions": "1.15.3",
-          "StackExchange.Redis": "2.6.122"
+          "StackExchange.Redis": "3.0.7"
         },
         "runtime": {
           "lib/net10.0/OpenTelemetry.Instrumentation.StackExchangeRedis.dll": {
@@ -1284,11 +1295,19 @@
           }
         }
       },
-      "Pipelines.Sockets.Unofficial/2.2.8": {
+      "RabbitMQ.Client/7.2.1": {
         "runtime": {
-          "lib/net5.0/Pipelines.Sockets.Unofficial.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "2.2.8.1080"
+          "lib/net8.0/RabbitMQ.Client.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.2.1.0"
+          }
+        }
+      },
+      "RESPite/3.0.7": {
+        "runtime": {
+          "lib/net10.0/RESPite.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.7.18028"
           }
         }
       },
@@ -1426,14 +1445,15 @@
           }
         }
       },
-      "StackExchange.Redis/2.6.122": {
+      "StackExchange.Redis/3.0.7": {
         "dependencies": {
-          "Pipelines.Sockets.Unofficial": "2.2.8"
+          "RESPite": "3.0.7",
+          "System.IO.Hashing": "10.0.5"
         },
         "runtime": {
-          "lib/net6.0/StackExchange.Redis.dll": {
-            "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.6.122.38350"
+          "lib/net10.0/StackExchange.Redis.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.7.18028"
           }
         }
       },
@@ -1601,6 +1621,14 @@
           }
         }
       },
+      "System.IO.Hashing/10.0.5": {
+        "runtime": {
+          "lib/net10.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "10.0.0.5",
+            "fileVersion": "10.0.526.15411"
+          }
+        }
+      },
       "System.Management/4.7.0": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -1675,6 +1703,37 @@
           }
         }
       },
+      "ZiggyCreatures.FusionCache/2.6.0": {
+        "runtime": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.dll": {
+            "assemblyVersion": "2.6.0.0",
+            "fileVersion": "2.6.0.0"
+          }
+        }
+      },
+      "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis/2.6.0": {
+        "dependencies": {
+          "StackExchange.Redis": "3.0.7",
+          "ZiggyCreatures.FusionCache": "2.6.0"
+        },
+        "runtime": {
+          "lib/net9.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll": {
+            "assemblyVersion": "2.6.0.0",
+            "fileVersion": "2.6.0.0"
+          }
+        }
+      },
+      "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.6.0": {
+        "dependencies": {
+          "ZiggyCreatures.FusionCache": "2.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll": {
+            "assemblyVersion": "2.6.0.0",
+            "fileVersion": "2.6.0.0"
+          }
+        }
+      },
       "MyThings.Auth/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.1.0",
@@ -1705,7 +1764,9 @@
           "EPPlus": "8.5.4",
           "Grafana.OpenTelemetry": "1.7.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7",
+          "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
           "MyThings.Core": "1.0.0",
+          "RabbitMQ.Client": "7.2.1",
           "Riok.Mapperly": "4.3.1",
           "Serilog": "4.3.1",
           "Serilog.Extensions.Hosting": "10.0.0",
@@ -1713,7 +1774,11 @@
           "Serilog.Sinks.Console": "6.1.1",
           "Serilog.Sinks.File": "7.0.0",
           "Serilog.Sinks.Loki": "3.0.0",
-          "Serilog.Sinks.OpenTelemetry": "4.2.0"
+          "Serilog.Sinks.OpenTelemetry": "4.2.0",
+          "StackExchange.Redis": "3.0.7",
+          "ZiggyCreatures.FusionCache": "2.6.0",
+          "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis": "2.6.0",
+          "ZiggyCreatures.FusionCache.Serialization.SystemTextJson": "2.6.0"
         },
         "runtime": {
           "MyThings.Infrastructure.dll": {
@@ -2031,6 +2096,13 @@
       "path": "microsoft.entityframeworkcore.sqlserver/10.0.7",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.10.0.7.nupkg.sha512"
     },
+    "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PkscI6VZkG+dVvKSPoR8eq/l3zl1ONPio4286+rvB/hVh2a50Du7w9jqbTWknggKobb+WnODdd4RZzSVY4Ir5g==",
+      "path": "microsoft.extensions.caching.stackexchangeredis/10.0.9",
+      "hashPath": "microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512"
+    },
     "Microsoft.Extensions.DependencyModel/10.0.7": {
       "type": "package",
       "serviceable": true,
@@ -2325,12 +2397,19 @@
       "path": "opentelemetry.resources.processruntime/1.15.1-beta.1",
       "hashPath": "opentelemetry.resources.processruntime.1.15.1-beta.1.nupkg.sha512"
     },
-    "Pipelines.Sockets.Unofficial/2.2.8": {
+    "RabbitMQ.Client/7.2.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zG2FApP5zxSx6OcdJQLbZDk2AVlN2BNQD6MorwIfV6gVj0RRxWPEp2LXAxqDGZqeNV1Zp0BNPcNaey/GXmTdvQ==",
-      "path": "pipelines.sockets.unofficial/2.2.8",
-      "hashPath": "pipelines.sockets.unofficial.2.2.8.nupkg.sha512"
+      "sha512": "sha512-YKXEfg9fVQiTKgZlvIhAfPSFaamEgi8DsQmisCH0IAsU4FYLrtoguDrDj6JtJVGUt40QPnBLRH6fTQcAC4qsOg==",
+      "path": "rabbitmq.client/7.2.1",
+      "hashPath": "rabbitmq.client.7.2.1.nupkg.sha512"
+    },
+    "RESPite/3.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uBspFEns2SIoDden0355joj34sD3xoSDKmRiyqkAA7neb9N/rPQW/JkZ98uEjd50ZilaXH9b51MxSoW2rLIq/A==",
+      "path": "respite/3.0.7",
+      "hashPath": "respite.3.0.7.nupkg.sha512"
     },
     "Riok.Mapperly/4.3.1": {
       "type": "package",
@@ -2416,12 +2495,12 @@
       "path": "serilog.sinks.rollingfile/3.3.0",
       "hashPath": "serilog.sinks.rollingfile.3.3.0.nupkg.sha512"
     },
-    "StackExchange.Redis/2.6.122": {
+    "StackExchange.Redis/3.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-wp7mvGpFXaevfZ07/SDeh/6YHUJEgwJIGyjbDWKBYbPwKMJQYFz9zFEmBptqtVzqvSgft5nlewwutoaMaG0LPA==",
-      "path": "stackexchange.redis/2.6.122",
-      "hashPath": "stackexchange.redis.2.6.122.nupkg.sha512"
+      "sha512": "sha512-zKgns9+fcwAHVXxJvWMw6m252KYC6t0/vyuUE1bVjhzoWzVnld1NyBgpskuYZ+SQ0z13Uxsn+BHuEPDSvSqwxg==",
+      "path": "stackexchange.redis/3.0.7",
+      "hashPath": "stackexchange.redis.3.0.7.nupkg.sha512"
     },
     "Swashbuckle.AspNetCore/10.1.7": {
       "type": "package",
@@ -2528,6 +2607,13 @@
       "path": "system.identitymodel.tokens.jwt/8.0.1",
       "hashPath": "system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512"
     },
+    "System.IO.Hashing/10.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8IBJWcCT9+e4Bmevm4T7+fQEiAh133KGiz4oiVTgJckd3Q76OFdR1falgn9lpz7+C4HJvogCDJeAa2QmvbeVtg==",
+      "path": "system.io.hashing/10.0.5",
+      "hashPath": "system.io.hashing.10.0.5.nupkg.sha512"
+    },
     "System.Management/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -2569,6 +2655,27 @@
       "sha512": "sha512-YUXIMO4kL1v6dUVptJGixAx/8Ai5trQzVn3gbk0mpwxh77kGAs+MyBRoHN/5ZoxtwNn4E1dq3N4rJCAgAUaiJA==",
       "path": "system.servicemodel.primitives/4.7.0",
       "hashPath": "system.servicemodel.primitives.4.7.0.nupkg.sha512"
+    },
+    "ZiggyCreatures.FusionCache/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BCe+/SkwQZfaMpq2ZGDZB2pyx6BdGnP+zxqjMM/5K+4PBuH6hljZeIqH4KVzQ26khSbPsQ7IiYZl0Fve4OZOog==",
+      "path": "ziggycreatures.fusioncache/2.6.0",
+      "hashPath": "ziggycreatures.fusioncache.2.6.0.nupkg.sha512"
+    },
+    "ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GHzTt4OVBzVcajgFUJ8oHLmBZJPF+pi044LKG5rTS44ECcSxfzzvSnVZoTPrECbPl3tG96TyiLM+P4uIvzZWPQ==",
+      "path": "ziggycreatures.fusioncache.backplane.stackexchangeredis/2.6.0",
+      "hashPath": "ziggycreatures.fusioncache.backplane.stackexchangeredis.2.6.0.nupkg.sha512"
+    },
+    "ZiggyCreatures.FusionCache.Serialization.SystemTextJson/2.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A00mNC7xrkC8LUAQMkeB3OtVTfGzyTyHxTgAOwfqaFdazO/54d3fT8LFoekpgSslkvDjKAIPlyafqsFBPLgQIw==",
+      "path": "ziggycreatures.fusioncache.serialization.systemtextjson/2.6.0",
+      "hashPath": "ziggycreatures.fusioncache.serialization.systemtextjson.2.6.0.nupkg.sha512"
     },
     "MyThings.Auth/1.0.0": {
       "type": "project",

@@ -1,3 +1,12 @@
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.AssemblyReference.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rpswa.dswa.cache.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfoInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/appsettings.Development.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/appsettings.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.API.Admin.staticwebassets.endpoints.json
@@ -49,6 +58,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.Extensions.DependencyModel.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.Identity.Client.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.Identity.Client.Extensions.Msal.dll
@@ -91,7 +101,8 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/OpenTelemetry.Resources.OperatingSystem.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/OpenTelemetry.Resources.Process.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/OpenTelemetry.Resources.ProcessRuntime.dll
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Pipelines.Sockets.Unofficial.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/RabbitMQ.Client.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/RESPite.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Riok.Mapperly.Abstractions.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Serilog.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Serilog.Extensions.Hosting.dll
@@ -118,6 +129,7 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Configuration.ConfigurationManager.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Drawing.Common.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.IO.Hashing.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Management.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Memory.Data.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Private.ServiceModel.dll
@@ -125,6 +137,9 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.Security.Cryptography.ProtectedData.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.ServiceModel.Primitives.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/System.ServiceModel.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/ZiggyCreatures.FusionCache.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/ZiggyCreatures.FusionCache.Serialization.SystemTextJson.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/ca/Hangfire.Core.resources.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/de/Hangfire.Core.resources.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/es/Hangfire.Core.resources.dll
@@ -233,15 +248,6 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Core.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Infrastructure.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/MyThings.Auth.pdb
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.AssemblyReference.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rpswa.dswa.cache.json
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.GeneratedMSBuildEditorConfig.editorconfig
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfoInputs.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.AssemblyInfo.cs
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.csproj.CoreCompileInputs.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cs
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.MvcApplicationPartsAssemblyInfo.cache
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.sourcelink.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjimswa.dswa.cache.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjsmrazor.dswa.cache.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/rjsmcshtml.dswa.cache.json

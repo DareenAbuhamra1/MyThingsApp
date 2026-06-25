@@ -1,0 +1,50 @@
+2026-06-25 14:23:14.986 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 14:23:15.000 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 14:23:15.000 +03:00 [INF] Hosting environment: Development
+2026-06-25 14:23:15.000 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 14:23:38.577 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 14:23:38.773 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-25 14:23:49.726 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-25 14:23:49.994 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-25 14:26:56.694 +03:00 [INF] Application is shutting down...
+2026-06-25 14:27:05.109 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 14:27:05.120 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 14:27:05.120 +03:00 [INF] Hosting environment: Development
+2026-06-25 14:27:05.120 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 14:27:14.675 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 14:33:13.386 +03:00 [INF] Application is shutting down...
+2026-06-25 14:36:45.501 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 14:36:45.512 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 14:36:45.513 +03:00 [INF] Hosting environment: Development
+2026-06-25 14:36:45.513 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 14:37:01.540 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 16:11:27.135 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 16:11:27.146 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 16:11:27.146 +03:00 [INF] Hosting environment: Development
+2026-06-25 16:11:27.146 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 16:11:41.546 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 16:11:41.669 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-25 16:11:48.497 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-25 16:11:48.551 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-25 17:10:38.107 +03:00 [INF] Application is shutting down...
+2026-06-25 17:13:52.828 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 17:13:52.838 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 17:13:52.838 +03:00 [INF] Hosting environment: Development
+2026-06-25 17:13:52.838 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 17:13:57.209 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 17:14:14.357 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-06-25 17:14:18.561 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-06-25 17:14:18.590 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-06-25 17:44:31.563 +03:00 [INF] Application is shutting down...
+2026-06-25 17:44:44.132 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 17:44:44.143 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 17:44:44.143 +03:00 [INF] Hosting environment: Development
+2026-06-25 17:44:44.143 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 17:44:51.722 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 18:07:05.025 +03:00 [INF] Application is shutting down...
+2026-06-25 18:46:31.505 +03:00 [INF] Now listening on: http://localhost:5001
+2026-06-25 18:46:31.517 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-25 18:46:31.518 +03:00 [INF] Hosting environment: Development
+2026-06-25 18:46:31.518 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-06-25 18:46:40.994 +03:00 [WRN] Failed to determine the https port for redirect.
+2026-06-25 18:46:58.939 +03:00 [INF] Application is shutting down...

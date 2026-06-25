@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ifBdjYVezaA=",
+  "dgSpecHash": "Qom61wq7yLY=",
   "success": true,
   "projectFilePath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Partner/MyThings.API.Partner.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "/Users/dareenabuhamra/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.7/microsoft.entityframeworkcore.relational.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.entityframeworkcore.sqlserver/10.0.7/microsoft.entityframeworkcore.sqlserver.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/10.0.9/microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.dependencymodel/10.0.7/microsoft.extensions.dependencymodel.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.identity.client/4.73.1/microsoft.identity.client.4.73.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.identity.client.extensions.msal/4.73.1/microsoft.identity.client.extensions.msal.4.73.1.nupkg.sha512",
@@ -90,7 +91,8 @@
     "/Users/dareenabuhamra/.nuget/packages/opentelemetry.resources.operatingsystem/1.15.1-beta.1/opentelemetry.resources.operatingsystem.1.15.1-beta.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/opentelemetry.resources.process/1.15.1-beta.1/opentelemetry.resources.process.1.15.1-beta.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/opentelemetry.resources.processruntime/1.15.1-beta.1/opentelemetry.resources.processruntime.1.15.1-beta.1.nupkg.sha512",
-    "/Users/dareenabuhamra/.nuget/packages/pipelines.sockets.unofficial/2.2.8/pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/rabbitmq.client/7.2.1/rabbitmq.client.7.2.1.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/respite/3.0.7/respite.3.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/riok.mapperly/4.3.1/riok.mapperly.4.3.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog/4.3.1/serilog.4.3.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog.extensions.hosting/10.0.0/serilog.extensions.hosting.10.0.0.nupkg.sha512",
@@ -103,7 +105,7 @@
     "/Users/dareenabuhamra/.nuget/packages/serilog.sinks.opentelemetry/4.2.0/serilog.sinks.opentelemetry.4.2.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog.sinks.periodicbatching/2.2.0/serilog.sinks.periodicbatching.2.2.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/serilog.sinks.rollingfile/3.3.0/serilog.sinks.rollingfile.3.3.0.nupkg.sha512",
-    "/Users/dareenabuhamra/.nuget/packages/stackexchange.redis/2.6.122/stackexchange.redis.2.6.122.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/stackexchange.redis/3.0.7/stackexchange.redis.3.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/swashbuckle.aspnetcore/10.1.7/swashbuckle.aspnetcore.10.1.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/swashbuckle.aspnetcore.swagger/10.1.7/swashbuckle.aspnetcore.swagger.10.1.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/swashbuckle.aspnetcore.swaggergen/10.1.7/swashbuckle.aspnetcore.swaggergen.10.1.7.nupkg.sha512",
@@ -120,12 +122,16 @@
     "/Users/dareenabuhamra/.nuget/packages/system.configuration.configurationmanager/9.0.4/system.configuration.configurationmanager.9.0.4.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.drawing.common/4.7.2/system.drawing.common.4.7.2.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.identitymodel.tokens.jwt/8.0.1/system.identitymodel.tokens.jwt.8.0.1.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/system.io.hashing/10.0.5/system.io.hashing.10.0.5.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.management/4.7.0/system.management.4.7.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.memory.data/8.0.1/system.memory.data.8.0.1.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.private.servicemodel/4.7.0/system.private.servicemodel.4.7.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.security.cryptography.pkcs/10.0.7/system.security.cryptography.pkcs.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/system.security.cryptography.protecteddata/9.0.4/system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
-    "/Users/dareenabuhamra/.nuget/packages/system.servicemodel.primitives/4.7.0/system.servicemodel.primitives.4.7.0.nupkg.sha512"
+    "/Users/dareenabuhamra/.nuget/packages/system.servicemodel.primitives/4.7.0/system.servicemodel.primitives.4.7.0.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/ziggycreatures.fusioncache/2.6.0/ziggycreatures.fusioncache.2.6.0.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/ziggycreatures.fusioncache.backplane.stackexchangeredis/2.6.0/ziggycreatures.fusioncache.backplane.stackexchangeredis.2.6.0.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/ziggycreatures.fusioncache.serialization.systemtextjson/2.6.0/ziggycreatures.fusioncache.serialization.systemtextjson.2.6.0.nupkg.sha512"
   ],
   "logs": []
 }
