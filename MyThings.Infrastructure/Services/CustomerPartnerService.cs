@@ -1,5 +1,6 @@
 using System.Reflection.Metadata.Ecma335;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Caching.Hybrid;
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Mappers;
@@ -12,79 +13,64 @@ public class CustomerPartnerService : ICustomerPartnerService
     private readonly ProductOptionDisplayMapper _productOptionDisplayMapper;
     private readonly ProductDisplayMapper _productDisplayMapper;
     private readonly StoreDisplayMapper _storeDisplayMapper;
-    private readonly RedisCacheService _cache; 
-    private readonly HybridCacheService _hybridCache;
+    private readonly HybridCache _hybridCache;
 
-    public CustomerPartnerService(IPartnerReadRepository partnerRepository, ProductOptionDisplayMapper productOptionDisplayMapper, ProductDisplayMapper productDisplayMapper, StoreDisplayMapper storeDisplayMapper, RedisCacheService cache,
-        HybridCacheService hybridCache
+    public CustomerPartnerService(IPartnerReadRepository partnerRepository, ProductOptionDisplayMapper productOptionDisplayMapper, ProductDisplayMapper productDisplayMapper, StoreDisplayMapper storeDisplayMapper, HybridCache hybridCache
     )
     {
         _partnerRepository = partnerRepository;
         _productOptionDisplayMapper = productOptionDisplayMapper;
         _productDisplayMapper = productDisplayMapper;
         _storeDisplayMapper = storeDisplayMapper;
-        _cache = cache;
         _hybridCache = hybridCache;
     }
 
     public async Task<List<StoreDisplayDto>> GetPartnersAsync(int domainId)
     {
-        var partnersList = await _hybridCache.GetOrCreateAsync(
-            $"partners:{domainId}",
-            async () => {
+        return await _hybridCache.GetOrCreateAsync(
+            $"Partners:{domainId}",
+            async ct =>
+            {
                 var partners = await _partnerRepository.GetPartnersByDomainIdAsync(domainId);
 
                 return partners.Select(p => _storeDisplayMapper.Map(p)).ToList();
             },
-            TimeSpan.FromMinutes(2), 
-            TimeSpan.FromMinutes(30)
+            new HybridCacheEntryOptions
+            {
+                Expiration = TimeSpan.FromMinutes(5),
+            }
         );
-        
-        /*
-        var partners = await _partnerRepository.GetPartnersByDomainIdAsync(domainId);
-
-        var partnersList = partners.Select(p => _storeDisplayMapper.Map(p)).ToList();
-        */
-
-        return partnersList??[];
     }
     public async Task<List<ProductDisplayDto>> GetProductsAsync(int partnerId)
     {
-        var cacheKey = $"Products:{partnerId}";
-        var cached = await  _cache.GetAsync<List<ProductDisplayDto>>(cacheKey);
 
-        if(cached is not null)
-        {
-            Console.WriteLine("Cache Hit: Returning Cached Products");
-            return cached;
-        }
-
-        Console.WriteLine("Cache Miss: Returning Products from DB");
-        var products = await _partnerRepository.GetProductsByPartnerId(partnerId);
-
-        var productsList = products.Select(p => _productDisplayMapper.Map(p)).ToList();
-
-        await _cache.SetAsync(cacheKey, productsList,TimeSpan.FromMinutes(30));
-
-        return productsList;
+        return await _hybridCache.GetOrCreateAsync(
+            $"Products:{partnerId}",
+            async ct =>
+            {
+                var products = await _partnerRepository.GetProductsByPartnerId(partnerId);
+                return products.Select(p => _productDisplayMapper.Map(p)).ToList();
+            },
+            new HybridCacheEntryOptions
+            {
+                Expiration = TimeSpan.FromMinutes(5),
+            }
+        );
     }
     public async Task<List<ProductOptionDisplayDto>> GetProductOptionsAsync(int productId)
     {
-        var cacheKey = $"ProductOptions:{productId}";
-        var cached = await _cache.GetAsync<List<ProductOptionDisplayDto>>(cacheKey);
+        return await _hybridCache.GetOrCreateAsync(
+            $"ProductOptions:{productId}",
+            async ct =>
+            {
+                var productOptions = await _partnerRepository.GetProductOptionsByProductIdAsync(productId);
 
-        if(cached is not null)
-        {
-            Console.WriteLine("Cache Hit: Returning Cached Product Options");
-            return cached;
-        }
-        Console.WriteLine("Cache Miss: Returning Product Options from DB");
-        var productOptions = await _partnerRepository.GetProductOptionsByProductIdAsync(productId);
-
-        var productOptionsList =  productOptions.Select( og => _productOptionDisplayMapper.Map(og)).ToList();
-
-        await _cache.SetAsync(cacheKey, productOptionsList, TimeSpan.FromMinutes(30));
-
-        return productOptionsList;
+                return productOptions.Select(og => _productOptionDisplayMapper.Map(og)).ToList();
+            },
+            new HybridCacheEntryOptions
+            {
+                Expiration = TimeSpan.FromMinutes(5),
+            }
+        );
     }
 }

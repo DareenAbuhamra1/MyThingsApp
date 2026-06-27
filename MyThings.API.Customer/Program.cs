@@ -73,6 +73,13 @@ try
         return ConnectionMultiplexer.Connect(config!);
     });
     
+    builder.Services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = builder.Configuration["Redis:ConnectionString"];
+        }
+    );
+    builder.Services.AddHybridCache();
+    
     builder.Services.AddDbContext<WriteDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("PrimaryWrite")));
 

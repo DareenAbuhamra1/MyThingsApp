@@ -1060,6 +1060,22 @@
           "buildMultiTargeting/Microsoft.Extensions.ApiDescription.Server.targets": {}
         }
       },
+      "Microsoft.Extensions.Caching.Hybrid/10.7.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Hybrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Hybrid.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
         "type": "package",
         "dependencies": {
@@ -2482,6 +2498,7 @@
           "EPPlus": "8.5.4",
           "Grafana.OpenTelemetry": "1.7.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7",
+          "Microsoft.Extensions.Caching.Hybrid": "10.7.0",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
           "MyThings.Core": "1.0.0",
           "RabbitMQ.Client": "7.2.1",
@@ -4793,6 +4810,33 @@
         "tools/net462/netstandard.dll"
       ]
     },
+    "Microsoft.Extensions.Caching.Hybrid/10.7.0": {
+      "sha512": "DWdLkc6SCZhlQPXFuOjMee1wotUcsdLHzOrN2GN9JsWVscYrGXR91SjH1g7bhUrF6f8ayZD31KxoXAoXxVpCvA==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.hybrid/10.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "buildTransitive/net462/Microsoft.Extensions.Caching.Hybrid.targets",
+        "buildTransitive/net8.0/_._",
+        "lib/net10.0/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/net10.0/Microsoft.Extensions.Caching.Hybrid.xml",
+        "lib/net462/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/net462/Microsoft.Extensions.Caching.Hybrid.xml",
+        "lib/net8.0/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/net8.0/Microsoft.Extensions.Caching.Hybrid.xml",
+        "lib/net9.0/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/net9.0/Microsoft.Extensions.Caching.Hybrid.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Hybrid.xml",
+        "lib/netstandard2.1/Microsoft.Extensions.Caching.Hybrid.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.Caching.Hybrid.xml",
+        "microsoft.extensions.caching.hybrid.10.7.0.nupkg.sha512",
+        "microsoft.extensions.caching.hybrid.nuspec"
+      ]
+    },
     "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
       "sha512": "PkscI6VZkG+dVvKSPoR8eq/l3zl1ONPio4286+rvB/hVh2a50Du7w9jqbTWknggKobb+WnODdd4RZzSVY4Ir5g==",
       "type": "package",
@@ -6880,6 +6924,8 @@
       "Microsoft.AspNetCore.OpenApi >= 10.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 10.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 10.0.7",
+      "Microsoft.Extensions.Caching.Hybrid >= 10.7.0",
+      "Microsoft.Extensions.Caching.StackExchangeRedis >= 10.0.9",
       "MyThings.Auth >= 1.0.0",
       "MyThings.Core >= 1.0.0",
       "MyThings.Infrastructure >= 1.0.0",
@@ -6887,7 +6933,8 @@
       "Serilog >= 4.3.1",
       "Serilog.Sinks.Console >= 6.1.1",
       "Serilog.Sinks.File >= 7.0.0",
-      "Swashbuckle.AspNetCore >= 10.1.7"
+      "Swashbuckle.AspNetCore >= 10.1.7",
+      "ZiggyCreatures.FusionCache >= 2.6.0"
     ]
   },
   "packageFolders": {
@@ -6973,6 +7020,14 @@
             "target": "Package",
             "version": "[10.0.7, )"
           },
+          "Microsoft.Extensions.Caching.Hybrid": {
+            "target": "Package",
+            "version": "[10.7.0, )"
+          },
+          "Microsoft.Extensions.Caching.StackExchangeRedis": {
+            "target": "Package",
+            "version": "[10.0.9, )"
+          },
           "Riok.Mapperly": {
             "target": "Package",
             "version": "[4.3.1, )"
@@ -6992,6 +7047,10 @@
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[10.1.7, )"
+          },
+          "ZiggyCreatures.FusionCache": {
+            "target": "Package",
+            "version": "[2.6.0, )"
           }
         },
         "imports": [

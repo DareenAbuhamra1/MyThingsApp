@@ -17,14 +17,9 @@ using Hangfire.SqlServer;
 using Hangfire.Common;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Mappers;
-using MyThings.Core.DTOs;
 using Mythings.Infrastructure.Helper;
-using Microsoft.Extensions.Caching.StackExchangeRedis;
 using StackExchange.Redis;
-//using ZiggyCreatures.FusionCache;
-//using ZiggyCreatures.FusionCache.Serialization.SystemTextJson;
-//using ZiggyCreatures.FusionCache.Backplane.StackExchangeRedis;
-
+using Microsoft.Extensions.Caching.Hybrid;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("AdminAPI");
@@ -86,7 +81,13 @@ try
     builder.Services.AddSingleton<HybridCacheService>();
 
     builder.Services.AddHangfireServer();
-    //builder.Services.AddFusionCache();
+    
+    builder.Services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = builder.Configuration["Redis:ConnectionString"];
+        }
+    );
+    builder.Services.AddHybridCache();
 
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");
 
@@ -134,6 +135,7 @@ try
         builder.Configuration.GetRequiredSection("RabbitMQ")
     );
 
+    
     var app = builder.Build();
 
 

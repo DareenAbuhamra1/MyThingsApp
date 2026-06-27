@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1BIi8DnAlxA=",
+  "dgSpecHash": "+r/3L/4zE1U=",
   "success": true,
   "projectFilePath": "/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/MyThings.API.Driver.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "/Users/dareenabuhamra/.nuget/packages/microsoft.entityframeworkcore.relational/10.0.7/microsoft.entityframeworkcore.relational.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.entityframeworkcore.sqlserver/10.0.7/microsoft.entityframeworkcore.sqlserver.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.apidescription.server/10.0.0/microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
+    "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.caching.hybrid/10.7.0/microsoft.extensions.caching.hybrid.10.7.0.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.caching.stackexchangeredis/10.0.9/microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.extensions.dependencymodel/10.0.7/microsoft.extensions.dependencymodel.10.0.7.nupkg.sha512",
     "/Users/dareenabuhamra/.nuget/packages/microsoft.identity.client/4.73.1/microsoft.identity.client.4.73.1.nupkg.sha512",
