@@ -263,3 +263,4 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/MyThings.API.Admin.genruntimeconfig.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/obj/Debug/net10.0/ref/MyThings.API.Admin.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/bin/Debug/net10.0/Microsoft.Extensions.Caching.Hybrid.dll

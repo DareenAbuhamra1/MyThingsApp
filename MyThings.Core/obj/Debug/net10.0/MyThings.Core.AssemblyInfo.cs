@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyThings.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54bb88e09a0f2b5897a48f74dafd0a4acfa9c9da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+470a423349975a4d18f3bed970241a71b564c9f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyThings.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyThings.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

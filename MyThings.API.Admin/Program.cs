@@ -20,6 +20,7 @@ using MyThings.Infrastructure.Mappers;
 using Mythings.Infrastructure.Helper;
 using StackExchange.Redis;
 using Microsoft.Extensions.Caching.Hybrid;
+using RabbitMQ.Client;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("AdminAPI");
@@ -60,6 +61,7 @@ try
     builder.Services.AddScoped<IPartnerReadRepository, PartnerReadRepository>();
     builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
 
+
     builder.Services.AddSingleton<PartnerOrderMapper>();
     builder.Services.AddSingleton<OrderPaginationMapper>();
     builder.Services.AddSingleton<OrderInfoMapper>();
@@ -81,7 +83,7 @@ try
     builder.Services.AddSingleton<HybridCacheService>();
 
     builder.Services.AddHangfireServer();
-    
+
     builder.Services.AddStackExchangeRedisCache(options =>
         {
             options.Configuration = builder.Configuration["Redis:ConnectionString"];
@@ -135,7 +137,26 @@ try
         builder.Configuration.GetRequiredSection("RabbitMQ")
     );
 
-    
+    builder.Services.AddSingleton<IMessageBus, RabbitMqMessageBus>();
+
+    builder.Services.AddStackExchangeRedisCache(options =>
+        {
+            options.Configuration = builder.Configuration["Redis:ConnectionString"];
+        }
+    );
+    builder.Services.AddHybridCache();
+    builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+        {
+            var configuration = ConfigurationOptions.Parse(
+                builder.Configuration["Redis:ConnectionString"]
+            );
+
+            return ConnectionMultiplexer.Connect(configuration);
+        }
+    );
+
+    builder.Services.AddHostedService<DriverActivationConsumer>();
+
     var app = builder.Build();
 
 

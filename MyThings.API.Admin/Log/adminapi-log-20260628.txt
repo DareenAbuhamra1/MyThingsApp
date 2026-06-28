@@ -1,0 +1,543 @@
+2026-06-28 10:56:08.907 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-06-28 10:56:09.451 +03:00 [INF] Hangfire SQL objects installed.
+2026-06-28 10:56:09.577 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-06-28 10:56:09.609 +03:00 [INF] Now listening on: http://localhost:5000
+2026-06-28 10:56:09.611 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-06-28 10:56:09.612 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-06-28 10:56:09.612 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-06-28 10:56:09.619 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-28 10:56:09.619 +03:00 [INF] Hosting environment: Development
+2026-06-28 10:56:09.620 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-06-28 10:56:09.641 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d successfully announced in 21.1599 ms
+2026-06-28 10:56:09.642 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-06-28 10:56:09.646 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d all the dispatchers started
+2026-06-28 10:56:09.896 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 10:56:09 AM
+2026-06-28 10:56:09.960 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 7:56:09 AM
+2026-06-28 10:56:10.663 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 10:56:10.663 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:56:10.664 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:57:10.054 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 7:57:10 AM
+2026-06-28 10:57:10.094 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 10:57:10 AM
+2026-06-28 10:57:10.149 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 10:57:10.149 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:57:10.149 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:58:10.192 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 7:58:10 AM
+2026-06-28 10:58:10.210 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 10:58:10 AM
+2026-06-28 10:58:10.253 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 10:58:10.253 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:58:10.253 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:59:09.614 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="07:59:09.6131800"
+2026-06-28 10:59:10.300 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 10:59:10 AM
+2026-06-28 10:59:10.301 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 7:59:10 AM
+2026-06-28 10:59:10.326 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 10:59:10.326 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 10:59:10.326 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:00:10.425 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:00:10 AM
+2026-06-28 11:00:10.426 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:00:10 AM
+2026-06-28 11:00:10.475 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:00:10.475 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:00:10.475 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:01:10.542 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:01:10 AM
+2026-06-28 11:01:10.562 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:01:10 AM
+2026-06-28 11:01:10.594 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:01:10.594 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:01:10.594 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:02:09.580 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:02:09.5802760"
+2026-06-28 11:02:10.699 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:02:10 AM
+2026-06-28 11:02:10.699 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:02:10 AM
+2026-06-28 11:02:10.740 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:02:10.740 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:02:10.740 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:03:10.818 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:03:10 AM
+2026-06-28 11:03:10.818 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:03:10 AM
+2026-06-28 11:03:10.865 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:03:10.865 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:03:10.865 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:04:10.888 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:04:10 AM
+2026-06-28 11:04:10.904 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:04:10 AM
+2026-06-28 11:04:10.927 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:04:10.927 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:04:10.927 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:05:09.580 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:05:09.5798050"
+2026-06-28 11:05:10.993 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:05:10 AM
+2026-06-28 11:05:11.006 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:05:11 AM
+2026-06-28 11:05:11.050 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:05:11.051 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:05:11.051 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:06:11.098 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:06:11 AM
+2026-06-28 11:06:11.100 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:06:11 AM
+2026-06-28 11:06:11.135 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:06:11.135 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:06:11.135 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:07:11.192 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:07:11 AM
+2026-06-28 11:07:11.200 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:07:11 AM
+2026-06-28 11:07:11.220 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:07:11.220 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:07:11.220 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:08:09.578 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:08:09.5782210"
+2026-06-28 11:08:11.283 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:08:11 AM
+2026-06-28 11:08:11.295 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:08:11 AM
+2026-06-28 11:08:11.328 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:08:11.328 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:08:11.328 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:09:11.379 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:09:11 AM
+2026-06-28 11:09:11.394 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:09:11 AM
+2026-06-28 11:09:11.419 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:09:11.419 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:09:11.419 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:10:11.504 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:10:11 AM
+2026-06-28 11:10:11.520 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:10:11 AM
+2026-06-28 11:10:11.551 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:10:11.551 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:10:11.551 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:11:09.578 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:11:09.5781290"
+2026-06-28 11:11:11.609 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:11:11 AM
+2026-06-28 11:11:11.617 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:11:11 AM
+2026-06-28 11:11:11.651 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:11:11.651 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:11:11.651 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:12:11.713 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:12:11 AM
+2026-06-28 11:12:11.718 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:12:11 AM
+2026-06-28 11:12:11.773 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:12:11.773 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:12:11.773 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:13:11.838 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:13:11 AM
+2026-06-28 11:13:11.866 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:13:11 AM
+2026-06-28 11:13:11.890 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:13:11.890 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:13:11.890 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:14:09.579 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:14:09.5792280"
+2026-06-28 11:14:11.975 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:14:11 AM
+2026-06-28 11:14:11.978 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:14:11 AM
+2026-06-28 11:14:12.015 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:14:12.015 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:14:12.015 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:15:12.104 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:15:12 AM
+2026-06-28 11:15:12.107 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:15:12 AM
+2026-06-28 11:15:12.145 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:15:12.145 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:15:12.145 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:16:12.238 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:16:12 AM
+2026-06-28 11:16:12.256 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:16:12 AM
+2026-06-28 11:16:12.279 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:16:12.279 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:16:12.279 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:17:09.577 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:17:09.5777200"
+2026-06-28 11:17:12.369 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:17:12 AM
+2026-06-28 11:17:12.370 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:17:12 AM
+2026-06-28 11:17:12.416 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:17:12.416 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:17:12.416 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:18:12.493 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:18:12 AM
+2026-06-28 11:18:12.517 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:18:12 AM
+2026-06-28 11:18:12.560 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:18:12.560 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:18:12.560 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:19:12.666 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:19:12 AM
+2026-06-28 11:19:12.668 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:19:12 AM
+2026-06-28 11:19:12.753 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:19:12.753 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:19:12.753 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:20:09.578 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:20:09.5782350"
+2026-06-28 11:20:12.804 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:20:12 AM
+2026-06-28 11:20:12.812 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:20:12 AM
+2026-06-28 11:20:12.850 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:20:12.850 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:20:12.850 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:21:12.883 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:21:12 AM
+2026-06-28 11:21:12.886 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:21:12 AM
+2026-06-28 11:21:12.913 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:21:12.913 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:21:12.913 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:22:12.954 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:22:12 AM
+2026-06-28 11:22:12.970 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:22:12 AM
+2026-06-28 11:22:13.015 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:22:13.015 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:22:13.015 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:23:09.579 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:23:09.5795760"
+2026-06-28 11:23:13.105 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:23:13 AM
+2026-06-28 11:23:13.112 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:23:13 AM
+2026-06-28 11:23:13.131 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:23:13.131 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:23:13.131 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:24:13.254 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:24:13 AM
+2026-06-28 11:24:13.267 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:24:13 AM
+2026-06-28 11:24:13.291 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:24:13.291 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:24:13.291 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:25:13.434 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:25:13 AM
+2026-06-28 11:25:13.435 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:25:13 AM
+2026-06-28 11:25:13.492 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:25:13.492 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:25:13.492 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:27:02.339 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:27:02 AM
+2026-06-28 11:27:02.359 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:27:02 AM
+2026-06-28 11:27:02.465 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:27:02.466 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:27:02.466 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:27:17.416 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:27:17 AM
+2026-06-28 11:27:17.427 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:27:17 AM
+2026-06-28 11:27:17.478 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:27:17.478 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:27:17.478 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:27:28.198 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:27:28.1988340"
+2026-06-28 11:28:02.547 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:28:02 AM
+2026-06-28 11:28:02.558 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:28:02 AM
+2026-06-28 11:28:02.592 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:28:02.592 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:28:02.592 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:29:02.644 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:29:02 AM
+2026-06-28 11:29:02.655 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:29:02 AM
+2026-06-28 11:29:02.679 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:29:02.680 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:29:02.680 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:30:02.751 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:30:02 AM
+2026-06-28 11:30:02.765 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:30:02 AM
+2026-06-28 11:30:02.785 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:30:02.785 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:30:02.785 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:30:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:30:28.1992820"
+2026-06-28 11:31:02.886 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:31:02 AM
+2026-06-28 11:31:02.887 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:31:02 AM
+2026-06-28 11:31:02.921 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:31:02.922 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:31:02.922 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:32:02.987 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:32:02 AM
+2026-06-28 11:32:03.029 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:32:03 AM
+2026-06-28 11:32:03.083 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:32:03.083 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:32:03.084 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:33:03.122 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:33:03 AM
+2026-06-28 11:33:03.149 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:33:03 AM
+2026-06-28 11:33:03.180 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:33:03.180 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:33:03.180 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:33:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:33:28.1993730"
+2026-06-28 11:34:03.292 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:34:03 AM
+2026-06-28 11:34:03.313 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:34:03 AM
+2026-06-28 11:34:03.334 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:34:03.334 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:34:03.334 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:35:03.434 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:35:03 AM
+2026-06-28 11:35:03.434 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:35:03 AM
+2026-06-28 11:35:03.476 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:35:03.476 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:35:03.477 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:36:03.567 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:36:03 AM
+2026-06-28 11:36:03.582 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:36:03 AM
+2026-06-28 11:36:03.606 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:36:03.606 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:36:03.606 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:36:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:36:28.1990400"
+2026-06-28 11:37:03.690 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:37:03 AM
+2026-06-28 11:37:03.700 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:37:03 AM
+2026-06-28 11:37:03.738 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:37:03.738 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:37:03.738 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:38:03.861 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:38:03 AM
+2026-06-28 11:38:03.862 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:38:03 AM
+2026-06-28 11:38:03.899 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:38:03.899 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:38:03.899 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:39:03.940 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:39:03 AM
+2026-06-28 11:39:03.961 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:39:03 AM
+2026-06-28 11:39:03.995 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:39:03.996 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:39:03.996 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:39:28.202 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:39:28.2016020"
+2026-06-28 11:40:04.084 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:40:04 AM
+2026-06-28 11:40:04.085 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:40:04 AM
+2026-06-28 11:40:04.131 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:40:04.132 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:40:04.132 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:41:04.210 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:41:04 AM
+2026-06-28 11:41:04.211 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:41:04 AM
+2026-06-28 11:41:04.260 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:41:04.260 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:41:04.260 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:42:04.350 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:42:04 AM
+2026-06-28 11:42:04.353 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:42:04 AM
+2026-06-28 11:42:04.411 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:42:04.412 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:42:04.412 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:42:28.200 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:42:28.2000790"
+2026-06-28 11:43:04.498 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:43:04 AM
+2026-06-28 11:43:04.498 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:43:04 AM
+2026-06-28 11:43:04.551 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:43:04.551 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:43:04.551 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:44:04.630 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:44:04 AM
+2026-06-28 11:44:04.636 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:44:04 AM
+2026-06-28 11:44:04.674 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:44:04.674 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:44:04.674 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:45:04.782 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:45:04 AM
+2026-06-28 11:45:04.783 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:45:04 AM
+2026-06-28 11:45:04.823 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:45:04.824 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:45:04.824 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:45:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:45:28.1996370"
+2026-06-28 11:46:04.931 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:46:04 AM
+2026-06-28 11:46:04.933 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:46:04 AM
+2026-06-28 11:46:04.968 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:46:04.968 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:46:04.968 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:47:05.049 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:47:05 AM
+2026-06-28 11:47:05.091 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:47:05 AM
+2026-06-28 11:47:05.124 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:47:05.124 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:47:05.124 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:48:05.177 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:48:05 AM
+2026-06-28 11:48:05.223 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:48:05 AM
+2026-06-28 11:48:05.270 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:48:05.270 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:48:05.270 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:48:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:48:28.1996150"
+2026-06-28 11:49:05.322 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:49:05 AM
+2026-06-28 11:49:05.367 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:49:05 AM
+2026-06-28 11:49:05.404 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:49:05.404 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:49:05.405 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:50:05.436 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:50:05 AM
+2026-06-28 11:50:05.438 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:50:05 AM
+2026-06-28 11:50:05.475 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:50:05.475 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:50:05.475 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:51:05.538 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:51:05 AM
+2026-06-28 11:51:05.544 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:51:05 AM
+2026-06-28 11:51:05.567 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:51:05.567 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:51:05.567 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:51:28.198 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:51:28.1989180"
+2026-06-28 11:52:05.628 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:52:05 AM
+2026-06-28 11:52:05.675 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:52:05 AM
+2026-06-28 11:52:05.704 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:52:05.704 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:52:05.704 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:53:05.750 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:53:05 AM
+2026-06-28 11:53:05.782 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:53:05 AM
+2026-06-28 11:53:05.824 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:53:05.824 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:53:05.824 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:54:05.838 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:54:05 AM
+2026-06-28 11:54:05.842 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:54:05 AM
+2026-06-28 11:54:05.889 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:54:05.889 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:54:05.889 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:54:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:54:28.1992430"
+2026-06-28 11:55:05.950 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:55:05 AM
+2026-06-28 11:55:05.951 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:55:05 AM
+2026-06-28 11:55:06.013 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:55:06.013 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:55:06.013 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:56:06.069 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:56:06 AM
+2026-06-28 11:56:06.098 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:56:06 AM
+2026-06-28 11:56:06.122 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:56:06.122 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:56:06.122 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:57:06.194 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:57:06 AM
+2026-06-28 11:57:06.222 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:57:06 AM
+2026-06-28 11:57:06.256 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:57:06.256 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:57:06.256 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:57:28.200 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="08:57:28.2002110"
+2026-06-28 11:58:06.317 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:58:06 AM
+2026-06-28 11:58:06.359 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:58:06 AM
+2026-06-28 11:58:06.399 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:58:06.400 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:58:06.400 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:59:06.432 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 8:59:06 AM
+2026-06-28 11:59:06.442 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 11:59:06 AM
+2026-06-28 11:59:06.460 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 11:59:06.460 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 11:59:06.460 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:00:06.503 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:00:06 AM
+2026-06-28 12:00:06.508 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:00:06 PM
+2026-06-28 12:00:06.528 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:00:06.528 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:00:06.528 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:00:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:00:28.1995480"
+2026-06-28 12:01:06.587 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:01:06 AM
+2026-06-28 12:01:06.590 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:01:06 PM
+2026-06-28 12:01:06.619 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:01:06.619 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:01:06.619 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:02:06.684 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:02:06 AM
+2026-06-28 12:02:06.693 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:02:06 PM
+2026-06-28 12:02:06.732 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:02:06.732 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:02:06.732 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:03:06.769 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:03:06 AM
+2026-06-28 12:03:06.771 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:03:06 PM
+2026-06-28 12:03:06.789 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:03:06.789 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:03:06.789 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:03:28.199 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:03:28.1996290"
+2026-06-28 12:04:06.879 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:04:06 AM
+2026-06-28 12:04:06.911 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:04:06 PM
+2026-06-28 12:04:06.933 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:04:06.933 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:04:06.933 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:05:07.032 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:05:07 AM
+2026-06-28 12:05:07.087 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:05:07 PM
+2026-06-28 12:05:07.138 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:05:07.139 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:05:07.139 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:06:12.622 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:06:12 AM
+2026-06-28 12:06:12.623 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:06:12 PM
+2026-06-28 12:06:12.676 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:06:12.676 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:06:12.676 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:13:21.491 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:13:21 AM
+2026-06-28 12:13:21.521 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:13:21 PM
+2026-06-28 12:13:21.541 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:13:21.541 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:13:21.541 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:13:27.463 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:13:27.4630490"
+2026-06-28 12:14:06.602 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:14:06 AM
+2026-06-28 12:14:06.620 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:14:06 PM
+2026-06-28 12:14:06.632 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:14:06.632 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:14:06.633 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:15:06.703 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:15:06 AM
+2026-06-28 12:15:06.704 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:15:06 PM
+2026-06-28 12:15:06.728 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:15:06.728 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:15:06.728 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:16:06.824 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:16:06 AM
+2026-06-28 12:16:06.860 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:16:06 PM
+2026-06-28 12:16:06.892 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:16:06.892 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:16:06.892 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:16:27.464 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:16:27.4640010"
+2026-06-28 12:17:06.943 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:17:06 AM
+2026-06-28 12:17:06.962 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:17:06 PM
+2026-06-28 12:17:06.996 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:17:06.996 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:17:06.997 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:18:07.029 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:18:07 AM
+2026-06-28 12:18:07.054 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:18:07 PM
+2026-06-28 12:18:07.072 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:18:07.072 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:18:07.073 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:19:07.125 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:19:07 AM
+2026-06-28 12:19:07.129 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:19:07 PM
+2026-06-28 12:19:07.149 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:19:07.149 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:19:07.150 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:19:27.462 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:19:27.4627640"
+2026-06-28 12:20:07.240 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:20:07 AM
+2026-06-28 12:20:07.270 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:20:07 PM
+2026-06-28 12:20:07.288 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:20:07.288 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:20:07.289 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:21:07.339 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:21:07 AM
+2026-06-28 12:21:07.351 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:21:07 PM
+2026-06-28 12:21:07.358 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:21:07.358 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:21:07.359 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:22:07.426 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:22:07 AM
+2026-06-28 12:22:07.432 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:22:07 PM
+2026-06-28 12:22:07.447 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:22:07.448 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:22:07.448 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:22:27.463 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:22:27.4633120"
+2026-06-28 12:23:07.537 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:23:07 AM
+2026-06-28 12:23:07.572 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:23:07 PM
+2026-06-28 12:23:07.612 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:23:07.612 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:23:07.612 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:24:07.641 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:24:07 AM
+2026-06-28 12:24:07.649 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:24:07 PM
+2026-06-28 12:24:07.667 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:24:07.667 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:24:07.667 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:25:07.726 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:25:07 AM
+2026-06-28 12:25:07.774 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:25:07 PM
+2026-06-28 12:25:07.795 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:25:07.795 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:25:07.795 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:25:27.463 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:25:27.4635350"
+2026-06-28 12:26:07.851 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:26:07 AM
+2026-06-28 12:26:07.859 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:26:07 PM
+2026-06-28 12:26:07.877 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:26:07.878 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:26:07.878 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:27:07.949 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:27:07 AM
+2026-06-28 12:27:07.974 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:27:07 PM
+2026-06-28 12:27:07.983 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:27:07.983 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:27:07.983 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:28:08.060 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:28:08 AM
+2026-06-28 12:28:08.085 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:28:08 PM
+2026-06-28 12:28:08.110 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:28:08.110 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:28:08.110 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:28:27.463 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:28:27.4635150"
+2026-06-28 12:29:08.161 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:29:08 AM
+2026-06-28 12:29:08.190 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:29:08 PM
+2026-06-28 12:29:08.219 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:29:08.219 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:29:08.219 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:30:08.264 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:30:08 AM
+2026-06-28 12:30:08.266 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:30:08 PM
+2026-06-28 12:30:08.289 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:30:08.289 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:30:08.290 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:40:54.407 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:40:54 AM
+2026-06-28 12:40:54.451 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:40:54 PM
+2026-06-28 12:40:54.489 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:40:54.489 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:40:54.489 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:41:09.491 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:41:09 PM
+2026-06-28 12:41:09.491 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:41:09 AM
+2026-06-28 12:41:09.511 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:41:09.511 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:41:09.511 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:41:28.464 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:41:28.4644470"
+2026-06-28 12:42:09.582 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:42:09 AM
+2026-06-28 12:42:09.640 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:42:09 PM
+2026-06-28 12:42:09.644 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:42:09.644 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:42:09.644 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:43:09.716 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:43:09 AM
+2026-06-28 12:43:09.743 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:43:09 PM
+2026-06-28 12:43:09.756 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:43:09.756 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:43:09.756 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:54:31.113 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:54:31 AM
+2026-06-28 12:54:31.132 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:54:31 PM
+2026-06-28 12:54:31.164 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:54:31.164 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:54:31.164 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:55:01.193 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:55:01 AM
+2026-06-28 12:55:01.233 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:55:01.233 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:55:01.233 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:55:01.234 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:55:01 PM
+2026-06-28 12:55:04.754 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:55:04.7543050"
+2026-06-28 12:56:01.292 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:56:01 AM
+2026-06-28 12:56:01.309 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:56:01 PM
+2026-06-28 12:56:01.319 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:56:01.319 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:56:01.319 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:57:01.433 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:57:01 PM
+2026-06-28 12:57:01.433 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:57:01 AM
+2026-06-28 12:57:01.475 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:57:01.475 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:57:01.475 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:58:01.558 +03:00 [INF] CheckDriverLicenseExpiry Job 28/06/2026 9:58:01 AM
+2026-06-28 12:58:01.582 +03:00 [INF] HELLO FROM RECURRING JOB 28/06/2026 12:58:01 PM
+2026-06-28 12:58:01.645 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-06-28 12:58:01.646 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:58:01.646 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-06-28 12:58:04.755 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Sunday" (0), Time="09:58:04.7549310"
+2026-06-28 12:58:32.482 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d caught stopping signal...
+2026-06-28 12:58:32.485 +03:00 [INF] Application is shutting down...
+2026-06-28 12:58:32.542 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d All dispatchers stopped
+2026-06-28 12:58:32.553 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d successfully reported itself as stopped in 10.419 ms
+2026-06-28 12:58:32.553 +03:00 [INF] Server dareens-macbook-air:2665:bf5c937d has been stopped in total 68.1779 ms

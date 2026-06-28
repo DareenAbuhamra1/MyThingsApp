@@ -12,12 +12,14 @@ public class AccountService : IAccountService
     private readonly IDriverService _driverService;
     private readonly IAuditService _auditService;
     private readonly IUserAccessor _userAccessor;
-    public AccountService(IUnitOfWork unitOfWork, IDriverService driverService, IAuditService auditService, IUserAccessor userAccessor)
+    private readonly IMessageBus _messageBus;
+    public AccountService(IUnitOfWork unitOfWork, IDriverService driverService, IAuditService auditService, IUserAccessor userAccessor, IMessageBus messageBus)
     {
         _unitOfWork = unitOfWork;
         _driverService = driverService;
         _auditService = auditService;
         _userAccessor = userAccessor;
+        _messageBus = messageBus;
     }
     //rewrite the method
     public async Task<ServiceResponse<bool>> ActivateUserAsync(int userId)
@@ -40,9 +42,19 @@ public class AccountService : IAccountService
 
     public async Task<ServiceResponse<Driver>> ApproveDriverAsync(int driverId, bool active)
     {
-        var Driver = await _driverService.ActivateDriverAsync(driverId, active);
-        if (Driver == null) return ServiceResponse<Driver>.Failure("The driver is not found", 404);
-        return ServiceResponse<Driver>.Ok(Driver);
+        var driver = await _driverService.ActivateDriverAsync(driverId, active);
+        if (driver == null) return ServiceResponse<Driver>.Failure("The driver is not found", 404);
+        await _messageBus.PublishAsync(
+            new DriverActivationEventDto
+            {
+                DriverId = driverId,
+                AdminId = 1,
+                DriverPhone = driver.Phone,
+                Active = active
+            },
+            "driver.account.status"
+        );
+        return ServiceResponse<Driver>.Ok(driver);
     }
     //needs refactoring for Password Hash 
     public async Task<ServiceResponse<AdminInfoDto>> CreateAdminAsync(AdminInfoDto dto)
