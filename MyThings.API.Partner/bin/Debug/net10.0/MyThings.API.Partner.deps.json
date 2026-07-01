@@ -755,6 +755,14 @@
           }
         }
       },
+      "Microsoft.Extensions.Caching.Hybrid/10.7.0": {
+        "runtime": {
+          "lib/net10.0/Microsoft.Extensions.Caching.Hybrid.dll": {
+            "assemblyVersion": "10.7.0.0",
+            "fileVersion": "10.700.26.30905"
+          }
+        }
+      },
       "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
         "dependencies": {
           "StackExchange.Redis": "3.0.7"
@@ -1695,6 +1703,7 @@
           "EPPlus": "8.5.4",
           "Grafana.OpenTelemetry": "1.7.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.7",
+          "Microsoft.Extensions.Caching.Hybrid": "10.7.0",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
           "MyThings.Core": "1.0.0",
           "RabbitMQ.Client": "7.2.1",
@@ -2005,6 +2014,13 @@
       "sha512": "sha512-jci/dpjLIZyrp0Kbt0kr1lh+7BXbJ3wNk+vTwS/Se65grEJSBC+eE2UAQsi/xSNB5lHP2dysyOMHugkpFwQwNA==",
       "path": "microsoft.entityframeworkcore.sqlserver/10.0.7",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.10.0.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Caching.Hybrid/10.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DWdLkc6SCZhlQPXFuOjMee1wotUcsdLHzOrN2GN9JsWVscYrGXR91SjH1g7bhUrF6f8ayZD31KxoXAoXxVpCvA==",
+      "path": "microsoft.extensions.caching.hybrid/10.7.0",
+      "hashPath": "microsoft.extensions.caching.hybrid.10.7.0.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.StackExchangeRedis/10.0.9": {
       "type": "package",

@@ -1,4 +1,5 @@
-namespace Mythings.Infrastructure.Helper;
+namespace MyThings.Infrastructure.Helper;
+
 public class RabbitMqSettings
 {
     public string Host { get; set; } = null!;

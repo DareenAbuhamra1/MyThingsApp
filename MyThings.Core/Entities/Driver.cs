@@ -4,7 +4,7 @@ using MyThings.Core.Interfaces;
 
 namespace MyThings.Core.Entities;
 
-public class Driver : User
+public class Driver : User, IAuditableEntity
 {
 
     public bool IsOnline { get; set; }

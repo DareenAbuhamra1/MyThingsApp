@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using Mythings.Core.Interaces.Services;
-using Mythings.Infrastructure.Helper;
+using MyThings.Core.Interfaces;
+using MyThings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;
@@ -13,6 +13,7 @@ using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
 using Serilog;
 using StackExchange.Redis;
+using Mythings.Core.Interaces.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

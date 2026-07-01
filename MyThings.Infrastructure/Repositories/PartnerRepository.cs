@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Mythings.Core.Interaces.Repositories;
+using MyThings.Core.Interfaces;
 using MyThings.Core.Entities;
 using MyThings.Infrastructure.Context;
 

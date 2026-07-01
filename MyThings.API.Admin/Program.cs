@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
-using Mythings.Core.Interaces.Repositories;
-using Mythings.Core.Interaces.Services;
+using MyThings.Core.Interfaces;
+//using MyThings.Core.Interaces.Services;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure;
@@ -17,10 +17,13 @@ using Hangfire.SqlServer;
 using Hangfire.Common;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Mappers;
-using Mythings.Infrastructure.Helper;
 using StackExchange.Redis;
 using Microsoft.Extensions.Caching.Hybrid;
 using RabbitMQ.Client;
+using Mythings.Core.Interaces.Services;
+
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("AdminAPI");
@@ -62,6 +65,8 @@ try
     builder.Services.AddScoped<ICustomerAdminService, CustomerAdminService>();
 
 
+    //builder.Services.AddScoped<AuditSaveChangesInterceptor>();
+
     builder.Services.AddSingleton<PartnerOrderMapper>();
     builder.Services.AddSingleton<OrderPaginationMapper>();
     builder.Services.AddSingleton<OrderInfoMapper>();
@@ -92,7 +97,7 @@ try
     builder.Services.AddHybridCache();
 
     var connectionString = builder.Configuration.GetConnectionString("PrimaryWrite");
-
+    
     builder.Services.AddDbContext<WriteDbContext>(
         options => options.UseSqlServer(connectionString, sqlOptions =>
         {
@@ -100,8 +105,11 @@ try
                 maxRetryCount: 5,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
-        }));
-
+        })
+    
+    );
+    
+    //builder.
     builder.Services.AddDbContext<ReadDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("SecondaryRead"))
         .UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking));

@@ -1,7 +1,7 @@
 using MyThings.Core.Entities;
 using MyThings.Core.Interfaces;
 
-namespace Mythings.Core.Interaces.Repositories;
+namespace MyThings.Core.Interfaces;
 
 public interface IPartnerRepository :IGenericRepository<Partner>
 {

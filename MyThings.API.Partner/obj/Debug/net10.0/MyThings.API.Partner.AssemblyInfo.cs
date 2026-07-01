@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyThings.API.Partner")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+54bb88e09a0f2b5897a48f74dafd0a4acfa9c9da")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00e7722656ff0fe1d2ecebe26cc59b9e88529323")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyThings.API.Partner")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyThings.API.Partner")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -3,7 +3,7 @@ using System.Text.Json;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Mythings.Infrastructure.Helper;
+using MyThings.Infrastructure.Helper;
 using MyThings.Core.DTOs;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;

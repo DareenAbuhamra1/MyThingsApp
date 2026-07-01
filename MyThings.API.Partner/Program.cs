@@ -1,7 +1,7 @@
 using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
-using Mythings.Core.Interaces.Repositories;
-using Mythings.Infrastructure.Helper;
+using MyThings.Core.Interfaces;
+using MyThings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using Mythings.Infrastructure.Helper;
+using MyThings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.DTOs;
 using MyThings.Core.Interfaces;

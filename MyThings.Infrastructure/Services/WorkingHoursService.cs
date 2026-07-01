@@ -1,5 +1,5 @@
 using System.Runtime.InteropServices;
-using Mythings.Core.Interaces.Repositories;
+using MyThings.Core.Interfaces;
 using MyThings.Core.DTOs;
 using MyThings.Core.Entities;
 using MyThings.Core.Interfaces;

@@ -249,3 +249,4 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.genruntimeconfig.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/ref/MyThings.API.Driver.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Caching.Hybrid.dll

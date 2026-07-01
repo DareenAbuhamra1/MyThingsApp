@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyThings.Auth")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+470a423349975a4d18f3bed970241a71b564c9f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00e7722656ff0fe1d2ecebe26cc59b9e88529323")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyThings.Auth")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyThings.Auth")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,7 @@
 using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Options;
-using Mythings.Infrastructure.Helper;
+using MyThings.Infrastructure.Helper;
 using MyThings.Core.Interfaces;
 using RabbitMQ.Client;
 
