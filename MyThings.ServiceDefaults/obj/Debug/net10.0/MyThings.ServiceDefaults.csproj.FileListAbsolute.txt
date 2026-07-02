@@ -1,0 +1,13 @@
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/bin/Debug/net10.0/MyThings.ServiceDefaults.deps.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/bin/Debug/net10.0/MyThings.ServiceDefaults.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/bin/Debug/net10.0/MyThings.ServiceDefaults.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.csproj.AssemblyReference.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.AssemblyInfoInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.AssemblyInfo.cs
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.csproj.CoreCompileInputs.cache
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.sourcelink.json
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/refint/MyThings.ServiceDefaults.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/MyThings.ServiceDefaults.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.ServiceDefaults/obj/Debug/net10.0/ref/MyThings.ServiceDefaults.dll

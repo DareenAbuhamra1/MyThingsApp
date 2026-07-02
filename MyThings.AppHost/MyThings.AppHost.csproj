@@ -1,0 +1,23 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.4.6">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>94c4d34e-c797-41ed-9cca-7e786d5e5a1c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyThings.ServiceDefaults\MyThings.ServiceDefaults.csproj" />
+    <ProjectReference Include="..\MyThings.API.Customer\MyThings.API.Customer.csproj" />
+    <ProjectReference Include="..\MyThings.API.Admin\MyThings.API.Admin.csproj" />
+    <ProjectReference Include="..\MyThings.API.Driver\MyThings.API.Driver.csproj" />
+    <ProjectReference Include="..\MyThings.API.Partner\MyThings.API.Partner.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="13.4.6" />
+  </ItemGroup>
+
+</Project>

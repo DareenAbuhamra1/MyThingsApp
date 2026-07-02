@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThings.API.Partner", "MyT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThings.API.Driver", "MyThings.API.Driver\MyThings.API.Driver.csproj", "{FA93C023-CCAF-4711-B6CA-3005CED82701}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThings.AppHost", "MyThings.AppHost\MyThings.AppHost.csproj", "{E0891367-34D1-4B0D-9462-ADFF075D3ADA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyThings.ServiceDefaults", "MyThings.ServiceDefaults\MyThings.ServiceDefaults.csproj", "{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -109,6 +113,30 @@ Global
 		{FA93C023-CCAF-4711-B6CA-3005CED82701}.Release|x64.Build.0 = Release|Any CPU
 		{FA93C023-CCAF-4711-B6CA-3005CED82701}.Release|x86.ActiveCfg = Release|Any CPU
 		{FA93C023-CCAF-4711-B6CA-3005CED82701}.Release|x86.Build.0 = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|x64.Build.0 = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Debug|x86.Build.0 = Debug|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|x64.ActiveCfg = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|x64.Build.0 = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|x86.ActiveCfg = Release|Any CPU
+		{E0891367-34D1-4B0D-9462-ADFF075D3ADA}.Release|x86.Build.0 = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|x64.Build.0 = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Debug|x86.Build.0 = Debug|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|x64.ActiveCfg = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|x64.Build.0 = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|x86.ActiveCfg = Release|Any CPU
+		{5DECB3F0-3418-4276-ABA3-6D28890C4E0E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

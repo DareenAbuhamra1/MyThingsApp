@@ -24,6 +24,7 @@
     <ProjectReference Include="..\MyThings.Core\MyThings.Core.csproj" />
     <ProjectReference Include="..\MyThings.Infrastructure\MyThings.Infrastructure.csproj" />
     <ProjectReference Include="..\MyThings.Auth\MyThings.Auth.csproj" />
+    <ProjectReference Include="..\MyThings.ServiceDefaults\MyThings.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>

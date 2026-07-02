@@ -1,0 +1,60 @@
+2026-07-01 15:17:33.599 +03:00 [INF] Now listening on: https://localhost:51092
+2026-07-01 15:17:33.611 +03:00 [INF] Now listening on: http://localhost:51097
+2026-07-01 15:17:33.612 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:17:33.612 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:17:33.612 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 15:19:03.309 +03:00 [INF] Application is shutting down...
+2026-07-01 15:19:19.220 +03:00 [INF] Now listening on: https://localhost:51739
+2026-07-01 15:19:19.231 +03:00 [INF] Now listening on: http://localhost:51742
+2026-07-01 15:19:19.232 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:19:19.232 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:19:19.232 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 15:31:06.633 +03:00 [INF] Application is shutting down...
+2026-07-01 15:32:24.419 +03:00 [INF] Now listening on: https://localhost:54202
+2026-07-01 15:32:24.432 +03:00 [INF] Now listening on: http://localhost:54206
+2026-07-01 15:32:24.433 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:32:24.433 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:32:24.433 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 17:53:39.404 +03:00 [INF] Application is shutting down...
+2026-07-01 17:53:52.053 +03:00 [INF] Now listening on: https://localhost:55320
+2026-07-01 17:53:52.240 +03:00 [INF] Now listening on: http://localhost:55329
+2026-07-01 17:53:52.241 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 17:53:52.241 +03:00 [INF] Hosting environment: Development
+2026-07-01 17:53:52.242 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 17:56:50.964 +03:00 [INF] Application is shutting down...
+2026-07-01 17:57:03.728 +03:00 [INF] Now listening on: https://localhost:55523
+2026-07-01 17:57:03.750 +03:00 [INF] Now listening on: http://localhost:55524
+2026-07-01 17:57:03.751 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 17:57:03.751 +03:00 [INF] Hosting environment: Development
+2026-07-01 17:57:03.752 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 18:42:32.399 +03:00 [INF] Application is shutting down...
+2026-07-01 18:42:52.174 +03:00 [INF] Now listening on: https://localhost:56207
+2026-07-01 18:42:52.193 +03:00 [INF] Now listening on: http://localhost:56208
+2026-07-01 18:42:52.194 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:42:52.196 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:42:52.196 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 18:44:57.719 +03:00 [INF] Application is shutting down...
+2026-07-01 18:45:09.633 +03:00 [INF] Now listening on: https://localhost:56407
+2026-07-01 18:45:09.652 +03:00 [INF] Now listening on: http://localhost:56408
+2026-07-01 18:45:09.655 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:45:09.655 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:45:09.655 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 18:45:36.453 +03:00 [INF] Application is shutting down...
+2026-07-01 18:45:45.920 +03:00 [INF] Now listening on: https://localhost:56567
+2026-07-01 18:45:45.933 +03:00 [INF] Now listening on: http://localhost:56568
+2026-07-01 18:45:45.935 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:45:45.935 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:45:45.935 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 18:50:04.975 +03:00 [INF] Application is shutting down...
+2026-07-01 18:50:13.358 +03:00 [INF] Now listening on: https://localhost:56755
+2026-07-01 18:50:13.376 +03:00 [INF] Now listening on: http://localhost:56756
+2026-07-01 18:50:13.378 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:50:13.378 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:50:13.378 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 18:53:27.727 +03:00 [INF] Application is shutting down...
+2026-07-01 18:53:36.845 +03:00 [INF] Now listening on: https://localhost:56941
+2026-07-01 18:53:36.866 +03:00 [INF] Now listening on: http://localhost:56942
+2026-07-01 18:53:36.866 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:53:36.866 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:53:36.867 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver
+2026-07-01 20:36:53.905 +03:00 [INF] Application is shutting down...

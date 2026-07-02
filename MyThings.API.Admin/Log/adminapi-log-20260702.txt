@@ -1,0 +1,1400 @@
+2026-07-02 10:47:46.934 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 10:47:48.346 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 10:47:48.524 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 10:47:48.734 +03:00 [INF] Now listening on: https://localhost:57799
+2026-07-02 10:47:48.734 +03:00 [INF] Now listening on: http://localhost:57800
+2026-07-02 10:47:48.736 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 10:47:48.736 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 10:47:48.736 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 10:47:48.741 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 10:47:48.741 +03:00 [INF] Hosting environment: Development
+2026-07-02 10:47:48.741 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 10:47:48.790 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf successfully announced in 49.3297 ms
+2026-07-02 10:47:48.791 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 10:47:48.795 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf all the dispatchers started
+2026-07-02 10:47:49.292 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:47:49 AM
+2026-07-02 10:47:49.364 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:47:49 AM
+2026-07-02 10:47:51.045 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:47:51.045 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:47:51.045 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:48:04.362 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:48:04 AM
+2026-07-02 10:48:04.363 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:48:04 AM
+2026-07-02 10:48:04.465 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:48:04.465 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:48:04.465 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:48:48.578 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 40
+   at lambda_method189(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:49:04.508 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:49:04 AM
+2026-07-02 10:49:04.510 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:49:04 AM
+2026-07-02 10:49:04.547 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:49:04.547 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:49:04.547 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:50:04.615 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:50:04 AM
+2026-07-02 10:50:04.636 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:50:04 AM
+2026-07-02 10:50:04.686 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:50:04.686 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:50:04.686 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:50:33.634 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 40
+   at lambda_method189(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:50:48.218 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 40
+   at lambda_method189(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:50:48.538 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:50:48.5365570"
+2026-07-02 10:51:04.789 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:51:04 AM
+2026-07-02 10:51:04.801 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:51:04 AM
+2026-07-02 10:51:04.819 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:51:04.819 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:51:04.819 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:51:31.486 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf caught stopping signal...
+2026-07-02 10:51:31.489 +03:00 [INF] Application is shutting down...
+2026-07-02 10:51:32.023 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf All dispatchers stopped
+2026-07-02 10:51:32.025 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf caught stopped signal...
+2026-07-02 10:51:32.059 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf successfully reported itself as stopped in 34.2086 ms
+2026-07-02 10:51:32.059 +03:00 [INF] Server dareens-macbook-air:23219:5535bbdf has been stopped in total 570.2447 ms
+2026-07-02 10:51:45.004 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 10:51:45.416 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 10:51:45.565 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 10:51:45.732 +03:00 [INF] Now listening on: https://localhost:58001
+2026-07-02 10:51:45.732 +03:00 [INF] Now listening on: http://localhost:58004
+2026-07-02 10:51:45.734 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 10:51:45.734 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 10:51:45.735 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 10:51:45.738 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 10:51:45.738 +03:00 [INF] Hosting environment: Development
+2026-07-02 10:51:45.738 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 10:51:45.754 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 successfully announced in 15.1628 ms
+2026-07-02 10:51:45.754 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 10:51:45.757 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 all the dispatchers started
+2026-07-02 10:51:52.276 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 40
+   at lambda_method65(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:52:00.979 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:52:00 AM
+2026-07-02 10:52:00.985 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:52:00 AM
+2026-07-02 10:52:01.755 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:52:01.755 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:52:01.755 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:53:01.084 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:53:01 AM
+2026-07-02 10:53:01.086 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:53:01 AM
+2026-07-02 10:53:01.170 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:53:01.170 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:53:01.170 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:53:13.581 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 caught stopping signal...
+2026-07-02 10:53:13.585 +03:00 [INF] Application is shutting down...
+2026-07-02 10:53:13.842 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 All dispatchers stopped
+2026-07-02 10:53:13.860 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 successfully reported itself as stopped in 16.5138 ms
+2026-07-02 10:53:13.860 +03:00 [INF] Server dareens-macbook-air:25494:6ae85062 has been stopped in total 275.3287 ms
+2026-07-02 10:53:31.102 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 10:53:31.480 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 10:53:31.620 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 10:53:31.767 +03:00 [INF] Now listening on: https://localhost:58181
+2026-07-02 10:53:31.767 +03:00 [INF] Now listening on: http://localhost:58182
+2026-07-02 10:53:31.769 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 10:53:31.769 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 10:53:31.769 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 10:53:31.773 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 10:53:31.773 +03:00 [INF] Hosting environment: Development
+2026-07-02 10:53:31.773 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 10:53:31.842 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 successfully announced in 68.9047 ms
+2026-07-02 10:53:31.844 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 10:53:31.847 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 all the dispatchers started
+2026-07-02 10:53:47.486 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 40
+   at lambda_method65(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:54:02.165 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:54:02 AM
+2026-07-02 10:54:02.178 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:54:02 AM
+2026-07-02 10:54:02.961 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:54:02.962 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:54:02.962 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:54:47.039 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 caught stopping signal...
+2026-07-02 10:54:47.043 +03:00 [INF] Application is shutting down...
+2026-07-02 10:54:47.564 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 caught stopped signal...
+2026-07-02 10:54:47.921 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 All dispatchers stopped
+2026-07-02 10:54:47.971 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 successfully reported itself as stopped in 47.1424 ms
+2026-07-02 10:54:47.971 +03:00 [INF] Server dareens-macbook-air:26654:c11b7b89 has been stopped in total 928.8155 ms
+2026-07-02 10:54:54.094 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 10:54:54.620 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 10:54:54.804 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 10:54:54.973 +03:00 [INF] Now listening on: https://localhost:58329
+2026-07-02 10:54:54.974 +03:00 [INF] Now listening on: http://localhost:58330
+2026-07-02 10:54:54.976 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 10:54:54.976 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 10:54:54.976 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 10:54:54.980 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 10:54:54.980 +03:00 [INF] Hosting environment: Development
+2026-07-02 10:54:54.980 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 10:54:54.999 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 successfully announced in 18.0808 ms
+2026-07-02 10:54:55.000 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 10:54:55.004 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 all the dispatchers started
+2026-07-02 10:54:55.721 +03:00 [INF] CacheTestEndpoint base address: 
+2026-07-02 10:54:55.723 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method65(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:55:10.239 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:55:10 AM
+2026-07-02 10:55:10.239 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:55:10 AM
+2026-07-02 10:55:10.877 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:55:10.877 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:55:10.877 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:56:10.327 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:56:10 AM
+2026-07-02 10:56:10.334 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:56:10 AM
+2026-07-02 10:56:10.434 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:56:10.435 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:56:10.435 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:57:10.694 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:57:10 AM
+2026-07-02 10:57:10.697 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:57:10 AM
+2026-07-02 10:57:10.785 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:57:10.785 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:57:10.785 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:57:54.829 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="07:57:54.8266600"
+2026-07-02 10:58:02.974 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 caught stopping signal...
+2026-07-02 10:58:02.977 +03:00 [INF] Application is shutting down...
+2026-07-02 10:58:03.183 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 All dispatchers stopped
+2026-07-02 10:58:03.199 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 successfully reported itself as stopped in 14.5512 ms
+2026-07-02 10:58:03.199 +03:00 [INF] Server dareens-macbook-air:27503:037df9a4 has been stopped in total 223.0236 ms
+2026-07-02 10:58:28.123 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 10:58:28.441 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 10:58:28.581 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 10:58:28.717 +03:00 [INF] Now listening on: https://localhost:58559
+2026-07-02 10:58:28.718 +03:00 [INF] Now listening on: http://localhost:58563
+2026-07-02 10:58:28.720 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 10:58:28.720 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 10:58:28.720 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 10:58:28.724 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 10:58:28.724 +03:00 [INF] Hosting environment: Development
+2026-07-02 10:58:28.724 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 10:58:28.762 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f successfully announced in 38.5473 ms
+2026-07-02 10:58:28.763 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 10:58:28.766 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f all the dispatchers started
+2026-07-02 10:58:28.986 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:58:28 AM
+2026-07-02 10:58:29.043 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:58:29 AM
+2026-07-02 10:58:29.906 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:58:29.907 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:58:29.907 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:58:44.659 +03:00 [INF] CacheTestEndpoint base address: https+http://customerapi/
+2026-07-02 10:58:44.737 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '0', Execution Time: 60.2312ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:44.743 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:46.939 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '1', Execution Time: 6.0323ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:46.940 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:48.382 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '2', Execution Time: 7.2895ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:48.383 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:50.857 +03:00 [ERR] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '3', Execution Time: 15.7696ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 10:58:50.868 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method191(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 10:59:14.050 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 7:59:14 AM
+2026-07-02 10:59:14.067 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 10:59:14 AM
+2026-07-02 10:59:14.143 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 10:59:14.143 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:59:14.143 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 10:59:42.288 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f caught stopping signal...
+2026-07-02 10:59:42.291 +03:00 [INF] Application is shutting down...
+2026-07-02 10:59:42.828 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f caught stopped signal...
+2026-07-02 10:59:42.845 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f All dispatchers stopped
+2026-07-02 10:59:42.871 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f successfully reported itself as stopped in 24.7887 ms
+2026-07-02 10:59:42.871 +03:00 [INF] Server dareens-macbook-air:29733:9680dc0f has been stopped in total 581.1404 ms
+2026-07-02 11:00:03.333 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:00:03.854 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:00:04.143 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:00:04.403 +03:00 [INF] Now listening on: https://localhost:58723
+2026-07-02 11:00:04.403 +03:00 [INF] Now listening on: http://localhost:58727
+2026-07-02 11:00:04.406 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:00:04.406 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:00:04.406 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:00:04.411 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:00:04.411 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:00:04.411 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:00:04.434 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 successfully announced in 22.6563 ms
+2026-07-02 11:00:04.436 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:00:04.441 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 all the dispatchers started
+2026-07-02 11:00:05.022 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:00:05 AM
+2026-07-02 11:00:05.094 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:00:05 AM
+2026-07-02 11:00:05.861 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:00:05.861 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:00:05.861 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:00:13.900 +03:00 [INF] CacheTestEndpoint base address: https://customerapi/
+2026-07-02 11:00:13.951 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '0', Execution Time: 32.343ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:13.956 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.SocketsHttpHandler.<SendAsync>g__CreateHandlerAndSendAsync|115_0(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:16.442 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '1', Execution Time: 4.1046ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:16.443 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:18.488 +03:00 [WRN] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '2', Execution Time: 3.5051ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:18.489 +03:00 [WRN] Resilience event occurred. EventName: 'OnRetry', Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)'
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:19.702 +03:00 [ERR] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: 'nodename nor servname provided, or not known (customerapi:443)', Handled: 'true', Attempt: '3', Execution Time: 16.446ms
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+2026-07-02 11:00:19.715 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: nodename nor servname provided, or not known (customerapi:443)
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): nodename nor servname provided, or not known
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.InjectNewHttp11ConnectionAsync(QueueItem queueItem)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionWaiter`1.WaitForConnectionWithTelemetryAsync(HttpRequestMessage request, HttpConnectionPool pool, Boolean async, CancellationToken requestCancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.Metrics.MetricsHandler.SendAsyncWithMetrics(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.ServiceDiscovery.Http.ResolvingHttpDelegatingHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.<>c.<<SendAsync>b__3_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Polly.Outcome`1.ThrowIfException()
+   at Microsoft.Extensions.Http.Resilience.ResilienceHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.<SendCoreAsync>g__Core|4_0(HttpRequestMessage request, Boolean useAsync, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method176(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 11:01:05.144 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:01:05 AM
+2026-07-02 11:01:05.145 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:01:05 AM
+2026-07-02 11:01:05.221 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:01:05.222 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:01:05.222 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:02:05.265 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:02:05 AM
+2026-07-02 11:02:05.267 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:02:05 AM
+2026-07-02 11:02:05.299 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:02:05.299 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:02:05.299 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:03:04.168 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:03:04.1664660"
+2026-07-02 11:03:05.381 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:03:05 AM
+2026-07-02 11:03:05.387 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:03:05 AM
+2026-07-02 11:03:05.596 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:03:05.596 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:03:05.596 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:04:05.475 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:04:05 AM
+2026-07-02 11:04:05.487 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:04:05 AM
+2026-07-02 11:04:05.518 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:04:05.518 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:04:05.518 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:05:01.030 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 caught stopping signal...
+2026-07-02 11:05:01.032 +03:00 [INF] Application is shutting down...
+2026-07-02 11:05:01.561 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 caught stopped signal...
+2026-07-02 11:05:01.725 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 All dispatchers stopped
+2026-07-02 11:05:01.756 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 successfully reported itself as stopped in 29.2591 ms
+2026-07-02 11:05:01.756 +03:00 [INF] Server dareens-macbook-air:30765:6aa683e0 has been stopped in total 724.3153 ms
+2026-07-02 11:05:23.163 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:05:25.043 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:05:25.258 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:05:25.516 +03:00 [INF] Now listening on: https://localhost:58938
+2026-07-02 11:05:25.516 +03:00 [INF] Now listening on: http://localhost:58940
+2026-07-02 11:05:25.519 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:05:25.519 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:05:25.519 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:05:25.524 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:05:25.524 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:05:25.524 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:05:25.594 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 successfully announced in 70.011 ms
+2026-07-02 11:05:25.596 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:05:25.604 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 all the dispatchers started
+2026-07-02 11:05:26.237 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:05:26 AM
+2026-07-02 11:05:26.335 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:05:26 AM
+2026-07-02 11:05:27.350 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:05:27.350 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:05:27.350 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:05:35.001 +03:00 [INF] CacheTestEndpoint base address: https+http://customer-api/
+2026-07-02 11:05:35.177 +03:00 [INF] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: 161.5297ms
+2026-07-02 11:05:35.185 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method176(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 11:06:11.467 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:06:11 AM
+2026-07-02 11:06:11.468 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:06:11 AM
+2026-07-02 11:06:11.531 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:06:11.531 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:06:11.531 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:07:11.591 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:07:11 AM
+2026-07-02 11:07:11.592 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:07:11 AM
+2026-07-02 11:07:11.674 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:07:11.676 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:07:11.676 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:08:11.685 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:08:11 AM
+2026-07-02 11:08:11.691 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:08:11 AM
+2026-07-02 11:08:11.724 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:08:11.724 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:08:11.724 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:08:25.272 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:08:25.2725260"
+2026-07-02 11:09:11.770 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:09:11 AM
+2026-07-02 11:09:11.776 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:09:11 AM
+2026-07-02 11:09:11.803 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:09:11.803 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:09:11.803 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:09:39.924 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 caught stopping signal...
+2026-07-02 11:09:39.927 +03:00 [INF] Application is shutting down...
+2026-07-02 11:09:40.462 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 caught stopped signal...
+2026-07-02 11:09:40.848 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 All dispatchers stopped
+2026-07-02 11:09:40.874 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 successfully reported itself as stopped in 23.1585 ms
+2026-07-02 11:09:40.874 +03:00 [INF] Server dareens-macbook-air:33902:deab4235 has been stopped in total 948.3254 ms
+2026-07-02 11:10:06.317 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:10:06.629 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:10:06.851 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:10:07.056 +03:00 [INF] Now listening on: https://localhost:59141
+2026-07-02 11:10:07.057 +03:00 [INF] Now listening on: http://localhost:59145
+2026-07-02 11:10:07.059 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:10:07.059 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:10:07.059 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:10:07.063 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:10:07.063 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:10:07.063 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:10:07.083 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f successfully announced in 20.3982 ms
+2026-07-02 11:10:07.084 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:10:07.088 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f all the dispatchers started
+2026-07-02 11:10:07.321 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:10:07 AM
+2026-07-02 11:10:07.384 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:10:07 AM
+2026-07-02 11:10:08.121 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:10:08.121 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:10:08.121 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:10:16.053 +03:00 [INF] CacheTestEndpoint base address: https+http://customer-api/
+2026-07-02 11:10:16.251 +03:00 [INF] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: '404', Handled: 'false', Attempt: '0', Execution Time: 182.1197ms
+2026-07-02 11:10:16.260 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
+   at System.Net.Http.HttpResponseMessage.EnsureSuccessStatusCode()
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method191(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 11:11:07.388 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:11:07 AM
+2026-07-02 11:11:07.399 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:11:07 AM
+2026-07-02 11:11:07.472 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:11:07.472 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:11:07.472 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:12:07.545 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:12:07 AM
+2026-07-02 11:12:07.550 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:12:07 AM
+2026-07-02 11:12:07.615 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:12:07.615 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:12:07.615 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:13:06.880 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:13:06.8774500"
+2026-07-02 11:13:07.598 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:13:07 AM
+2026-07-02 11:13:07.609 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:13:07 AM
+2026-07-02 11:13:07.649 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:13:07.649 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:13:07.649 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:14:07.733 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:14:07 AM
+2026-07-02 11:14:07.735 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:14:07 AM
+2026-07-02 11:14:07.770 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:14:07.770 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:14:07.770 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:15:07.853 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:15:07 AM
+2026-07-02 11:15:07.859 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:15:07 AM
+2026-07-02 11:15:07.885 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:15:07.886 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:15:07.886 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:16:06.859 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:16:06.8585550"
+2026-07-02 11:16:07.950 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:16:07 AM
+2026-07-02 11:16:07.970 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:16:07 AM
+2026-07-02 11:16:07.987 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:16:07.988 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:16:07.988 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:17:08.066 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:17:08 AM
+2026-07-02 11:17:08.070 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:17:08 AM
+2026-07-02 11:17:08.097 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:17:08.097 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:17:08.097 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:18:08.161 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:18:08 AM
+2026-07-02 11:18:08.163 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:18:08 AM
+2026-07-02 11:18:08.212 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:18:08.212 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:18:08.212 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:23:03.445 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:23:03.4439360"
+2026-07-02 11:23:04.838 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:23:04 AM
+2026-07-02 11:23:04.847 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:23:04 AM
+2026-07-02 11:23:04.872 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:23:04.872 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:23:04.872 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:23:19.897 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:23:19 AM
+2026-07-02 11:23:19.917 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:23:19 AM
+2026-07-02 11:23:19.939 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:23:19.939 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:23:19.939 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:24:04.991 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:24:04 AM
+2026-07-02 11:24:05.016 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:24:05 AM
+2026-07-02 11:24:05.036 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:24:05.036 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:24:05.036 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:25:00.746 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f caught stopping signal...
+2026-07-02 11:25:00.749 +03:00 [INF] Application is shutting down...
+2026-07-02 11:25:01.294 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f caught stopped signal...
+2026-07-02 11:25:01.419 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f All dispatchers stopped
+2026-07-02 11:25:01.457 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f successfully reported itself as stopped in 34.1568 ms
+2026-07-02 11:25:01.457 +03:00 [INF] Server dareens-macbook-air:36535:2bdf851f has been stopped in total 707.8533 ms
+2026-07-02 11:25:37.141 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:25:38.193 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:25:38.353 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:25:38.549 +03:00 [INF] Now listening on: https://localhost:59491
+2026-07-02 11:25:38.549 +03:00 [INF] Now listening on: http://localhost:59498
+2026-07-02 11:25:38.552 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:25:38.552 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:25:38.552 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:25:38.556 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:25:38.556 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:25:38.556 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:25:38.645 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 successfully announced in 89.0537 ms
+2026-07-02 11:25:38.646 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:25:38.649 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 all the dispatchers started
+2026-07-02 11:25:39.052 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:25:39 AM
+2026-07-02 11:25:39.105 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:25:39 AM
+2026-07-02 11:25:40.282 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:25:40.282 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:25:40.282 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:25:43.378 +03:00 [INF] CacheTestEndpoint base address: https+http://customer-api/
+2026-07-02 11:25:46.590 +03:00 [INF] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 3194.1994ms
+2026-07-02 11:26:09.063 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:26:09 AM
+2026-07-02 11:26:09.071 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:26:09 AM
+2026-07-02 11:26:09.135 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:26:09.135 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:26:09.135 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:26:50.595 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 caught stopping signal...
+2026-07-02 11:26:50.600 +03:00 [INF] Application is shutting down...
+2026-07-02 11:26:50.724 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 All dispatchers stopped
+2026-07-02 11:26:50.762 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 successfully reported itself as stopped in 36.7556 ms
+2026-07-02 11:26:50.762 +03:00 [INF] Server dareens-macbook-air:43026:e62ef728 has been stopped in total 161.7061 ms
+2026-07-02 11:27:14.957 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:27:15.318 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:27:15.624 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:27:15.803 +03:00 [INF] Now listening on: https://localhost:59675
+2026-07-02 11:27:15.804 +03:00 [INF] Now listening on: http://localhost:59677
+2026-07-02 11:27:15.806 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:27:15.806 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:27:15.806 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:27:15.810 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:27:15.810 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:27:15.810 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:27:15.840 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f successfully announced in 28.8198 ms
+2026-07-02 11:27:15.841 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:27:15.851 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f all the dispatchers started
+2026-07-02 11:27:16.152 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:27:16 AM
+2026-07-02 11:27:16.241 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:27:16 AM
+2026-07-02 11:27:17.219 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:27:17.220 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:27:17.220 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:27:22.971 +03:00 [INF] CacheTestEndpoint base address: 
+2026-07-02 11:27:22.974 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.
+   at System.Net.Http.HttpClient.PrepareRequestMessage(HttpRequestMessage request)
+   at System.Net.Http.HttpClient.GetStringAsync(Uri requestUri, CancellationToken cancellationToken)
+   at CustomerController.Controllers.CustomerController.CacheTestEndpoint() in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin/Controllers/CustomerController.cs:line 41
+   at lambda_method176(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at MyThings.Infrastructure.Helper.JWTMiddleware.Invoke(HttpContext context, IUserService userService) in /Users/dareenabuhamra/MyThingsApp/MyThings.Infrastructure/Helper/JWTMiddleware.cs:line 32
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-07-02 11:27:31.738 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f caught stopping signal...
+2026-07-02 11:27:31.743 +03:00 [INF] Application is shutting down...
+2026-07-02 11:27:31.859 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f All dispatchers stopped
+2026-07-02 11:27:31.884 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f successfully reported itself as stopped in 23.9375 ms
+2026-07-02 11:27:31.884 +03:00 [INF] Server dareens-macbook-air:44254:11827f2f has been stopped in total 142.0062 ms
+2026-07-02 11:27:39.274 +03:00 [INF] Start installing Hangfire SQL objects...
+2026-07-02 11:27:39.585 +03:00 [INF] Hangfire SQL objects installed.
+2026-07-02 11:27:39.729 +03:00 [INF] Relational Partner Availability Worker initialized.
+2026-07-02 11:27:39.879 +03:00 [INF] Now listening on: https://localhost:59825
+2026-07-02 11:27:39.879 +03:00 [INF] Now listening on: http://localhost:59826
+2026-07-02 11:27:39.881 +03:00 [INF] Starting Hangfire Server using job storage: 'SQL Server: localhost,1433@MyThings'
+2026-07-02 11:27:39.881 +03:00 [INF] Using the following options for SQL Server job storage: Queue poll interval: 00:00:00.
+2026-07-02 11:27:39.882 +03:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-07-02 11:27:39.885 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-02 11:27:39.885 +03:00 [INF] Hosting environment: Development
+2026-07-02 11:27:39.885 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Admin
+2026-07-02 11:27:39.899 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 successfully announced in 14.1985 ms
+2026-07-02 11:27:39.900 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, SqlServerHeartbeatProcess, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-07-02 11:27:39.903 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 all the dispatchers started
+2026-07-02 11:27:46.955 +03:00 [INF] CacheTestEndpoint base address: https+http://customer-api/
+2026-07-02 11:27:50.152 +03:00 [INF] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 3180.0588ms
+2026-07-02 11:28:10.153 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:28:10 AM
+2026-07-02 11:28:10.159 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:28:10 AM
+2026-07-02 11:28:10.769 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:28:10.769 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:28:10.769 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:29:10.249 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:29:10 AM
+2026-07-02 11:29:10.249 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:29:10 AM
+2026-07-02 11:29:10.307 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:29:10.307 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:29:10.307 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:30:10.361 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:30:10 AM
+2026-07-02 11:30:10.374 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:30:10 AM
+2026-07-02 11:30:10.402 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:30:10.402 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:30:10.402 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:30:39.743 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:30:39.7421520"
+2026-07-02 11:31:10.466 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:31:10 AM
+2026-07-02 11:31:10.467 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:31:10 AM
+2026-07-02 11:31:10.494 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:31:10.494 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:31:10.494 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:32:12.019 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:32:12 AM
+2026-07-02 11:32:12.027 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:32:12 AM
+2026-07-02 11:32:12.090 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:32:12.090 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:32:12.090 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:33:12.118 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:33:12 AM
+2026-07-02 11:33:12.128 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:33:12 AM
+2026-07-02 11:33:12.146 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:33:12.146 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:33:12.147 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:33:56.203 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:33:56.2027330"
+2026-07-02 11:34:12.232 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:34:12 AM
+2026-07-02 11:34:12.237 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:34:12 AM
+2026-07-02 11:34:12.259 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:34:12.259 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:34:12.259 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:34:29.691 +03:00 [INF] CacheTestEndpoint base address: https+http://customer-api/
+2026-07-02 11:34:32.762 +03:00 [INF] Execution attempt. Source: '-standard//Standard-Retry', Operation Key: 'null', Result: '200', Handled: 'false', Attempt: '0', Execution Time: 3070.2648ms
+2026-07-02 11:35:12.324 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:35:12 AM
+2026-07-02 11:35:12.325 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:35:12 AM
+2026-07-02 11:35:12.351 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:35:12.351 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:35:12.351 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:36:12.448 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:36:12 AM
+2026-07-02 11:36:12.448 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:36:12 AM
+2026-07-02 11:36:12.483 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:36:12.483 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:36:12.483 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:46:12.306 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:46:12.3063330"
+2026-07-02 11:46:28.631 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:46:28 AM
+2026-07-02 11:46:28.643 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:46:28 AM
+2026-07-02 11:46:28.663 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:46:28.663 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:46:28.663 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:47:10.526 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:47:10 AM
+2026-07-02 11:47:10.531 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:47:10 AM
+2026-07-02 11:47:10.556 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:47:10.556 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:47:10.556 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:54:01.677 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:54:01 AM
+2026-07-02 11:54:01.691 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:54:01 AM
+2026-07-02 11:54:01.716 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:54:01.716 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:54:01.716 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:55:01.796 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:55:01 AM
+2026-07-02 11:55:01.802 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:55:01 AM
+2026-07-02 11:55:01.824 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:55:01.824 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:55:01.824 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:55:15.115 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:55:15.1153370"
+2026-07-02 11:56:01.894 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:56:01 AM
+2026-07-02 11:56:01.899 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:56:01 AM
+2026-07-02 11:56:01.922 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:56:01.922 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:56:01.922 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:57:01.991 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:57:01 AM
+2026-07-02 11:57:01.999 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:57:01 AM
+2026-07-02 11:57:02.022 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:57:02.022 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:57:02.022 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:58:02.098 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:58:02 AM
+2026-07-02 11:58:02.134 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:58:02 AM
+2026-07-02 11:58:02.160 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:58:02.160 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:58:02.160 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:58:15.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="08:58:15.1121560"
+2026-07-02 11:59:02.250 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 8:59:02 AM
+2026-07-02 11:59:02.255 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 11:59:02 AM
+2026-07-02 11:59:02.275 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 11:59:02.275 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 11:59:02.275 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:00:02.331 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:00:02 AM
+2026-07-02 12:00:02.345 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:00:02 PM
+2026-07-02 12:00:02.359 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:00:02.359 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:00:02.359 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:01:02.437 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:01:02 AM
+2026-07-02 12:01:02.445 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:01:02 PM
+2026-07-02 12:01:02.461 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:01:02.461 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:01:02.461 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:01:15.111 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:01:15.1111590"
+2026-07-02 12:02:02.537 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:02:02 AM
+2026-07-02 12:02:02.552 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:02:02 PM
+2026-07-02 12:02:02.595 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:02:02.595 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:02:02.595 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:03:02.650 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:03:02 AM
+2026-07-02 12:03:02.666 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:03:02 PM
+2026-07-02 12:03:02.682 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:03:02.682 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:03:02.682 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:04:02.761 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:04:02 AM
+2026-07-02 12:04:02.779 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:04:02 PM
+2026-07-02 12:04:02.801 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:04:02.801 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:04:02.801 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:04:15.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:04:15.1124980"
+2026-07-02 12:05:02.862 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:05:02 AM
+2026-07-02 12:05:02.869 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:05:02 PM
+2026-07-02 12:05:02.898 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:05:02.898 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:05:02.898 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:06:02.949 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:06:02 AM
+2026-07-02 12:06:02.961 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:06:02 PM
+2026-07-02 12:06:02.985 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:06:02.985 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:06:02.985 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:07:03.047 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:07:03 AM
+2026-07-02 12:07:03.053 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:07:03 PM
+2026-07-02 12:07:03.075 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:07:03.075 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:07:03.075 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:07:15.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:07:15.1121330"
+2026-07-02 12:08:03.143 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:08:03 AM
+2026-07-02 12:08:03.158 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:08:03 PM
+2026-07-02 12:08:03.175 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:08:03.175 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:08:03.175 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:09:03.246 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:09:03 AM
+2026-07-02 12:09:03.255 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:09:03 PM
+2026-07-02 12:09:03.283 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:09:03.283 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:09:03.283 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:10:03.357 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:10:03 AM
+2026-07-02 12:10:03.363 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:10:03 PM
+2026-07-02 12:10:03.382 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:10:03.382 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:10:03.382 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:10:15.115 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:10:15.1149140"
+2026-07-02 12:11:03.454 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:11:03 AM
+2026-07-02 12:11:03.464 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:11:03 PM
+2026-07-02 12:11:03.482 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:11:03.482 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:11:03.482 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:12:03.563 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:12:03 AM
+2026-07-02 12:12:03.573 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:12:03 PM
+2026-07-02 12:12:03.598 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:12:03.598 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:12:03.598 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:13:03.670 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:13:03 AM
+2026-07-02 12:13:03.681 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:13:03 PM
+2026-07-02 12:13:03.711 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:13:03.711 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:13:03.711 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:13:15.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:13:15.1121800"
+2026-07-02 12:14:03.769 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:14:03 AM
+2026-07-02 12:14:03.785 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:14:03 PM
+2026-07-02 12:14:03.802 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:14:03.802 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:14:03.802 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:15:03.874 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:15:03 AM
+2026-07-02 12:15:03.881 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:15:03 PM
+2026-07-02 12:15:03.897 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:15:03.897 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:15:03.897 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:16:03.971 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:16:03 AM
+2026-07-02 12:16:03.988 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:16:03 PM
+2026-07-02 12:16:04.006 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:16:04.006 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:16:04.006 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:16:15.113 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:16:15.1131310"
+2026-07-02 12:17:04.057 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:17:04 AM
+2026-07-02 12:17:04.063 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:17:04 PM
+2026-07-02 12:17:04.078 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:17:04.078 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:17:04.078 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:18:04.129 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:18:04 AM
+2026-07-02 12:18:04.134 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:18:04 PM
+2026-07-02 12:18:04.154 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:18:04.154 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:18:04.154 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:19:04.193 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:19:04 AM
+2026-07-02 12:19:04.199 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:19:04 PM
+2026-07-02 12:19:04.216 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:19:04.216 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:19:04.216 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:19:15.111 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:19:15.1113160"
+2026-07-02 12:20:04.269 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:20:04 AM
+2026-07-02 12:20:04.275 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:20:04 PM
+2026-07-02 12:20:04.294 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:20:04.294 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:20:04.294 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:21:04.370 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:21:04 AM
+2026-07-02 12:21:04.384 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:21:04 PM
+2026-07-02 12:21:04.423 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:21:04.423 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:21:04.423 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:22:04.450 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:22:04 AM
+2026-07-02 12:22:04.457 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:22:04 PM
+2026-07-02 12:22:04.476 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:22:04.476 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:22:04.476 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:22:15.111 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:22:15.1114690"
+2026-07-02 12:23:04.551 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:23:04 AM
+2026-07-02 12:23:04.561 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:23:04 PM
+2026-07-02 12:23:04.577 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:23:04.577 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:23:04.577 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:24:04.641 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:24:04 AM
+2026-07-02 12:24:04.649 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:24:04 PM
+2026-07-02 12:24:04.664 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:24:04.664 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:24:04.664 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:25:04.722 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:25:04 AM
+2026-07-02 12:25:04.731 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:25:04 PM
+2026-07-02 12:25:04.744 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:25:04.744 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:25:04.744 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:25:15.112 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:25:15.1119730"
+2026-07-02 12:26:04.820 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:26:04 AM
+2026-07-02 12:26:04.823 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:26:04 PM
+2026-07-02 12:26:04.848 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:26:04.848 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:26:04.848 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:33:15.909 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:33:15 AM
+2026-07-02 12:33:15.915 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:33:15 PM
+2026-07-02 12:33:15.935 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:33:15.935 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:33:15.935 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:33:30.955 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:33:30 AM
+2026-07-02 12:33:30.965 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:33:30 PM
+2026-07-02 12:33:30.976 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:33:30.976 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:33:30.976 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:34:01.028 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:34:01 AM
+2026-07-02 12:34:01.039 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:34:01 PM
+2026-07-02 12:34:01.057 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:34:01.057 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:34:01.057 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:38:01.889 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:38:01.8891950"
+2026-07-02 12:38:06.890 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:38:06 AM
+2026-07-02 12:38:06.900 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:38:06 PM
+2026-07-02 12:38:06.916 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:38:06.916 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:38:06.916 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:39:06.063 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:39:06 AM
+2026-07-02 12:39:06.073 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:39:06 PM
+2026-07-02 12:39:06.086 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:39:06.086 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:39:06.086 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:40:12.921 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:40:12 AM
+2026-07-02 12:40:12.929 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:40:12 PM
+2026-07-02 12:40:12.946 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:40:12.946 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:40:12.946 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:41:13.494 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:41:13 AM
+2026-07-02 12:41:13.501 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:41:13 PM
+2026-07-02 12:41:13.518 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:41:13.518 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:41:13.518 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:41:53.182 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:41:53.1828210"
+2026-07-02 12:42:13.590 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:42:13 AM
+2026-07-02 12:42:13.600 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:42:13 PM
+2026-07-02 12:42:13.619 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:42:13.619 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:42:13.619 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:43:13.689 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:43:13 AM
+2026-07-02 12:43:13.696 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:43:13 PM
+2026-07-02 12:43:13.722 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:43:13.722 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:43:13.722 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:44:13.789 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:44:13 AM
+2026-07-02 12:44:13.795 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:44:13 PM
+2026-07-02 12:44:13.817 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:44:13.817 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:44:13.817 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:44:53.186 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:44:53.1855990"
+2026-07-02 12:45:13.901 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:45:13 AM
+2026-07-02 12:45:13.905 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:45:13 PM
+2026-07-02 12:45:13.925 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:45:13.926 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:45:13.926 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:46:13.995 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:46:13 AM
+2026-07-02 12:46:14.002 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:46:14 PM
+2026-07-02 12:46:14.017 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:46:14.017 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:46:14.017 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:47:14.095 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:47:14 AM
+2026-07-02 12:47:14.107 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:47:14 PM
+2026-07-02 12:47:14.129 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:47:14.129 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:47:14.129 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:47:53.184 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:47:53.1842650"
+2026-07-02 12:48:14.198 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:48:14 AM
+2026-07-02 12:48:14.239 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:48:14.239 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:48:14.239 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:48:14.254 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:48:14 PM
+2026-07-02 12:49:14.294 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:49:14 AM
+2026-07-02 12:49:14.300 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:49:14 PM
+2026-07-02 12:49:14.321 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:49:14.321 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:49:14.321 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:50:14.405 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:50:14 AM
+2026-07-02 12:50:14.411 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:50:14 PM
+2026-07-02 12:50:14.442 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:50:14.442 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:50:14.442 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:50:53.187 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:50:53.1873510"
+2026-07-02 12:51:14.510 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:51:14 AM
+2026-07-02 12:51:14.515 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:51:14 PM
+2026-07-02 12:51:14.540 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:51:14.540 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:51:14.540 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:52:14.609 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:52:14 AM
+2026-07-02 12:52:14.618 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:52:14 PM
+2026-07-02 12:52:14.643 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:52:14.643 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:52:14.643 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:53:14.707 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:53:14 AM
+2026-07-02 12:53:14.714 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:53:14 PM
+2026-07-02 12:53:14.736 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:53:14.736 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:53:14.736 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:53:53.185 +03:00 [INF] System Wake Cycle executed. Current Amman Schedule: Day="Thursday" (4), Time="09:53:53.1849060"
+2026-07-02 12:54:14.817 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:54:14 AM
+2026-07-02 12:54:14.826 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:54:14 PM
+2026-07-02 12:54:14.856 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:54:14.856 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:54:14.856 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:55:14.927 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:55:14 AM
+2026-07-02 12:55:14.939 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:55:14 PM
+2026-07-02 12:55:14.968 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:55:14.968 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:55:14.968 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:56:15.056 +03:00 [INF] CheckDriverLicenseExpiry Job 02/07/2026 9:56:15 AM
+2026-07-02 12:56:15.061 +03:00 [INF] HELLO FROM RECURRING JOB 02/07/2026 12:56:15 PM
+2026-07-02 12:56:15.082 +03:00 [INF] Driver 6 with License No. ijmojde expired on 21/06/2026 9:14:39 AM
+2026-07-02 12:56:15.082 +03:00 [INF] Driver 4002 with License No. 280esOD expired on 21/06/2026 11:14:39 AM
+2026-07-02 12:56:15.082 +03:00 [INF] Driver 7014 with License No. 345678 expired on 21/06/2026 11:14:39 AM
+2026-07-02 13:01:03.938 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 caught stopping signal...
+2026-07-02 13:01:03.941 +03:00 [INF] Application is shutting down...
+2026-07-02 13:01:04.196 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 All dispatchers stopped
+2026-07-02 13:01:04.224 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 successfully reported itself as stopped in 26.2467 ms
+2026-07-02 13:01:04.224 +03:00 [INF] Server dareens-macbook-air:44560:ca8b4c53 has been stopped in total 282.4342 ms

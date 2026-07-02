@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using MyThings.Core.Interfaces;
 //using MyThings.Core.Interaces.Services;
 using MyThings.Auth.AuthServices;
-using MyThings.Core.Interfaces;
 using MyThings.Infrastructure;
 using MyThings.Infrastructure.BackgroundWorkers;
 using MyThings.Infrastructure.Context;
@@ -27,7 +26,7 @@ using Mythings.Core.Interaces.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("AdminAPI");
-builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "AdminAPI");
+//builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "AdminAPI");
 
 try
 {
@@ -156,7 +155,7 @@ try
     builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
         {
             var configuration = ConfigurationOptions.Parse(
-                builder.Configuration["Redis:ConnectionString"]
+                builder.Configuration["Redis:ConnectionString"]!
             );
 
             return ConnectionMultiplexer.Connect(configuration);
@@ -164,6 +163,14 @@ try
     );
 
     builder.Services.AddHostedService<DriverActivationConsumer>();
+
+    builder.AddServiceDefaults();
+
+    builder.Services.AddHttpClient("customer-api", client =>
+        {
+            client.BaseAddress = new Uri("https+http://customer-api");
+        }).AddServiceDiscovery();
+
 
     var app = builder.Build();
 
@@ -183,7 +190,7 @@ try
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
     app.UseHangfireDashboard();
-
+    app.MapDefaultEndpoints();
     HangfireJobSchedular.ScheduleJob();
 
     app.Run();

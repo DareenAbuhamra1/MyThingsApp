@@ -46,8 +46,20 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.AmbientMetadata.Application.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Caching.Hybrid.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Caching.StackExchangeRedis.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Compliance.Abstractions.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.DependencyInjection.AutoActivation.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.DependencyModel.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Http.Diagnostics.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Http.Resilience.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Resilience.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.ServiceDiscovery.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.ServiceDiscovery.Abstractions.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Telemetry.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Telemetry.Abstractions.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Identity.Client.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Identity.Client.Extensions.Msal.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.IdentityModel.Abstractions.dll
@@ -89,6 +101,9 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/OpenTelemetry.Resources.OperatingSystem.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/OpenTelemetry.Resources.Process.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/OpenTelemetry.Resources.ProcessRuntime.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Polly.Core.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Polly.Extensions.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Polly.RateLimiting.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/RabbitMQ.Client.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/RESPite.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Riok.Mapperly.Abstractions.dll
@@ -222,9 +237,11 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Auth.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Core.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Infrastructure.dll
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.ServiceDefaults.dll
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Core.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Infrastructure.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.Auth.pdb
+/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/MyThings.ServiceDefaults.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.csproj.AssemblyReference.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/rpswa.dswa.cache.json
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.GeneratedMSBuildEditorConfig.editorconfig
@@ -249,4 +266,3 @@
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.pdb
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/MyThings.API.Driver.genruntimeconfig.cache
 /Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/obj/Debug/net10.0/ref/MyThings.API.Driver.dll
-/Users/dareenabuhamra/MyThingsApp/MyThings.API.Driver/bin/Debug/net10.0/Microsoft.Extensions.Caching.Hybrid.dll

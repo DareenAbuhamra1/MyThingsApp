@@ -4,6 +4,9 @@ using Microsoft.Extensions.Caching.Memory;
 
 namespace CacheController.Controllers
 {
+    
+    [Route("api/[controller]")]
+    [ApiController]
     public class CacheController : ControllerBase
     {
         private readonly ILogger<CacheController> _logger;

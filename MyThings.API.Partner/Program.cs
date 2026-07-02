@@ -3,12 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
-using MyThings.Core.DTOs;
-using MyThings.Core.Interfaces;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Context;
 using MyThings.Infrastructure.Extensions;
-using MyThings.Infrastructure.Helper;
 using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
@@ -18,7 +15,7 @@ using StackExchange.Redis;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("PartnerAPI");
-builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "PartnerAPI");
+//builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "PartnerAPI");
 try
 {
 
@@ -97,6 +94,7 @@ try
     builder.Services.Configure<RabbitMqSettings>(
         builder.Configuration.GetRequiredSection("RabbitMQ")
     );
+    builder.AddServiceDefaults();
 
     var app = builder.Build();
 
@@ -112,7 +110,9 @@ try
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
     app.UseCors("AllowAngularUI");
-
+    
+    app.MapDefaultEndpoints();
+    
     app.Run();
 
 }

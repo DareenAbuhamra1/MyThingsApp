@@ -1,0 +1,168 @@
+2026-07-01 14:18:27.580 +03:00 [ERR] Hosting failed to start
+System.NotSupportedException: Signal-specific AddOtlpExporter methods and the cross-cutting UseOtlpExporter method being invoked on the same IServiceCollection is not supported.
+   at OpenTelemetry.Exporter.OpenTelemetryBuilderServiceProviderExtensions.EnsureNoUseOtlpExporterRegistrations(IServiceProvider serviceProvider)
+   at OpenTelemetry.Metrics.OtlpMetricExporterExtensions.BuildOtlpExporterMetricReader(IServiceProvider serviceProvider, OtlpExporterOptions exporterOptions, MetricReaderOptions metricReaderOptions, ExperimentalOptions experimentalOptions, Boolean skipUseOtlpExporterRegistrationCheck, Func`2 configureExporterInstance)
+   at OpenTelemetry.Metrics.OtlpMetricExporterExtensions.<>c__DisplayClass2_0.<AddOtlpExporter>b__1(IServiceProvider sp)
+   at OpenTelemetry.Metrics.MeterProviderBuilderExtensions.<>c__DisplayClass2_0.<AddReader>b__0(IServiceProvider sp, MeterProviderBuilder builder)
+   at OpenTelemetry.Metrics.OpenTelemetryDependencyInjectionMetricsServiceCollectionExtensions.ConfigureMeterProviderBuilderCallbackWrapper.ConfigureBuilder(IServiceProvider serviceProvider, MeterProviderBuilder meterProviderBuilder)
+   at OpenTelemetry.Metrics.MeterProviderSdk..ctor(IServiceProvider serviceProvider, Boolean ownsServiceProvider)
+   at OpenTelemetry.Metrics.MeterProviderBuilderBase.<>c.<.ctor>b__3_0(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Options.OptionsBuilder`1.<>c__DisplayClass9_0`1.<Configure>b__0(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+2026-07-01 14:18:27.596 +03:00 [FTL] The application host terminated unexpectedly
+System.NotSupportedException: Signal-specific AddOtlpExporter methods and the cross-cutting UseOtlpExporter method being invoked on the same IServiceCollection is not supported.
+   at OpenTelemetry.Exporter.OpenTelemetryBuilderServiceProviderExtensions.EnsureNoUseOtlpExporterRegistrations(IServiceProvider serviceProvider)
+   at OpenTelemetry.Metrics.OtlpMetricExporterExtensions.BuildOtlpExporterMetricReader(IServiceProvider serviceProvider, OtlpExporterOptions exporterOptions, MetricReaderOptions metricReaderOptions, ExperimentalOptions experimentalOptions, Boolean skipUseOtlpExporterRegistrationCheck, Func`2 configureExporterInstance)
+   at OpenTelemetry.Metrics.OtlpMetricExporterExtensions.<>c__DisplayClass2_0.<AddOtlpExporter>b__1(IServiceProvider sp)
+   at OpenTelemetry.Metrics.MeterProviderBuilderExtensions.<>c__DisplayClass2_0.<AddReader>b__0(IServiceProvider sp, MeterProviderBuilder builder)
+   at OpenTelemetry.Metrics.OpenTelemetryDependencyInjectionMetricsServiceCollectionExtensions.ConfigureMeterProviderBuilderCallbackWrapper.ConfigureBuilder(IServiceProvider serviceProvider, MeterProviderBuilder meterProviderBuilder)
+   at OpenTelemetry.Metrics.MeterProviderSdk..ctor(IServiceProvider serviceProvider, Boolean ownsServiceProvider)
+   at OpenTelemetry.Metrics.MeterProviderBuilderBase.<>c.<.ctor>b__3_0(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.CreateServiceAccessor(ServiceIdentifier serviceIdentifier)
+   at System.Collections.Concurrent.ConcurrentDictionary`2.GetOrAdd(TKey key, Func`2 valueFactory)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Options.OptionsBuilder`1.<>c__DisplayClass9_0`1.<Configure>b__0(IServiceProvider sp)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitIEnumerable(IEnumerableCallSite enumerableCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitRootCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetService[T](IServiceProvider provider)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at Program.<Main>$(String[] args) in /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer/Program.cs:line 130
+2026-07-01 14:26:06.379 +03:00 [INF] Now listening on: https://localhost:50560
+2026-07-01 14:26:06.389 +03:00 [INF] Now listening on: http://localhost:50562
+2026-07-01 14:26:06.390 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 14:26:06.390 +03:00 [INF] Hosting environment: Development
+2026-07-01 14:26:06.390 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 14:27:47.743 +03:00 [INF] Access 1: 0.0781ms, Access 2: 0.001ms
+2026-07-01 15:16:05.035 +03:00 [INF] Application is shutting down...
+2026-07-01 15:17:33.655 +03:00 [INF] Now listening on: https://localhost:51090
+2026-07-01 15:17:33.666 +03:00 [INF] Now listening on: http://localhost:51091
+2026-07-01 15:17:33.667 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:17:33.667 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:17:33.667 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 15:19:03.316 +03:00 [INF] Application is shutting down...
+2026-07-01 15:19:19.341 +03:00 [INF] Now listening on: https://localhost:51732
+2026-07-01 15:19:19.352 +03:00 [INF] Now listening on: http://localhost:51738
+2026-07-01 15:19:19.353 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:19:19.353 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:19:19.353 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 15:22:17.044 +03:00 [INF] Application is shutting down...
+2026-07-01 15:22:20.268 +03:00 [INF] Now listening on: https://localhost:52300
+2026-07-01 15:22:20.277 +03:00 [INF] Now listening on: http://localhost:52301
+2026-07-01 15:22:20.278 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:22:20.278 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:22:20.278 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 15:31:06.543 +03:00 [INF] Application is shutting down...
+2026-07-01 15:32:24.385 +03:00 [INF] Now listening on: https://localhost:54199
+2026-07-01 15:32:24.403 +03:00 [INF] Now listening on: http://localhost:54200
+2026-07-01 15:32:24.404 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 15:32:24.404 +03:00 [INF] Hosting environment: Development
+2026-07-01 15:32:24.404 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 17:07:37.637 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-07-01 17:07:50.859 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-07-01 17:07:50.923 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-07-01 17:09:05.456 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-07-01 17:53:39.417 +03:00 [INF] Application is shutting down...
+2026-07-01 17:53:52.000 +03:00 [INF] Now listening on: https://localhost:55323
+2026-07-01 17:53:52.016 +03:00 [INF] Now listening on: http://localhost:55324
+2026-07-01 17:53:52.018 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 17:53:52.018 +03:00 [INF] Hosting environment: Development
+2026-07-01 17:53:52.033 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 17:56:50.963 +03:00 [INF] Application is shutting down...
+2026-07-01 17:57:03.721 +03:00 [INF] Now listening on: https://localhost:55525
+2026-07-01 17:57:03.741 +03:00 [INF] Now listening on: http://localhost:55526
+2026-07-01 17:57:03.743 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 17:57:03.743 +03:00 [INF] Hosting environment: Development
+2026-07-01 17:57:03.743 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 18:05:26.006 +03:00 [INF] OTP successfully sent to 0796406942.
+2026-07-01 18:05:30.655 +03:00 [INF] Customer 0796406942 verified correctly.
+2026-07-01 18:05:30.738 +03:00 [INF] Customer 0796406942 logged in successfully.
+2026-07-01 18:27:42.704 +03:00 [INF] Access 1: 0.2233ms, Access 2: 0.0012ms
+2026-07-01 18:42:32.384 +03:00 [INF] Application is shutting down...
+2026-07-01 18:42:52.174 +03:00 [INF] Now listening on: https://localhost:56213
+2026-07-01 18:42:52.248 +03:00 [INF] Now listening on: http://localhost:56217
+2026-07-01 18:42:52.249 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:42:52.249 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:42:52.249 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 18:44:57.721 +03:00 [INF] Application is shutting down...
+2026-07-01 18:45:09.587 +03:00 [INF] Now listening on: https://localhost:56411
+2026-07-01 18:45:09.603 +03:00 [INF] Now listening on: http://localhost:56412
+2026-07-01 18:45:09.604 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:45:09.604 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:45:09.604 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 18:45:36.453 +03:00 [INF] Application is shutting down...
+2026-07-01 18:45:45.940 +03:00 [INF] Now listening on: https://localhost:56558
+2026-07-01 18:45:45.956 +03:00 [INF] Now listening on: http://localhost:56559
+2026-07-01 18:45:45.957 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:45:45.958 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:45:45.958 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 18:50:04.975 +03:00 [INF] Application is shutting down...
+2026-07-01 18:50:13.348 +03:00 [INF] Now listening on: https://localhost:56757
+2026-07-01 18:50:13.368 +03:00 [INF] Now listening on: http://localhost:56758
+2026-07-01 18:50:13.372 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:50:13.372 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:50:13.372 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 18:53:27.736 +03:00 [INF] Application is shutting down...
+2026-07-01 18:53:36.979 +03:00 [INF] Now listening on: https://localhost:56945
+2026-07-01 18:53:36.995 +03:00 [INF] Now listening on: http://localhost:56946
+2026-07-01 18:53:36.996 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-01 18:53:36.996 +03:00 [INF] Hosting environment: Development
+2026-07-01 18:53:36.996 +03:00 [INF] Content root path: /Users/dareenabuhamra/MyThingsApp/MyThings.API.Customer
+2026-07-01 20:36:53.903 +03:00 [INF] Application is shutting down...

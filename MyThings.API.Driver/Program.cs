@@ -6,7 +6,6 @@ using MyThings.Core.Interfaces;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Context;
 using MyThings.Infrastructure.Extensions;
-using MyThings.Infrastructure.Helper;
 using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
@@ -16,7 +15,7 @@ using StackExchange.Redis;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("DriverAPI");
-builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "DriverAPI");
+//builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "DriverAPI");
 
 try
 {
@@ -88,6 +87,8 @@ try
     builder.Services.Configure<RabbitMqSettings>(
         builder.Configuration.GetRequiredSection("RabbitMQ")
     );
+    builder.AddServiceDefaults();
+
     var app = builder.Build();
 
     // 2. CONFIGURE PIPELINE
@@ -102,6 +103,9 @@ try
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
     app.UseCors("AllowAngularUI");
+
+    app.MapDefaultEndpoints();
+
     app.Run();
 }
 catch (Exception e)

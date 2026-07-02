@@ -17,11 +17,13 @@ namespace CustomerController.Controllers
     {
         private readonly ILogger<CustomerController> _logger;
         private readonly ICustomerAdminService _customerAdminService;
+        private readonly HttpClient _client;
 
-        public CustomerController(ILogger<CustomerController> logger, ICustomerAdminService customerAdminService)
+        public CustomerController(ILogger<CustomerController> logger, ICustomerAdminService customerAdminService, IHttpClientFactory factory)
         {
             _logger = logger;
             _customerAdminService = customerAdminService;
+            _client = factory.CreateClient("customer-api");
         }
 
         [HttpGet("customers/details")]
@@ -31,6 +33,14 @@ namespace CustomerController.Controllers
             return response.Success
                 ? Ok(response.Data)
                 : BadRequest(response.Message);
+        }
+        [HttpGet("customer/cacheTestEndpoint")]
+        public async Task<ActionResult> CacheTestEndpoint()
+        {
+            _logger.LogInformation($"CacheTestEndpoint base address: {_client.BaseAddress}");
+            var response = await _client.GetStringAsync("api/Cache/test-api-caching");
+            
+            return Ok(response);
         }
     }
 }

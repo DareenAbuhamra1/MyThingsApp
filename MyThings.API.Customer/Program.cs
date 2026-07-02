@@ -3,11 +3,9 @@ using MyThings.Core.Interfaces;
 using MyThings.Infrastructure.Helper;
 using MyThings.Auth.AuthServices;
 using MyThings.Core.DTOs;
-using MyThings.Core.Interfaces;
 using MyThings.Core.Interfaces.Services;
 using MyThings.Infrastructure.Context;
 using MyThings.Infrastructure.Extensions;
-using MyThings.Infrastructure.Helper;
 using MyThings.Infrastructure.Mappers;
 using MyThings.Infrastructure.Repositories;
 using MyThings.Infrastructure.Services;
@@ -18,7 +16,8 @@ using Mythings.Core.Interaces.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.AddSharedSerilogConfiguration("CustomerAPI");
-builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "CustomerAPI");
+//Remove the following line because it conflicts with Aspire OpenTelemetry
+//builder.Services.AddSharedOpenTelemetryMetrics(builder.Configuration, "CustomerAPI");
 
 try
 {
@@ -104,6 +103,17 @@ try
     );
     // builder.Services.AddSharedAuth(builder.Configuration);
 
+    // Add shareed service defaults like health checks, logging, etc. This is optional but recommended for consistency across services.
+    builder.AddServiceDefaults();
+
+    builder.Services.AddServiceDiscovery();
+
+    builder.Services.ConfigureHttpClientDefaults(http =>
+    {
+        http.AddServiceDiscovery();
+    });
+   
+
     var app = builder.Build();
 
     // 2. CONFIGURE PIPELINE
@@ -119,6 +129,9 @@ try
     app.UseAuthorization();
     app.MapControllers(); // This tells the API to look in your Controllers folder
     app.UseCors("AllowAngularUI");
+     
+
+    app.MapDefaultEndpoints();
     
     app.Run();
 
